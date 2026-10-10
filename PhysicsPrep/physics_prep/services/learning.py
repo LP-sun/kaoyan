@@ -44,6 +44,7 @@ class LearningService:
         if question_id:
             matches = [q for q in self.repository.list_questions() if q['id'] == question_id]
             if (not matches or not matches[0]['verified']
+                    or matches[0].get('content_status', 'practice_ready') != 'practice_ready'
                     or matches[0]['source_type'] == 'official_exam' or matches[0].get('frozen')):
                 raise ValueError('题目不存在、尚未核验或属于冻结模拟卷')
             snapshot = matches[0]

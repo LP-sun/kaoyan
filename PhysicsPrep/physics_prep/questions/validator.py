@@ -15,6 +15,8 @@ class QuestionInput(BaseModel):
     source_type: Literal['official_exam','textbook','original','ai_generated']
     source_reference: Any = None
     verified: bool = False
+    content_status: Literal['extracted','normalized','statement_verified','solution_draft','solution_checked','practice_ready','needs_review','blocked','out_of_scope','duplicate_candidate'] = 'normalized'
+    content_priority: int = Field(default=0, ge=0, le=100)
     @model_validator(mode='after')
     def check_choice(self):
         if self.question_type in ('single_choice','multiple_choice'):
@@ -26,4 +28,9 @@ class QuestionInput(BaseModel):
         return self
 
 def validate_question(data):
-    return QuestionInput.model_validate(data).model_dump()
+    result = QuestionInput.model_validate(data).model_dump()
+    if result['source_type'] == 'ai_generated' and result['content_status'] == 'practice_ready':
+        result['content_status'] = 'solution_checked'
+    if result['verified'] and result['content_status'] == 'normalized':
+        result['content_status'] = 'practice_ready'
+    return result

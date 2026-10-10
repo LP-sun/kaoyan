@@ -10,7 +10,8 @@ AUTO_GRADED_TYPES = frozenset({'single_choice', 'multiple_choice', 'numeric', 's
 def select_question(questions, attempts, mastery, prerequisites=None, due=None):
     """Explainable ranking with coverage, remedy, level fit and repetition penalty."""
     prerequisites=prerequisites or {}; due=due or set()
-    eligible=[q for q in questions if q.get('verified') and q.get('source_type')!='official_exam' and not q.get('frozen',False)]
+    eligible=[q for q in questions if q.get('verified') and q.get('source_type')!='official_exam' and not q.get('frozen',False)
+              and q.get('content_status', 'practice_ready') == 'practice_ready']
     if not eligible: return None
     gradable=[q for q in eligible if q.get('question_type') in AUTO_GRADED_TYPES]
     if gradable: eligible=gradable

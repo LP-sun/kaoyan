@@ -1,0 +1,54 @@
+﻿# Python / local runtime
+__pycache__/
+.pytest_cache/
+*.pyc
+*.log
+*.err
+*.tmp
+.tmp*
+
+# Secrets and local environments
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+**/credentials*
+**/genai_keys.json
+
+# Original/private source material (kept locally, not published)
+*.pdf
+*.xlsx
+教材/
+允文君数学物理资料分享/
+23普物.pdf
+24普物.pdf
+24量子.pdf
+普物大纲.pdf
+量子大纲.pdf
+并行-MaaS平台模型列表及报价(1).xlsx
+
+# Generated large aggregates and browser/runtime records
+资料整理/题库/教材习题.json
+资料整理/题库/教材习题.csv
+资料整理/题库/教材题库数据.js
+资料整理/题库/推荐数据.js
+资料整理/题库/deepseek相关性分析.json
+资料整理/题库/考研相关性.json
+资料整理/题库/基础题库.json
+资料整理/题库/基础题库.csv
+资料整理/题库/真题索引.json
+资料整理/题库/真题索引.csv
+资料整理/题库/physics-records-v1*
+
+# Build outputs / local databases
+PhysicsPrep/data/*.db
+PhysicsPrep/.venv/
+fastgpt-physics-lab/env/.env
+fastgpt-physics-lab/data/diagnosis-sessions.json
+
+资料整理/工具依赖/
+fastgpt-physics-lab/third_party/
+.fastgpt-lab-notes/
+PhysicsPrep/data/
+

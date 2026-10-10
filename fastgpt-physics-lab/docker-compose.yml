@@ -1,0 +1,388 @@
+# =============================================================================
+# fastgpt-physics-lab / docker-compose.yml
+# -----------------------------------------------------------------------------
+# 基于 FastGPT 官方 v4.17.0 部署模板定制（来源见 SOURCES.md）。
+# 上游模板: deploy/version/main/docker-compose.template.yml @ tag v4.17.1
+#           + deploy/templates/vector/pg.txt（向量库片段）
+#
+# 本文件的全部改动都是为了「与机器上其它项目完全隔离」：
+#   1. 删除所有 container_name  -> 由 Compose 自动生成 fastgpt-physics-lab-* 前缀名，
+#      不会与任何既有容器重名。
+#   2. 所有宿主机端口映射改为 127.0.0.1 绑定，不暴露到局域网/公网。
+#   3. 仅保留必要端口映射：
+#        3101 -> FastGPT Web (容器 3000)
+#        3102 -> Agent Sandbox Proxy (容器 1006)
+#      MinIO 9000/9001 默认不映射到宿主机（仅 Compose 私有网络内可见）。
+#   4. 所有路径挂载只使用本项目专属命名卷，不使用宿主机目录挂载，
+#      不挂载 Docker socket。
+#   5. 移除上游的 fastgpt-opensandbox-server / fastgpt-volume-manager：
+#      这两个服务会挂载 /var/run/docker.sock，属于高权限风险面，
+#      而本工作流（选择题诊断）并不需要 Agent 沙箱。
+#   6. 全部镜像使用明确版本号，不使用 latest。
+#
+# 启动：docker compose --env-file env/.env -p fastgpt-physics-lab up -d
+# 停止：docker compose --env-file env/.env -p fastgpt-physics-lab down
+# 切勿在本机上执行 docker system prune 等全局清理命令。
+# =============================================================================
+
+x-share-db-config: &x-share-db-config
+  MONGODB_URI: mongodb://${MONGO_ROOT_USERNAME:-fgphysics}:${MONGO_ROOT_PASSWORD:-fgphysics-mongo-pw}@fastgpt-mongo:27017/fastgpt?authSource=admin
+  DB_MAX_LINK: 100
+  REDIS_URL: redis://default:${REDIS_PASSWORD:-fgphysics-redis-pw}@fastgpt-redis:6379
+  STORAGE_VENDOR: minio
+  STORAGE_REGION: us-east-1
+  STORAGE_ACCESS_KEY_ID: ${MINIO_ROOT_USER:-fgphysics-minio}
+  STORAGE_SECRET_ACCESS_KEY: ${MINIO_ROOT_PASSWORD:-fgphysics-minio-pw}
+  STORAGE_PUBLIC_BUCKET: fastgpt-public
+  STORAGE_PRIVATE_BUCKET: fastgpt-private
+  STORAGE_DOWNLOAD_URL_MODE: short-proxy
+  STORAGE_S3_ENDPOINT: http://fastgpt-minio:9000
+  STORAGE_S3_FORCE_PATH_STYLE: "true"
+  STORAGE_S3_MAX_RETRIES: 3
+
+x-log-config: &x-log-config
+  LOG_ENABLE_CONSOLE: true
+  LOG_CONSOLE_LEVEL: info
+  LOG_ENABLE_OTEL: false
+  LOG_OTEL_LEVEL: info
+
+# 容器内若继承宿主机代理环境变量，会让 Compose 内部互访被代理劫持；
+# 这里显式把所有内部服务名加入 NO_PROXY。
+x-no-proxy-config: &x-no-proxy-config
+  NO_PROXY: localhost,127.0.0.1,::1,fastgpt-app,fastgpt-plugin,fastgpt-code-sandbox,fastgpt-agent-sandbox-proxy,fastgpt-minio,fastgpt-mongo,fastgpt-redis,fastgpt-vector,host.docker.internal
+  no_proxy: localhost,127.0.0.1,::1,fastgpt-app,fastgpt-plugin,fastgpt-code-sandbox,fastgpt-agent-sandbox-proxy,fastgpt-minio,fastgpt-mongo,fastgpt-redis,fastgpt-vector,host.docker.internal
+
+x-agent-sandbox-config: &x-agent-sandbox-config
+  # 本工作流不需要 Agent 沙箱：置空后 FastGPT 不会尝试拉起沙箱容器。
+  AGENT_SANDBOX_PROVIDER: ""
+  AGENT_SANDBOX_PROXY_SECRET: ${AGENT_SANDBOX_PROXY_SECRET:-fgphysics-sandbox-proxy-secret-32chars}
+  AGENT_SANDBOX_PROXY_URL: ws://127.0.0.1:${SANDBOX_PROXY_HOST_PORT:-3102}
+  AGENT_SANDBOX_PREVIEW_PROXY_URL: http://127.0.0.1:${SANDBOX_PROXY_HOST_PORT:-3102}
+
+x-vec-config: &x-vec-config
+  PG_URL: postgresql://${PG_VECTOR_USER:-fgphysics}:${PG_VECTOR_PASSWORD:-fgphysics-pg-pw}@fastgpt-vector:5432/postgres
+
+# 项目名写进文件本身：即使别人忘记加 -p 参数，容器/网络/数据卷也一定带
+# fastgpt-physics-lab_ 前缀，不会与机器上其它 Compose 项目互相干扰。
+name: fastgpt-physics-lab
+
+services:
+  # ---------------------------------------------------------------------------
+  # 向量库：pgvector（官方镜像 registry.cn-hangzhou.aliyuncs.com/fastgpt/pgvector:0.8.0-pg15）
+  # 仅私有网络，不映射宿主机端口。
+  # ---------------------------------------------------------------------------
+  fastgpt-vector:
+    image: registry.cn-hangzhou.aliyuncs.com/fastgpt/pgvector:0.8.0-pg15
+    restart: always
+    networks:
+      - data
+    environment:
+      POSTGRES_USER: ${PG_VECTOR_USER:-fgphysics}
+      POSTGRES_PASSWORD: ${PG_VECTOR_PASSWORD:-fgphysics-pg-pw}
+      POSTGRES_DB: postgres
+    volumes:
+      - fastgpt-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD', 'pg_isready', '-U', '${PG_VECTOR_USER:-fgphysics}', '-d', 'postgres']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    deploy:
+      resources:
+        limits:
+          memory: 1g
+
+  # ---------------------------------------------------------------------------
+  # MongoDB 5.0.32：必须启用副本集（FastGPT 使用事务）
+  # ---------------------------------------------------------------------------
+  fastgpt-mongo:
+    image: registry.cn-hangzhou.aliyuncs.com/fastgpt/mongo:5.0.32
+    restart: always
+    networks:
+      - data
+    # keyFile 是**必需**的：本项目同时开启了鉴权（MONGO_INITDB_ROOT_*）
+    # 与副本集（--replSet rs0），MongoDB 对该组合有硬性要求：
+    #   BadValue: security.keyFile is required when authorization is enabled
+    #             with replica sets
+    # 缺少 keyFile 时 mongod 会直接退出（实测：容器反复重启、退出码 2）。
+    #
+    # keyFile 由下面的 entrypoint 包装脚本在**启动 mongod 之前**创建并设好权限
+    # （400、属主 mongodb），这是必须的：
+    #   - keyFile 必须早于 mongod 进程存在；
+    #   - MongoDB 拒绝权限过宽的 keyFile，而直接绑定挂载的文件属主是宿主机 uid
+    #     （通常 root），镜像内 mongod 以 mongodb 运行，会不可读或权限过宽。
+    #
+    # 不使用 $$VAR 转义：实测本机 Compose 下 $$ 不会被折叠（见下方注释）。
+    command: mongod --replSet rs0 --keyFile /data/db/mongo-keyfile
+    entrypoint: ['/bin/bash', '/docker-entrypoint-wrapper/mongo-entrypoint.sh']
+    environment:
+      # MongoDB 官方入口脚本用它创建管理员账号
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_ROOT_USERNAME:-fgphysics}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD:-fgphysics-mongo-pw}
+      # 下面两个变量是给「容器内脚本」用的（副本集初始化脚本读取它们）。
+      # 注意：不要使用 $$VAR 转义写法。实测本机 Compose v5.6.0 下
+      # `docker compose config` 会把 $$ 原样保留，而 bash 中 $$ 是进程号，
+      # $$MONGO_ROOT_USERNAME 会展开成 "12345MONGO_ROOT_USERNAME"，导致认证用错账号。
+      # 本文件因此把脚本放进挂载文件（完全绕开 Compose 插值），
+      # healthcheck 则直接使用 ${...}（由 Compose 在解析期替换为真实值）。
+      MONGO_ROOT_USERNAME: ${MONGO_ROOT_USERNAME:-fgphysics}
+      MONGO_ROOT_PASSWORD: ${MONGO_ROOT_PASSWORD:-fgphysics-mongo-pw}
+    volumes:
+      - fastgpt-mongo:/data/db
+      # keyFile 准备脚本（含权限修正），通过覆盖 entrypoint 调用。
+      # 它最后会 exec 官方 /usr/local/bin/docker-entrypoint.sh，因此
+      # initdb.d 机制照常生效。
+      - ./scripts/mongo-entrypoint.sh:/docker-entrypoint-wrapper/mongo-entrypoint.sh:ro
+      # 副本集幂等自举脚本：每次容器启动都会执行（见脚本头部说明）。
+      # 不能只依赖 initdb.d——它仅在数据目录为空时运行一次，
+      # 而早期启动失败会让数据目录非空，导致副本集永远不被初始化。
+      - ./scripts/mongo-replset-bootstrap.sh:/docker-entrypoint-wrapper/mongo-replset-bootstrap.sh:ro
+      # 副本集初始化脚本走 MongoDB 官方镜像的 initdb.d 机制：
+      # 仅在首次初始化（数据目录为空）时执行一次，脚本内部也不需要自行启动 mongod。
+      # 放在挂载文件里是为了让内容完全绕开 Compose 的变量插值（见该文件头部说明）。
+      - ./scripts/mongo-replica-init.sh:/docker-entrypoint-initdb.d/zz-replica-init.sh:ro
+    healthcheck:
+      # Compose 先把 ${...} 替换为 .env 中的值，再由容器内 shell 处理。
+      # 外层双引号保证密码含空格时不被拆词。不要用 $$（行为在不同版本不一致）。
+      test: ['CMD-SHELL', 'mongo -u "${MONGO_ROOT_USERNAME}" -p "${MONGO_ROOT_PASSWORD}" --authenticationDatabase admin --eval 1']
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    # 不使用自定义 entrypoint：保留 MongoDB 官方镜像默认入口，
+    # 它才会去执行 /docker-entrypoint-initdb.d/ 下的副本集初始化脚本。
+    # 密钥文件与副本集参数通过上面的 command: 传给 mongod。
+    deploy:
+      resources:
+        limits:
+          memory: 1g
+
+  # ---------------------------------------------------------------------------
+  # Redis 7.2：缓存 / 流式恢复
+  # ---------------------------------------------------------------------------
+  fastgpt-redis:
+    image: registry.cn-hangzhou.aliyuncs.com/fastgpt/redis:7.2-alpine
+    restart: always
+    networks:
+      - data
+    command: >
+      redis-server --requirepass ${REDIS_PASSWORD:-fgphysics-redis-pw}
+      --loglevel warning --maxclients 10000 --appendonly yes
+      --save 60 10 --maxmemory 512mb --maxmemory-policy noeviction
+    volumes:
+      - fastgpt-redis:/data
+    healthcheck:
+      test: ['CMD', 'redis-cli', '-a', '${REDIS_PASSWORD:-fgphysics-redis-pw}', 'ping']
+      interval: 10s
+      timeout: 3s
+      retries: 3
+      start_period: 30s
+    deploy:
+      resources:
+        limits:
+          memory: 768m
+
+  # ---------------------------------------------------------------------------
+  # MinIO：对象存储。宿主机不映射 9000/9001（内部访问走 fastgpt-minio:9000）。
+  # 如确需 Web 控制台，取消下面注释并确保只听回环。
+  # ---------------------------------------------------------------------------
+  fastgpt-minio:
+    image: registry.cn-hangzhou.aliyuncs.com/fastgpt/minio:RELEASE.2025-09-07T16-13-09Z
+    restart: always
+    networks:
+      - data
+    # ports:
+    #   - "${MINIO_CONSOLE_BIND:-127.0.0.1:9101}:9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-fgphysics-minio}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-fgphysics-minio-pw}
+    volumes:
+      - fastgpt-minio:/data
+    command: server /data --console-address ":9001"
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:9000/minio/health/live']
+      interval: 30s
+      timeout: 20s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          memory: 512m
+
+  # ---------------------------------------------------------------------------
+  # 系统插件服务：官方文档要求（工作流插件、系统工具）
+  # ---------------------------------------------------------------------------
+  fastgpt-plugin:
+    image: registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt-plugin:v1.1.3
+    restart: always
+    networks:
+      - data
+      - app
+    environment:
+      <<: [*x-share-db-config, *x-log-config, *x-no-proxy-config]
+      AUTH_TOKEN: ${PLUGIN_TOKEN:-fgphysics-plugin-token}
+      # plugin 在 production 下还会校验 CONNECTION_GATEWAY_AUTH_TOKEN，
+      # 要求与 AUTH_TOKEN 相同（≥32 字符、非弱值）。缺失会导致
+      # `Invalid environment variables` 并无限重启。这里显式传入。
+      CONNECTION_GATEWAY_AUTH_TOKEN: ${CONNECTION_GATEWAY_AUTH_TOKEN:-fgphysics-connection-gateway-token-32char-min}
+      SERVICE_REQUEST_MAX_CONTENT_LENGTH: 10
+      MAX_API_SIZE: 10
+      LOG_OTEL_SERVICE_NAME: fastgpt-plugin
+    depends_on:
+      fastgpt-mongo:
+        condition: service_healthy
+      fastgpt-minio:
+        condition: service_healthy
+    healthcheck:
+      test: ['CMD', 'curl', '-f', 'http://localhost:3000/health']
+      interval: 30s
+      timeout: 20s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          memory: 1g
+
+  # ---------------------------------------------------------------------------
+  # 代码沙箱：仅供工作流「代码运行」节点使用，本身不挂载 docker socket。
+  # ---------------------------------------------------------------------------
+  fastgpt-code-sandbox:
+    image: registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt-code-sandbox:v4.17.0
+    restart: always
+    networks:
+      - codesandbox
+    security_opt:
+      - no-new-privileges:true
+    environment:
+      <<: [*x-log-config, *x-no-proxy-config]
+      LOG_OTEL_SERVICE_NAME: fastgpt-code-sandbox
+      SANDBOX_TOKEN: ${CODE_SANDBOX_TOKEN:-fgphysics-code-sandbox-token}
+      SANDBOX_API_MAX_BODY_MB: 8
+      SANDBOX_MAX_TIMEOUT: 60000
+      SANDBOX_MAX_MEMORY_MB: 256
+      SANDBOX_MAX_OUTPUT_MB: 10
+      SANDBOX_POOL_SIZE: 2
+      CHECK_INTERNAL_IP: "true"
+      SANDBOX_REQUEST_MAX_COUNT: 30
+      SANDBOX_REQUEST_TIMEOUT: 60000
+      SANDBOX_REQUEST_MAX_RESPONSE_MB: 10
+      SANDBOX_REQUEST_MAX_BODY_MB: 5
+      SANDBOX_JS_ALLOWED_MODULES: lodash,dayjs,uuid,crypto-js,qs,url,querystring
+      SANDBOX_PYTHON_ALLOWED_MODULES: math,cmath,decimal,fractions,random,statistics,collections,array,heapq,bisect,copy,itertools,functools,operator,string,re,difflib,textwrap,datetime,time,json,csv,base64,hashlib,secrets,uuid,typing,dataclasses,pprint,numpy
+    healthcheck:
+      test: ['CMD', 'node', '-e', "fetch('http://localhost:3000/health').then((res) => { if (!res.ok) throw new Error(String(res.status)); })"]
+      interval: 30s
+      timeout: 20s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          memory: 768m
+
+  # ---------------------------------------------------------------------------
+  # FastGPT 主服务：唯一对外（仅回环）暴露的 Web 入口
+  # ---------------------------------------------------------------------------
+  fastgpt-app:
+    image: registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt:v4.17.0
+    restart: always
+    ports:
+      # 只绑定回环地址；宿主机端口默认 3101（3100 在本机被平台策略禁止绑定）
+      - "127.0.0.1:${FASTGPT_HOST_PORT:-3100}:3000"
+    networks:
+      - data
+      - app
+      - codesandbox
+    depends_on:
+      fastgpt-mongo:
+        condition: service_healthy
+      fastgpt-vector:
+        condition: service_healthy
+      fastgpt-redis:
+        condition: service_healthy
+      fastgpt-minio:
+        condition: service_healthy
+      fastgpt-code-sandbox:
+        condition: service_healthy
+      fastgpt-plugin:
+        condition: service_healthy
+    environment:
+      <<: [*x-share-db-config, *x-vec-config, *x-log-config, *x-no-proxy-config, *x-agent-sandbox-config]
+      HOSTNAME: 0.0.0.0
+      # 客户端访问地址（用于补全资源路径）
+      FE_DOMAIN: ${FE_DOMAIN:-http://127.0.0.1:3101}
+      ROOT_KEY: ${ROOT_KEY:-fgphysics-root-key-change-me-32chars}
+      DEFAULT_ROOT_PSW: ${DEFAULT_ROOT_PSW:-change-me-root-password}
+      DB_MAX_LINK: 20
+      SYNC_INDEX: true
+      SYSTEM_MAX_STRING_LENGTH_M: 100
+      FILE_TOKEN_KEY: ${FILE_TOKEN_KEY:-fgphysics-file-token-key}
+      AES256_SECRET_KEY: ${AES256_SECRET_KEY:-fgphysics-aes256-secret}
+      INVOKE_TOKEN_SECRET: ${INVOKE_TOKEN_SECRET:-fgphysics-invoke-token-secret-32chars}
+      MULTIPLE_DATA_TO_BASE64: "false"
+      PLUGIN_BASE_URL: http://fastgpt-plugin:3000
+      PLUGIN_TOKEN: ${PLUGIN_TOKEN:-fgphysics-plugin-token}
+      CODE_SANDBOX_URL: http://fastgpt-code-sandbox:3000
+      CODE_SANDBOX_TOKEN: ${CODE_SANDBOX_TOKEN:-fgphysics-code-sandbox-token}
+      LOG_OTEL_SERVICE_NAME: fastgpt-client
+      DATASET_PARSE_MAX_PROCESS: 4
+      VECTOR_MAX_PROCESS: 4
+      QA_MAX_PROCESS: 4
+      VLM_MAX_PROCESS: 4
+      HNSW_EF_SEARCH: 100
+      HNSW_MAX_SCAN_TUPLES: 100000
+      AGENT_ENGINE: fastAgent
+      # 安全相关：本项目仅本机访问，关闭 IP 限流与内网检查避免误伤本地调用
+      USE_IP_LIMIT: "false"
+      CHECK_INTERNAL_IP: "false"
+      AUTH_COOKIE_SECURE: "false"
+      # ---------------------------------------------------------------------
+      # AIPROXY_* 是 FastGPT v4.17 app 的**强制**环境变量：
+      #   AIPROXY_API_ENDPOINT: UrlSchema   （只校验是否为合法 URL）
+      #   AIPROXY_API_TOKEN:    <非空>
+      # 缺失会在启动时报 `Invalid environment variables` 并无限重启。
+      # 上游把它指向 fastgpt-aiproxy 服务；本项目**不部署 aiproxy**
+      # （它带一个额外的 PostgreSQL 与计费/渠道管理功能，对单机自用是多余组件）。
+      # 这里填一个语法合法、且确实存在的内部地址以满足启动校验。
+      # 后果：若将来要用 aiproxy 的渠道/计费功能，需要另行部署该服务并把
+      #       AIPROXY_API_ENDPOINT 指回 http://fastgpt-aiproxy:3000。
+      # 不影响：模型接入、工作流、知识库、交互节点 —— 这些都不经过 aiproxy。
+      # ---------------------------------------------------------------------
+      AIPROXY_API_ENDPOINT: ${AIPROXY_API_ENDPOINT:-http://fastgpt-agent-sandbox-proxy:1006}
+      AIPROXY_API_TOKEN: ${AIPROXY_API_TOKEN:-fgphysics-aiproxy-token-placeholder}
+    deploy:
+      resources:
+        limits:
+          memory: 2g
+
+  # ---------------------------------------------------------------------------
+  # Agent Sandbox Proxy：本地预留（AGENT_SANDBOX_PROVIDER 为空时不会被实际使用）
+  # ---------------------------------------------------------------------------
+  fastgpt-agent-sandbox-proxy:
+    image: registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt-agent-sandbox-proxy:v0.3.0
+    restart: always
+    networks:
+      - app
+    ports:
+      - "127.0.0.1:${SANDBOX_PROXY_HOST_PORT:-3102}:1006"
+    environment:
+      <<: [*x-no-proxy-config]
+      PORT: 1006
+      AGENT_SANDBOX_PROXY_SECRET: ${AGENT_SANDBOX_PROXY_SECRET:-fgphysics-sandbox-proxy-secret-32chars}
+      FASTGPT_APP_URL: http://fastgpt-app:3000
+      FASTGPT_APP_REQUEST_TIMEOUT_SECS: 60
+      RUST_LOG: info
+    deploy:
+      resources:
+        limits:
+          memory: 256m
+
+networks:
+  data:
+  app:
+  codesandbox:
+
+volumes:
+  fastgpt-pg:
+  fastgpt-mongo:
+  fastgpt-redis:
+  fastgpt-minio:

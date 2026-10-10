@@ -1,0 +1,6260 @@
+[
+  {
+    "id": "BK06-思考题-1-1",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-1",
+    "question_ocr": "1-1.一块金属在1100K下发出红色光辉，而在同样温度下，一块石英却不发光。\n这是为什么？",
+    "regions": [
+      {
+        "pdf_page": 86,
+        "book_page": 67,
+        "bbox": [
+          0,
+          644.0,
+          595.2755737304688,
+          689.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-1-p86.jpg",
+        "full_page": "../教材习题/BK06/page-0086.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-2",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-2",
+    "question_ocr": "1-2.猎户α和猎户β是猎户座中最亮的两颗星，看起来前者是橘红色，后者白中\n略带蓝色。它们的温度比太阳高还是低？",
+    "regions": [
+      {
+        "pdf_page": 86,
+        "book_page": 67,
+        "bbox": [
+          0,
+          685.3333333333334,
+          595.2755737304688,
+          729.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-2-p86.jpg",
+        "full_page": "../教材习题/BK06/page-0086.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-3",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-3",
+    "question_ocr": "1-3.天狼星是天空中最亮的星，温度大约是11000°C，你能设想它的颜色是怎样\n的吗？\n68\n第一章实验基础与基本原理",
+    "regions": [
+      {
+        "pdf_page": 86,
+        "book_page": 67,
+        "bbox": [
+          0,
+          725.3333333333334,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-3-p86.jpg",
+        "full_page": "../教材习题/BK06/page-0086.jpg"
+      },
+      {
+        "pdf_page": 87,
+        "book_page": 68,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          84.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-3-p87.jpg",
+        "full_page": "../教材习题/BK06/page-0087.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-4",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-4",
+    "question_ocr": "1-4.估计一下人体热辐射最强的波长。人眼不能感受红外线，你可设想一下，若\n能感受，会有怎样的后果。",
+    "regions": [
+      {
+        "pdf_page": 87,
+        "book_page": 68,
+        "bbox": [
+          0,
+          80.0,
+          595.2755737304688,
+          124.5
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-4-p87.jpg",
+        "full_page": "../教材习题/BK06/page-0087.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-5",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-5",
+    "question_ocr": "1-5. 如果计算一下不同泌\n的温度（～6000K)下比例最高。此外，太阳光谱中辐射能最大的波长与人眼最灵敏的波\n长大体相符。你认为这些都是偶然的巧合吗？其间有什么因果关系？",
+    "regions": [
+      {
+        "pdf_page": 87,
+        "book_page": 68,
+        "bbox": [
+          0,
+          120.5,
+          595.2755737304688,
+          180.66666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-5-p87.jpg",
+        "full_page": "../教材习题/BK06/page-0087.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-6",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-6",
+    "question_ocr": "1-6.在图1-12的光电伏安特性曲线中，当外电压稍微正于遏止电压-V。时，光\n电流为什么不垂直地上升到它的饱和值？",
+    "regions": [
+      {
+        "pdf_page": 87,
+        "book_page": 68,
+        "bbox": [
+          0,
+          176.66666666666666,
+          595.2755737304688,
+          220.66666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-6-p87.jpg",
+        "full_page": "../教材习题/BK06/page-0087.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-7",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-7",
+    "question_ocr": "1-7.为什么即使人射光是单色的，射出的光电子却有一定的速率分布？",
+    "regions": [
+      {
+        "pdf_page": 87,
+        "book_page": 68,
+        "bbox": [
+          0,
+          216.66666666666666,
+          595.2755737304688,
+          239.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-7-p87.jpg",
+        "full_page": "../教材习题/BK06/page-0087.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-8",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-8",
+    "question_ocr": "1-8.为什么光电测量对于光电极的表面性质非常敏感？",
+    "regions": [
+      {
+        "pdf_page": 87,
+        "book_page": 68,
+        "bbox": [
+          0,
+          235.33333333333334,
+          595.2755737304688,
+          259.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-8-p87.jpg",
+        "full_page": "../教材习题/BK06/page-0087.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-9",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-9",
+    "question_ocr": "1-9.今有如下一些材料（括号内是其功函数值）：钮(4.2eV)、钨（4.5eV)、铝\n(4.2eV)、钡(2.5eV)、锂（2.3eV)，如果要制造用于可见光的光电池，应选取哪种材\n料？",
+    "regions": [
+      {
+        "pdf_page": 87,
+        "book_page": 68,
+        "bbox": [
+          0,
+          255.33333333333331,
+          595.2755737304688,
+          319.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-9-p87.jpg",
+        "full_page": "../教材习题/BK06/page-0087.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-10",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-10",
+    "question_ocr": "1-10.可以用可见光来做康普顿散射实验吗？",
+    "regions": [
+      {
+        "pdf_page": 87,
+        "book_page": 68,
+        "bbox": [
+          0,
+          315.3333333333333,
+          595.2755737304688,
+          336.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-10-p87.jpg",
+        "full_page": "../教材习题/BK06/page-0087.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-11",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-11",
+    "question_ocr": "1-11.在光电效应中电子可以只吸收而不发射光子，在康普顿散射中的自由电子\n能这样吗？为什么？",
+    "regions": [
+      {
+        "pdf_page": 87,
+        "book_page": 68,
+        "bbox": [
+          0,
+          332.6666666666667,
+          595.2755737304688,
+          377.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-11-p87.jpg",
+        "full_page": "../教材习题/BK06/page-0087.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-12",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-12",
+    "question_ocr": "1-12.金属经典电子论认为，电子在晶格上散射是形成电阻的主要机制。按量子\n理论的观点，这看法对吗？试\nX\n估算一下，电子在晶格中满\n文\n将\n足布拉格条件发生衍射所需\n中子源一\n石墨\n→慢中子\n最低速度的数量级。\n快中子",
+    "regions": [
+      {
+        "pdf_page": 87,
+        "book_page": 68,
+        "bbox": [
+          0,
+          373.3333333333333,
+          595.2755737304688,
+          476.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-12-p87.jpg",
+        "full_page": "../教材习题/BK06/page-0087.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-13",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-13",
+    "question_ocr": "快中子\n1-13.在核裂变反应堆\nK\n里用石墨棒将中子慢化（见\n第五章4.3节）。其原理如本\n思考题1-13\n题图所示，中子源发出的中\n子进人石墨棒后，快速中子从侧面散射出来，只有速度低于某个极限速度的中子不被散\n射，从远端跑出。试用德布罗意波的观点加以解释。",
+    "regions": [
+      {
+        "pdf_page": 87,
+        "book_page": 68,
+        "bbox": [
+          0,
+          472.0,
+          595.2755737304688,
+          594.5
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-13-p87.jpg",
+        "full_page": "../教材习题/BK06/page-0087.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-14",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-14",
+    "question_ocr": "1-14. 气体中粒子热运动\n或热波长。试估算室温下大气中分子热波长的数量级，并与分子平均间距和分子平均自\n由程作一比较。由此你对气体的量子简并性能得到什么看法？",
+    "regions": [
+      {
+        "pdf_page": 87,
+        "book_page": 68,
+        "bbox": [
+          0,
+          590.5,
+          595.2755737304688,
+          652.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-14-p87.jpg",
+        "full_page": "../教材习题/BK06/page-0087.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-15",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-15",
+    "question_ocr": "1-15.计算质量40g、速率450m/s的子弹的德布罗意波长。",
+    "regions": [
+      {
+        "pdf_page": 87,
+        "book_page": 68,
+        "bbox": [
+          0,
+          648.6666666666666,
+          595.2755737304688,
+          675.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-15-p87.jpg",
+        "full_page": "../教材习题/BK06/page-0087.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-16",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-16",
+    "question_ocr": "1-16. 非相对论性粒子的\n明，群速（即波包的速度）就等于粒子本身的速度。",
+    "regions": [
+      {
+        "pdf_page": 87,
+        "book_page": 68,
+        "bbox": [
+          0,
+          671.0,
+          595.2755737304688,
+          712.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-16-p87.jpg",
+        "full_page": "../教材习题/BK06/page-0087.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-17",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-17",
+    "question_ocr": "1-17．如本题图，一束单色光射在半反射分束器后，一半能流反射到光电池1上，\n另一半能流透射到光电池2上。令两光电池的截止频率皆为vo，且v<v。<v/2.现在\n设想我们利用这一装置做微弱光流实验，即光源如此之弱，同时只有一个光子通过仪器\n思考题\n69\n到达光电池。试问：\n光电池1\n（1）到达每个光电池的光子能量是多\n狭缝\n少（hv还是hv/2）？频率是v还是v/2？\n半反射镜\n（2）如果把图中的光电池换为反射镜，\n光\n以组成一台迈克耳孙干涉仪，仍让光子一个\n电\n一\n池\n个地通过仪器，在照相底版上能否记录到干\n2\n涉条纹？",
+    "regions": [
+      {
+        "pdf_page": 87,
+        "book_page": 68,
+        "bbox": [
+          0,
+          708.6666666666666,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-17-p87.jpg",
+        "full_page": "../教材习题/BK06/page-0087.jpg"
+      },
+      {
+        "pdf_page": 88,
+        "book_page": 69,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          214.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-17-p88.jpg",
+        "full_page": "../教材习题/BK06/page-0088.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-18",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-18",
+    "question_ocr": "1-18.设想用杨氏双缝装置做微弱光\n照相底版\n流干涉实验，即光源如此之弱，同时只有一\n个光子通过仪器到达接收屏。如果我们又想\n思考题1-17\n知道每个光子是从哪条缝通过的，又不干扰\n该光子的动量，可以采用一对正交的偏振片来做哪条路检测器，每缝后各置一片，从最\n后接收到光子的偏振方向就可知道它的来路。在此装置的长时间记录中我们可以看到\n干涉条纹吗？",
+    "regions": [
+      {
+        "pdf_page": 88,
+        "book_page": 69,
+        "bbox": [
+          0,
+          210.0,
+          595.2755737304688,
+          342.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-18-p88.jpg",
+        "full_page": "../教材习题/BK06/page-0088.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-19",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-19",
+    "question_ocr": "1-19.试从海森伯不确定度关系的角度来发掘康普顿波长的物理意义：如果电子\n的活动范围局限于康普顿波长的限度以内，它的动量不确定度是相对论性的，还是非相\n对论性的？你知道吗，康普顿波长与原子或原子核的线度相比敦大敦小？",
+    "regions": [
+      {
+        "pdf_page": 88,
+        "book_page": 69,
+        "bbox": [
+          0,
+          338.6666666666667,
+          595.2755737304688,
+          394.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-19-p88.jpg",
+        "full_page": "../教材习题/BK06/page-0088.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-20",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-20",
+    "question_ocr": "1-20.从海森伯不确定度关系看，原子中的电子运动是相对论性的，还是非相对\n论性的？原子核里的质子和中子呢？",
+    "regions": [
+      {
+        "pdf_page": 88,
+        "book_page": 69,
+        "bbox": [
+          0,
+          390.0,
+          595.2755737304688,
+          428.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-20-p88.jpg",
+        "full_page": "../教材习题/BK06/page-0088.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-21",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-21",
+    "question_ocr": "1-21.试用海森伯不确定度关系说明：（1）在原子中电子轨道的概念是没有意义\n的；（2）汤姆孙用阴极射线测电子的荷质比时，电子的轨道概念还可以是有意义的。（阴\n极射线中电子束截面的线度10m，加速电子的电压10V.）",
+    "regions": [
+      {
+        "pdf_page": 88,
+        "book_page": 69,
+        "bbox": [
+          0,
+          424.0,
+          595.2755737304688,
+          478.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-21-p88.jpg",
+        "full_page": "../教材习题/BK06/page-0088.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-22",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-22",
+    "question_ocr": "1-22.威耳孙云室是用一串小雾滴来显示带电粒子的径迹的。雾滴的线度为um\n数量级，所观测电子的能量至少多少eV才有意义？",
+    "regions": [
+      {
+        "pdf_page": 88,
+        "book_page": 69,
+        "bbox": [
+          0,
+          474.6666666666667,
+          595.2755737304688,
+          512.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-22-p88.jpg",
+        "full_page": "../教材习题/BK06/page-0088.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-23",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-23",
+    "question_ocr": "1-23.在经典物理中一个矢量α与自身的矢积恒为0：\naxa=0,\n量子力学中这一性质仍普遍成立吗？试就a=r，p，i（=rxp)三种情况考虑此问题。",
+    "regions": [
+      {
+        "pdf_page": 88,
+        "book_page": 69,
+        "bbox": [
+          0,
+          508.66666666666663,
+          595.2755737304688,
+          564.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-23-p88.jpg",
+        "full_page": "../教材习题/BK06/page-0088.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-24",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-24",
+    "question_ocr": "1-24.数学中有个大家熟悉的恒等式\n(a+b)(a-b)=a²-b²,\n在量子力学中a、b成为算符a和6，上式仍普遍成立吗？",
+    "regions": [
+      {
+        "pdf_page": 88,
+        "book_page": 69,
+        "bbox": [
+          0,
+          560.0,
+          595.2755737304688,
+          614.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-24-p88.jpg",
+        "full_page": "../教材习题/BK06/page-0088.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-25",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-25",
+    "question_ocr": "1-25.在5.3节里证明了轨道磁量子数m为整数，从而绕z轴旋转一周时，波函数\n的相位改变2π，没有物理效果。但是应注意到，在那里曾用到一个条件，即m=0的本征\n值是可能的。然而这一条对于自旋角动量不成立，请设想一下，绕2轴旋转一周时，自旋\n的波函数相位改变多少？有没有物理效果？",
+    "regions": [
+      {
+        "pdf_page": 88,
+        "book_page": 69,
+        "bbox": [
+          0,
+          610.6666666666666,
+          595.2755737304688,
+          682.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-25-p88.jpg",
+        "full_page": "../教材习题/BK06/page-0088.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-26",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-26",
+    "question_ocr": "1-26.仿照图1-28画出自旋1/2的空间量子化图。这时自旋角动量矢量与2轴\n间的夹角为多少？",
+    "regions": [
+      {
+        "pdf_page": 88,
+        "book_page": 69,
+        "bbox": [
+          0,
+          678.6666666666666,
+          595.2755737304688,
+          717.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-26-p88.jpg",
+        "full_page": "../教材习题/BK06/page-0088.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-27",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-27",
+    "question_ocr": "1-27.对于自旋为1的粒子，自旋沿任何方向分量的本征值皆为+1、0、-1.对于\n任何两个相互垂直的方向（譬如x和y)，在第一个方向自旋分量的本征态中测量第二个\n方向自旋分量时，获得它的各个本征值的概率列于下表（见习题1－39)：\n70\n第一章实验基础与基本原理\n第一方向x\n+1\n0\n-1\n第二方向y\n+1\n0\n-1\n+1\n0\n-1\n+1\n0\n-1\n概率\n1/4\n1/2\n1/4\n1/2\n0\n1/2\n1/4\n1/2\n1/4\n试问：\n（1）若先在x方向测得自旋分量为+1，接着又在y方向测得自旋分量为-1，再接着\n回过来在x方向测量自旋分量，得到数值为+1的概率是多少？\n（2）若先在c方向测得自旋分量为0，接着又在y方向测得自旋分量为-1，再接着\n回过来在x方向测量自旋分量，得到数值为+1的概率是多少？\n（3）若先在x测得自旋分量为-1，接着又在?方向测得自旋分量为-1，再接着回过\n来在c方向测量自旋分量，得到数值为+1的概率是多少？",
+    "regions": [
+      {
+        "pdf_page": 88,
+        "book_page": 69,
+        "bbox": [
+          0,
+          713.3333333333334,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-27-p88.jpg",
+        "full_page": "../教材习题/BK06/page-0088.jpg"
+      },
+      {
+        "pdf_page": 89,
+        "book_page": 70,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          242.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-27-p89.jpg",
+        "full_page": "../教材习题/BK06/page-0089.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-28",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-28",
+    "question_ocr": "1-28.上题中测量粒子\n自旋分量的装置，可设计如本\n题图a，它相当于三个施特恩-\n格拉赫装置串联，其中两端两\n对磁极的长度和极性相同，中\n间一对磁极长度大一倍，极性\na\n相反。令粒子束相继通过这三\nb\n对磁极产生的高梯度磁场。自\n旋为1的未极化粒子束通过第\n一对磁极时，按自旋分量的不\n同分成+1、0、-1三股。这三股\n发散的原子束通过第二对磁极\n时轨道曲率反转，通过第三对\n磁极后轨道曲率再反转，汇集\n起来，复归为一股。如果粒子束\n中缺哪个自旋极化分量，在中\n思考题1-28\n间区域里就不出现那一股。以\n上装置可抽象成本题图b所示的平面示意图，磁场梯度的方向平行于此平面。\n如本题图c所示，将三个上述测量装置串联起来，装置1、3的磁场梯度在。方向，\n装置2的磁场梯度在y方向。当粒子束在装置1内分成三股时，将自旋分量为0和-1的\n两股遮挡掉，只让自旋分量为+1的一股通过。在装置通过3内将自旋分量为0和+1的\n两股遮挡掉。下面分两种情况讨论：\n(1）在装置2内将自旋分量为±1的两股遮挡掉（见图c中灰色挡板)。通过装置1\n的粒子还能通过装置3的概率有多少？\n(2）将图c中灰色挡板拆除，通过装置1的粒子还能通过装置3的概率有多少？",
+    "regions": [
+      {
+        "pdf_page": 89,
+        "book_page": 70,
+        "bbox": [
+          0,
+          238.0,
+          595.2755737304688,
+          646.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-28-p89.jpg",
+        "full_page": "../教材习题/BK06/page-0089.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-29",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-29",
+    "question_ocr": "1-29.仿效8.4节求泡利矩阵\n的方法，推导9.3节中j=1的角动量分\n晶体\n中子源\n量矩阵表达式(1.149)。",
+    "regions": [
+      {
+        "pdf_page": 89,
+        "book_page": 70,
+        "bbox": [
+          0,
+          642.6666666666666,
+          595.2755737304688,
+          703.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-29-p89.jpg",
+        "full_page": "../教材习题/BK06/page-0089.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-30",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-30",
+    "question_ocr": "中子\n1-30.如本题图，非单能中子束\n计数器\n在单晶上散射会生成劳厄相，即在满\n思考题1-30\n足布拉格条件的一些方向上可以探测\n思考题\n71\n到衍射主极强。但有时出现例外，若组成晶体的原子具有自旋，往往除尖锐的衍射峰之\n外还有一个接近各向同性的散射本底。你能理解这是什么原因吗？",
+    "regions": [
+      {
+        "pdf_page": 89,
+        "book_page": 70,
+        "bbox": [
+          0,
+          699.3333333333334,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-30-p89.jpg",
+        "full_page": "../教材习题/BK06/page-0089.jpg"
+      },
+      {
+        "pdf_page": 90,
+        "book_page": 71,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          122.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-30-p90.jpg",
+        "full_page": "../教材习题/BK06/page-0090.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-31",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-31",
+    "question_ocr": "1-31.在上题中，你能知道劳厄相是中子在晶体中哪个原子上散射的结果吗？我\n们知道，中子的自旋为1/2。假设晶体中每个原子的自旋也是1/2，且原来的方向一致向\n上。如果我们发现，一个自旋向下的中子被散射后自旋方向变为向上，这时你能知道它\n是被哪个原子散射的吗？你能否想象，这个中子朝各方向散射的概率是怎样分布的？",
+    "regions": [
+      {
+        "pdf_page": 90,
+        "book_page": 71,
+        "bbox": [
+          0,
+          118.0,
+          595.2755737304688,
+          200.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-31-p90.jpg",
+        "full_page": "../教材习题/BK06/page-0090.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-32",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-32",
+    "question_ocr": "1-32.算符和态矢运算的代数关系不因表象而异。下表给出轨道角量子数l=1的\n3个本征矢和角动量算符的两种表示：球坐标表示和矩阵表示。\n(1\nIp+)\n√2\n0\n0\n/po)\npo=-R(r)cos0\n1\nR(r)sin0e-\n|p->\np-=\n0\n√2\n？\n0\n0\n0\n0\n0\n？\ni( sin\ne\n+cotAcosp\na0\n？\n0\ni(- cos40\ne\n+cotosin\n0\n0\n+icotθ\n方\n0\n0\n-e-ie\n-icoto\nsin²0d\n试用这两种表示验算下列关系式：\n(1)lp-)=√2lpo)\n(2)1p0)=√2lp+)\n(3)p+)=0\n72\n第一章实验基础与基本原理\n？\np+)=√2|p0>\n(5）|p0>=√2|p-)\np-)=0",
+    "regions": [
+      {
+        "pdf_page": 90,
+        "book_page": 71,
+        "bbox": [
+          0,
+          196.0,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-32-p90.jpg",
+        "full_page": "../教材习题/BK06/page-0090.jpg"
+      },
+      {
+        "pdf_page": 91,
+        "book_page": 72,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          120.66666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-32-p91.jpg",
+        "full_page": "../教材习题/BK06/page-0091.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-33",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-33",
+    "question_ocr": "1-33.光的受激发射自发发射与光子是玻色子有什么关系？",
+    "regions": [
+      {
+        "pdf_page": 91,
+        "book_page": 72,
+        "bbox": [
+          0,
+          116.66666666666667,
+          595.2755737304688,
+          138.66666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-33-p91.jpg",
+        "full_page": "../教材习题/BK06/page-0091.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-1-34",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "1-34",
+    "question_ocr": "1-34.试用矩阵式(1.174)验算aa=n，aat=n+1.\n习题",
+    "regions": [
+      {
+        "pdf_page": 91,
+        "book_page": 72,
+        "bbox": [
+          0,
+          134.66666666666666,
+          595.2755737304688,
+          216.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-思考题-1-34-p91.jpg",
+        "full_page": "../教材习题/BK06/page-0091.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-1",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-1",
+    "question_ocr": "1-1.用（1.15)式导出斯特藩-玻耳兹曼定律（1.16)式和维恩位移定律（1.17)式。",
+    "regions": [
+      {
+        "pdf_page": 91,
+        "book_page": 72,
+        "bbox": [
+          0,
+          212.0,
+          595.2755737304688,
+          233.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-1-p91.jpg",
+        "full_page": "../教材习题/BK06/page-0091.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-2",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-2",
+    "question_ocr": "1-2.太阳常量（太阳在单位时间内垂直照射在地球表面单位面积上的能量）为\n1.94cal（cm²·min），日地距离约为1.50x10*km，太阳的角半径为0.00465rad，用这\n些数据来估算一下太阳的温度。",
+    "regions": [
+      {
+        "pdf_page": 91,
+        "book_page": 72,
+        "bbox": [
+          0,
+          229.33333333333334,
+          595.2755737304688,
+          289.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-2-p91.jpg",
+        "full_page": "../教材习题/BK06/page-0091.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-3",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-3",
+    "question_ocr": "1-3.设空腔处于某温度时入max=650.0nm，如果腔壁的温度增加，以致总辐射加\n倍时，入mx变为多少？",
+    "regions": [
+      {
+        "pdf_page": 91,
+        "book_page": 72,
+        "bbox": [
+          0,
+          285.3333333333333,
+          595.2755737304688,
+          325.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-3-p91.jpg",
+        "full_page": "../教材习题/BK06/page-0091.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-4",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-4",
+    "question_ocr": "1-4.热核爆炸中火球的瞬时温度为10'K，求\n（1）辐射最强的波长；\n（2）这种波长的能量子hv是多少？",
+    "regions": [
+      {
+        "pdf_page": 91,
+        "book_page": 72,
+        "bbox": [
+          0,
+          321.3333333333333,
+          595.2755737304688,
+          381.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-4-p91.jpg",
+        "full_page": "../教材习题/BK06/page-0091.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-5",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-5",
+    "question_ocr": "1-5.利用普朗克公式证明斯特藩-玻耳兹曼常量\n=2πk/15c²h².\n[提示：=]\ne-115'",
+    "regions": [
+      {
+        "pdf_page": 91,
+        "book_page": 72,
+        "bbox": [
+          0,
+          377.3333333333333,
+          595.2755737304688,
+          445.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-5-p91.jpg",
+        "full_page": "../教材习题/BK06/page-0091.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-6",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-6",
+    "question_ocr": "1-6.利用普朗克公式证明维恩常量\nb=0.2014hc/kB\n[提示：e+x/5=1的解为x=4.965.]",
+    "regions": [
+      {
+        "pdf_page": 91,
+        "book_page": 72,
+        "bbox": [
+          0,
+          441.3333333333333,
+          595.2755737304688,
+          500.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-6-p91.jpg",
+        "full_page": "../教材习题/BK06/page-0091.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-7",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-7",
+    "question_ocr": "1-7.从钠中取去一个电子所需的能量为2.3eV.\n（1）钠是否会对入=680.0nm的橙黄色光产生光电效应？\n（2）从钠表面光电发射的截止波长是多少？",
+    "regions": [
+      {
+        "pdf_page": 91,
+        "book_page": 72,
+        "bbox": [
+          0,
+          496.6666666666667,
+          595.2755737304688,
+          554.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-7-p91.jpg",
+        "full_page": "../教材习题/BK06/page-0091.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-8",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-8",
+    "question_ocr": "1-8.波长为200.0nm的光照到铝的表面，对铝来说，移去一个电子所需的能量为\n4.2eV，试问：\n（1）出射最快的光电子能量是多少？\n（2）遏止电压为多少？\n（3）铝的截止波长为多少？\n（4）如果入射光强度为2.0W/m²，单位时间打到单位面积上的平均光电子数为多\n少？",
+    "regions": [
+      {
+        "pdf_page": 91,
+        "book_page": 72,
+        "bbox": [
+          0,
+          550.0,
+          595.2755737304688,
+          683.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-8-p91.jpg",
+        "full_page": "../教材习题/BK06/page-0091.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-9",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-9",
+    "question_ocr": "1-9.某光电阴极对于入=491.0nm的光，发射光电子的遏止电压为0.71V.当改\n变人射光波长时，其遏止电压变为1.43V，问此时人射光的波长为多少？",
+    "regions": [
+      {
+        "pdf_page": 91,
+        "book_page": 72,
+        "bbox": [
+          0,
+          679.3333333333334,
+          595.2755737304688,
+          718.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-9-p91.jpg",
+        "full_page": "../教材习题/BK06/page-0091.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-10",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-10",
+    "question_ocr": "1-10.有光照射到照相底版上，如果在版上分解出AgBr分子，则光就被记录下\n来。分解一个AgBr分子所需的最小能量约为10-\"J，求截止波长（即大于该波长的光子\n将不被记录)。\n习题\n73",
+    "regions": [
+      {
+        "pdf_page": 91,
+        "book_page": 72,
+        "bbox": [
+          0,
+          714.6666666666666,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-10-p91.jpg",
+        "full_page": "../教材习题/BK06/page-0091.jpg"
+      },
+      {
+        "pdf_page": 92,
+        "book_page": 73,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          85.33333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-10-p92.jpg",
+        "full_page": "../教材习题/BK06/page-0092.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-11",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-11",
+    "question_ocr": "1-11.一个空腔辐射器处于6000K的温度，它壁上小圆孔的直径是0.10mm，计\n算每秒从此孔发出的波长在550.0～551.0nm之间的光子数。",
+    "regions": [
+      {
+        "pdf_page": 92,
+        "book_page": 73,
+        "bbox": [
+          0,
+          81.33333333333333,
+          595.2755737304688,
+          122.66666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-11-p92.jpg",
+        "full_page": "../教材习题/BK06/page-0092.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-12",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-12",
+    "question_ocr": "1-12.太阳光以每秒1340W/m²的辐射率照射到垂直于人射线的地球表面上，假\n如人射光的平均波长为550.0nm，求每秒每平方米上的光子数。",
+    "regions": [
+      {
+        "pdf_page": 92,
+        "book_page": 73,
+        "bbox": [
+          0,
+          118.66666666666667,
+          595.2755737304688,
+          159.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-12-p92.jpg",
+        "full_page": "../教材习题/BK06/page-0092.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-13",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-13",
+    "question_ocr": "1-13.在理想条件下正常人的眼晴接收到550.0nm的可见光时，每秒光子数达\n100个时就有光感，与此相当的功率是多少？",
+    "regions": [
+      {
+        "pdf_page": 92,
+        "book_page": 73,
+        "bbox": [
+          0,
+          155.33333333333334,
+          595.2755737304688,
+          196.66666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-13-p92.jpg",
+        "full_page": "../教材习题/BK06/page-0092.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-14",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-14",
+    "question_ocr": "1-14.单色电磁波的强度是Nhv，其中N是单位时间通过单位面积的光子数。照\n射在全反射镜面上的辐射压强是多少？",
+    "regions": [
+      {
+        "pdf_page": 92,
+        "book_page": 73,
+        "bbox": [
+          0,
+          192.66666666666666,
+          595.2755737304688,
+          232.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-14-p92.jpg",
+        "full_page": "../教材习题/BK06/page-0092.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-15",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-15",
+    "question_ocr": "1-15.试由（1.37)式、（1.38）式推导出康普顿散射的角分布公式（1.39）。",
+    "regions": [
+      {
+        "pdf_page": 92,
+        "book_page": 73,
+        "bbox": [
+          0,
+          228.0,
+          595.2755737304688,
+          248.66666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-15-p92.jpg",
+        "full_page": "../教材习题/BK06/page-0092.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-16",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-16",
+    "question_ocr": "1-16.试证明，康普顿散射中反冲电子的动能E和人射光子能量E之间的关系\n为\nE_\n2Ac sin²(0/2)\nE=+△+2入csin²（θ/2）\n其中入c=h/mc为康普顿波长，0角见图1-17.",
+    "regions": [
+      {
+        "pdf_page": 92,
+        "book_page": 73,
+        "bbox": [
+          0,
+          244.66666666666666,
+          595.2755737304688,
+          321.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-16-p92.jpg",
+        "full_page": "../教材习题/BK06/page-0092.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-17",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-17",
+    "question_ocr": "1-17.今有：①波长为0.100nm的X射线束；②从3Cs样品得到的波长为\n0.0188nm的y射线束，用两者分别去与自由电子碰撞，从与人射方向成90°角的方向去\n观察散射线。问每种情况的\n（1）康普顿波长偏移是多少？\n（2）给予反冲电子的动能为多少？\n（3）人射光在碰撞时失去的能量占总能量的百分之几？",
+    "regions": [
+      {
+        "pdf_page": 92,
+        "book_page": 73,
+        "bbox": [
+          0,
+          317.3333333333333,
+          595.2755737304688,
+          431.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-17-p92.jpg",
+        "full_page": "../教材习题/BK06/page-0092.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-18",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-18",
+    "question_ocr": "1-18.按归一化条件\nI=xp（x）（x）\n求出(1.50)式中高斯型波函数的归一化因子A=（π/α)-/4.",
+    "regions": [
+      {
+        "pdf_page": 92,
+        "book_page": 73,
+        "bbox": [
+          0,
+          427.3333333333333,
+          595.2755737304688,
+          490.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-18-p92.jpg",
+        "full_page": "../教材习题/BK06/page-0092.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-19",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-19",
+    "question_ocr": "1-19.验算一下，(1.52)式中给出的p表象波函数C(p)也是归一化的，即\n[ C*(p)C(p)dp = 1.",
+    "regions": [
+      {
+        "pdf_page": 92,
+        "book_page": 73,
+        "bbox": [
+          0,
+          486.6666666666667,
+          595.2755737304688,
+          538.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-19-p92.jpg",
+        "full_page": "../教材习题/BK06/page-0092.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-20",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-20",
+    "question_ocr": "1-20.用(1.56)式\nx={4(x)x²4（x）dx\n验算一下(1.53)式的结果，即x²=1/2α.",
+    "regions": [
+      {
+        "pdf_page": 92,
+        "book_page": 73,
+        "bbox": [
+          0,
+          534.6666666666666,
+          595.2755737304688,
+          601.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-20-p92.jpg",
+        "full_page": "../教材习题/BK06/page-0092.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-21",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-21",
+    "question_ocr": "1-21.试在α、p两种表象中计算(1.54)式的结果,即(p-po）²=h²α/2.在α表\n象中\n(p-po)²=²(x)(p-po)²4（x)dx,\n式中p=-ihd/dx.在p表象中\n(p-po)²= { C*(p)(p-po)²C(p) dp.",
+    "regions": [
+      {
+        "pdf_page": 92,
+        "book_page": 73,
+        "bbox": [
+          0,
+          597.3333333333334,
+          595.2755737304688,
+          696.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-21-p92.jpg",
+        "full_page": "../教材习题/BK06/page-0092.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-22",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-22",
+    "question_ocr": "1-22.一个粒子自身的动量与位置变量之间有对易关系（1.67)式，但不同粒子之\n间的变量是对易的。故对于两个粒子1和2来说，有\n[p，x]=-ih8（ij=1,2），\n试证明算符-和p+p是对易的。\n74\n第一章实验基础与基本原理",
+    "regions": [
+      {
+        "pdf_page": 92,
+        "book_page": 73,
+        "bbox": [
+          0,
+          692.6666666666666,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-22-p92.jpg",
+        "full_page": "../教材习题/BK06/page-0092.jpg"
+      },
+      {
+        "pdf_page": 93,
+        "book_page": 74,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          83.33333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-22-p93.jpg",
+        "full_page": "../教材习题/BK06/page-0093.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-23",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-23",
+    "question_ocr": "1-23.试论证，在p表象中位矢r=ci+yj+2k对应下列算符：\nx→=in\ndp\ny→g=in\nr→r=ip\n即\napy\n2→2=in\ndp:",
+    "regions": [
+      {
+        "pdf_page": 93,
+        "book_page": 74,
+        "bbox": [
+          0,
+          79.33333333333333,
+          595.2755737304688,
+          185.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-23-p93.jpg",
+        "full_page": "../教材习题/BK06/page-0093.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-24",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-24",
+    "question_ocr": "1-24.计算对易关系[，p²].",
+    "regions": [
+      {
+        "pdf_page": 93,
+        "book_page": 74,
+        "bbox": [
+          0,
+          181.33333333333334,
+          595.2755737304688,
+          203.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-24-p93.jpg",
+        "full_page": "../教材习题/BK06/page-0093.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-25",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-25",
+    "question_ocr": "1-25.试证明\n[p，F(r)]=-iVF（r)，\n式中F(r)是r的任意函数。",
+    "regions": [
+      {
+        "pdf_page": 93,
+        "book_page": 74,
+        "bbox": [
+          0,
+          199.33333333333334,
+          595.2755737304688,
+          244.66666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-25-p93.jpg",
+        "full_page": "../教材习题/BK06/page-0093.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-26",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-26",
+    "question_ocr": "1-26.试证明\n[1,F(p)]=ihV,F(p),\n式中F(p)是p的任意函数。",
+    "regions": [
+      {
+        "pdf_page": 93,
+        "book_page": 74,
+        "bbox": [
+          0,
+          240.66666666666666,
+          595.2755737304688,
+          284.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-26-p93.jpg",
+        "full_page": "../教材习题/BK06/page-0093.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-27",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-27",
+    "question_ocr": "1-27.在经典力学中沿径矢r方向动量的分量为p,=p·或p,但在量子力学\n中p与r不对易，以上两表达式不等价。故在量子力学中p,的定义取它们的平均：\nD=(p+D)\n证明：（1）p,=-in(+→)；（2）[p，]=-in.",
+    "regions": [
+      {
+        "pdf_page": 93,
+        "book_page": 74,
+        "bbox": [
+          0,
+          280.6666666666667,
+          595.2755737304688,
+          395.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-27-p93.jpg",
+        "full_page": "../教材习题/BK06/page-0093.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-28",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-28",
+    "question_ocr": "1-28.逐步详细推导角动量算符的所有对易关系（1.77式和（1.78）式。",
+    "regions": [
+      {
+        "pdf_page": 93,
+        "book_page": 74,
+        "bbox": [
+          0,
+          391.3333333333333,
+          595.2755737304688,
+          411.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-28-p93.jpg",
+        "full_page": "../教材习题/BK06/page-0093.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-29",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-29",
+    "question_ocr": "1-29.试证明\n[1,]=0和[,p²]=0,\n式中1为轨道角动量算符。",
+    "regions": [
+      {
+        "pdf_page": 93,
+        "book_page": 74,
+        "bbox": [
+          0,
+          407.3333333333333,
+          595.2755737304688,
+          472.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-29-p93.jpg",
+        "full_page": "../教材习题/BK06/page-0093.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-30",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-30",
+    "question_ocr": "1-30.证明：\npxi+ixp=2inp.",
+    "regions": [
+      {
+        "pdf_page": 93,
+        "book_page": 74,
+        "bbox": [
+          0,
+          468.6666666666667,
+          595.2755737304688,
+          497.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-30-p93.jpg",
+        "full_page": "../教材习题/BK06/page-0093.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-31",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-31",
+    "question_ocr": "1-31.证明r.i=1.r=0和p·i=i·p=0.",
+    "regions": [
+      {
+        "pdf_page": 93,
+        "book_page": 74,
+        "bbox": [
+          0,
+          493.3333333333333,
+          595.2755737304688,
+          518.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-31-p93.jpg",
+        "full_page": "../教材习题/BK06/page-0093.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-32",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-32",
+    "question_ocr": "1-32.处在一般有心力场中粒子的哈密顿算符为\nA=\n+V（r)，\n2m\n其中第一项是粒子的动能，第二项是它在有心力场中的势能。试证明：轨道角动量与此\n哈密顿算符对易，从而是个守恒量。",
+    "regions": [
+      {
+        "pdf_page": 93,
+        "book_page": 74,
+        "bbox": [
+          0,
+          514.0,
+          595.2755737304688,
+          607.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-32-p93.jpg",
+        "full_page": "../教材习题/BK06/page-0093.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-33",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-33",
+    "question_ocr": "1-33.谐振子的哈密顿算符为\nH=\nK²\n2mP\n2\n1\n（p²+m²²x²),\n2\n2m\n式中=√k/m为谐振子的经典固有角频率。已知它的前三个本征态波函数为\n[4o（5)=Aet22,\n()=2A5et2,\n2()=2A(25²-1)et²2，\n式中=（mw/h)x.试确定归一化因子Ao、A和A，并计算能量的平均值\n75\nEn={(x)An（x)dx（n=0,1,2）.",
+    "regions": [
+      {
+        "pdf_page": 93,
+        "book_page": 74,
+        "bbox": [
+          0,
+          603.3333333333334,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-33-p93.jpg",
+        "full_page": "../教材习题/BK06/page-0093.jpg"
+      },
+      {
+        "pdf_page": 94,
+        "book_page": 75,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          101.33333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-33-p94.jpg",
+        "full_page": "../教材习题/BK06/page-0094.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-34",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-34",
+    "question_ocr": "1-34.在上题中动能和势能的平均值各占多少比例？",
+    "regions": [
+      {
+        "pdf_page": 94,
+        "book_page": 75,
+        "bbox": [
+          0,
+          97.33333333333333,
+          595.2755737304688,
+          122.66666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-34-p94.jpg",
+        "full_page": "../教材习题/BK06/page-0094.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-35",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-35",
+    "question_ocr": "1-35.如本题图，|>和）分别代表沿±45°方向振动\n的线偏振态，试将它们以|x>和|y）为基矢展开。",
+    "regions": [
+      {
+        "pdf_page": 94,
+        "book_page": 75,
+        "bbox": [
+          0,
+          118.66666666666667,
+          595.2755737304688,
+          166.66666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-35-p94.jpg",
+        "full_page": "../教材习题/BK06/page-0094.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-36",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-36",
+    "question_ocr": "1-36.接上题，反过来以|>和|>为基矢将|x和|y>\n展开。",
+    "regions": [
+      {
+        "pdf_page": 94,
+        "book_page": 75,
+        "bbox": [
+          0,
+          162.66666666666666,
+          595.2755737304688,
+          212.66666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-36-p94.jpg",
+        "full_page": "../教材习题/BK06/page-0094.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-37",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-37",
+    "question_ocr": "1-37.以|>和>为基矢将左右旋圆偏振态|L>和\n习题1-35\n|R>展开。",
+    "regions": [
+      {
+        "pdf_page": 94,
+        "book_page": 75,
+        "bbox": [
+          0,
+          208.66666666666666,
+          595.2755737304688,
+          254.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-37-p94.jpg",
+        "full_page": "../教材习题/BK06/page-0094.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-38",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-38",
+    "question_ocr": "1-38.已知电子自旋三个分量的本征矢为\n[la+)~(1),\n[le+>(),\n1-)()\n试以|>为基矢将|x±>展开。在|x>中测量自旋y分量可能获得哪些值，它们各自的\n概率是多少？平均值是多少？",
+    "regions": [
+      {
+        "pdf_page": 94,
+        "book_page": 75,
+        "bbox": [
+          0,
+          250.0,
+          595.2755737304688,
+          376.0
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-38-p94.jpg",
+        "full_page": "../教材习题/BK06/page-0094.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-39",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-39",
+    "question_ocr": "1-39.已知角量子数J=1的角动量的三个分量、J的本征矢为\n（+2\nx0)\n|y0)=\n试以|x±>和|x0>为基矢将|y±）和|y0）展开。在|y±）和|y0>中测量J分量可能获\n得哪些值，它们各自的概率是多少？平均值是多少？",
+    "regions": [
+      {
+        "pdf_page": 94,
+        "book_page": 75,
+        "bbox": [
+          0,
+          372.0,
+          595.2755737304688,
+          558.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-39-p94.jpg",
+        "full_page": "../教材习题/BK06/page-0094.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-40",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-40",
+    "question_ocr": "1-40.下列光子的量子态称为相干态（coherentstate）：\n|α)=e-α\n=0√n！\n式中|n）粒子数算符的本征态，α是一个常量。试证明：相干态是消灭算符a的本征\n态。此外，其本征值为多少？",
+    "regions": [
+      {
+        "pdf_page": 94,
+        "book_page": 75,
+        "bbox": [
+          0,
+          554.6666666666666,
+          595.2755737304688,
+          645.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-40-p94.jpg",
+        "full_page": "../教材习题/BK06/page-0094.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-41",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-41",
+    "question_ocr": "1-41.在某种玻色子的n表象中谐振子的哈密顿算符可以写成（见第三章2.4\n节）\nH=(aa+)ho,\n式中是谐振子的固有角频率，其本征值为多少？",
+    "regions": [
+      {
+        "pdf_page": 94,
+        "book_page": 75,
+        "bbox": [
+          0,
+          641.3333333333334,
+          595.2755737304688,
+          711.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-41-p94.jpg",
+        "full_page": "../教材习题/BK06/page-0094.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-1-42",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 1,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "1-42",
+    "question_ocr": "1-42.接上两题，求谐振子能量在相干态中的平均值。",
+    "regions": [
+      {
+        "pdf_page": 94,
+        "book_page": 75,
+        "bbox": [
+          0,
+          707.3333333333334,
+          595.2755737304688,
+          776.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C1-习题-1-42-p94.jpg",
+        "full_page": "../教材习题/BK06/page-0094.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-2-1",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 2,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "2-1",
+    "question_ocr": "2-1.在本章1.2节中讨论氨分子的等价双态时，令H=Ae，H2=Ae-（A是大\n于0的实数），我们将得到怎样的分裂能级，C，与C、C之间的关系（2.8）式应作何改\n动？",
+    "regions": [
+      {
+        "pdf_page": 141,
+        "book_page": 122,
+        "bbox": [
+          0,
+          527.3333333333334,
+          595.2755737304688,
+          582.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C2-思考题-2-1-p141.jpg",
+        "full_page": "../教材习题/BK06/page-0141.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-2-2",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 2,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "2-2",
+    "question_ocr": "2-2.氨分子翻转分裂的裂距在厘米波段，而苯分子的共振能在紫外波段，其间差\n几个数量级？这样大的差别是什么原因造成的？",
+    "regions": [
+      {
+        "pdf_page": 141,
+        "book_page": 122,
+        "bbox": [
+          0,
+          578.6666666666666,
+          595.2755737304688,
+          618.0
+        ],
+        "image": "../教材习题/BK06/BK06-C2-思考题-2-2-p141.jpg",
+        "full_page": "../教材习题/BK06/page-0141.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-2-3",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 2,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "2-3",
+    "question_ocr": "2-3.染料分子等价双态翻转分裂在可见光波段，导致对可见光的强烈共振吸收；\n但苯分子等价双态的共振分裂在紫外波段，却对相应的紫外线吸收很弱。这是为什么？",
+    "regions": [
+      {
+        "pdf_page": 141,
+        "book_page": 122,
+        "bbox": [
+          0,
+          614.0,
+          595.2755737304688,
+          651.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C2-思考题-2-3-p141.jpg",
+        "full_page": "../教材习题/BK06/page-0141.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-2-4",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 2,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "2-4",
+    "question_ocr": "2-4.若在苯分子里相邻两个氢原子被溴原子所取代（见本题图），就成为正二溴\n苯。与苯分子不同，正二溴苯的环状分子中单键、双键对调时并不完全等价，因为的两\n个溴原子之间在一种情况下是单键，在另一种情况下是双键。不等价就意味着两种情\n况的能量不等。我们设|1）代表能量较高的态，|2>代表能量较低的态，两态之间有一\n定的概率相互过渡，它们都不是定态。设|-）、|+>分别是能量高、低两个定态，它们都\n可按原态矢|1>和|2>展开。你猜想，概率幅<1|+>和(2|+>中哪个模量大？（1|->和\n习\n题\n123\n（2|->呢？此外，能量E_比E，较低\n|1>\nH\nH\n2\n还是更高？E，与E比呢？（可用习\n题2-2来印证。）\nB1",
+    "regions": [
+      {
+        "pdf_page": 141,
+        "book_page": 122,
+        "bbox": [
+          0,
+          647.3333333333334,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C2-思考题-2-4-p141.jpg",
+        "full_page": "../教材习题/BK06/page-0141.jpg"
+      },
+      {
+        "pdf_page": 142,
+        "book_page": 123,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          126.0
+        ],
+        "image": "../教材习题/BK06/BK06-C2-思考题-2-4-p142.jpg",
+        "full_page": "../教材习题/BK06/page-0142.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-2-5",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 2,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "2-5",
+    "question_ocr": "B1\n2-5.设氨分子激射器中分子\n束的速率就是室温的热速率，谐振\n腔长12cm，试估算一下从它射出受\nBr\nH\nB\n激辐射的谱带宽度，并与共振频率\nH\nH\n@作比较。",
+    "regions": [
+      {
+        "pdf_page": 142,
+        "book_page": 123,
+        "bbox": [
+          0,
+          122.0,
+          595.2755737304688,
+          216.0
+        ],
+        "image": "../教材习题/BK06/BK06-C2-思考题-2-5-p142.jpg",
+        "full_page": "../教材习题/BK06/page-0142.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-2-6",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 2,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "2-6",
+    "question_ocr": "2-6.核磁共振的共振频率是\n思考题2-4\n质子在外磁场中的拉莫尔频率@=2μ3/h，化学位移效应表明，此频率会受到质子周\n围化学环境的影响。你能否设想，上式中哪个物理量会受到影响？",
+    "regions": [
+      {
+        "pdf_page": 142,
+        "book_page": 123,
+        "bbox": [
+          0,
+          212.0,
+          595.2755737304688,
+          268.0
+        ],
+        "image": "../教材习题/BK06/BK06-C2-思考题-2-6-p142.jpg",
+        "full_page": "../教材习题/BK06/page-0142.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-2-7",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 2,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "2-7",
+    "question_ocr": "2-7.有时需要用共振激光把一个处在低能级的双态系统部分地激发到高能级上\n去。如果希望系统处在上能级的概率为1/4、1/2或3/4，激光作用的时间应分别为多少\n个拉比周期T？\n习\n题",
+    "regions": [
+      {
+        "pdf_page": 142,
+        "book_page": 123,
+        "bbox": [
+          0,
+          264.0,
+          595.2755737304688,
+          380.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C2-思考题-2-7-p142.jpg",
+        "full_page": "../教材习题/BK06/page-0142.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-2-1",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 2,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "2-1",
+    "question_ocr": "2-1.用正规求本征值的办法求1.2节中等价双态系统哈密顿矩阵\nH=\nE\n-A\nE\n的本征值和本征矢，以及使之对角化的么正变换。",
+    "regions": [
+      {
+        "pdf_page": 142,
+        "book_page": 123,
+        "bbox": [
+          0,
+          376.6666666666667,
+          595.2755737304688,
+          450.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C2-习题-2-1-p142.jpg",
+        "full_page": "../教材习题/BK06/page-0142.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-2-2",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 2,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "2-2",
+    "question_ocr": "2-2.如果双态不等价，即H≠H2，则哈密顿矩阵可写成\nE\nH\nA\nE2\n取（E+E2）/2=E。，（E-E2)/2=√3A，两定态能级间隔比原来加大还是减少?定态态\n矢|±）与原态矢|1>、|2>之间的关系若何？任意态矢在新表象中的概率幅C，与在旧表\n象中的概率幅C、C之间的关系若何？",
+    "regions": [
+      {
+        "pdf_page": 142,
+        "book_page": 123,
+        "bbox": [
+          0,
+          446.6666666666667,
+          595.2755737304688,
+          564.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C2-习题-2-2-p142.jpg",
+        "full_page": "../教材习题/BK06/page-0142.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-2-3",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 2,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "2-3",
+    "question_ocr": "2-3.在4.1节里先后曾用过三套不同的正交归一基矢来描述氨分子的量子态：\n电场\n态基\n描述\n等\n非能量本征态μ向上\n价\n[1)\n双\n[2)\nμ向下\n态\n=0\n定\n丨+>\nE。-A（下能级）\n本征值\n态\n|->\nE。+A（上能级）\n[E=Eo-√A²+（μe)²\n定\n本征值\n8向上\n态\n|Ⅱ>\nE=Eo+√A²+(μE）²\n124\n第二章双态系统\n（1）将|I）和|Ⅱ）按|1）和|2>展开，计算一下被图2-12b中选态装置分离出来\n<1|Ⅱ>\n，并考察μE/A→和μE/A→0时的\n的|Ⅱ）态内两分量概率幅模方之比\n<2∣>\n极限。\n（2）将|I>和|Ⅱ）按|+）和|-）展开，计算一下被图2-12b中选态装置分离出来\n的|Ⅱ）态内两分量概率幅模方之比\n（-|Ⅱ>\n极限。从该选态装置的静电场中飞出来以后的氨分子处在什么量子态？",
+    "regions": [
+      {
+        "pdf_page": 142,
+        "book_page": 123,
+        "bbox": [
+          0,
+          560.6666666666666,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C2-习题-2-3-p142.jpg",
+        "full_page": "../教材习题/BK06/page-0142.jpg"
+      },
+      {
+        "pdf_page": 143,
+        "book_page": 124,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          204.66666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C2-习题-2-3-p143.jpg",
+        "full_page": "../教材习题/BK06/page-0143.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-2-4",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 2,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "2-4",
+    "question_ocr": "2-4.在5.4节中研究磁共振时，我们假定外加的交变磁场在。方向的线偏振场。\n试将它改为旋转磁场：\nB\n左旋：\ncoswt,\nB\nsinwt;\n√2\n√2\n右旋：\n男\n√2\ncoswt,\nB\n√2\nsinwt.\n这里左、右旋是迎着、男，方向看的。\n（1）导出哈密顿矩阵\nH=-μ\n2\n并注明式中各正负号与左右旋怎样对应。\n（2）导出跃迁概率幅和概率的公式。\n(3）讨论旋转磁场的左右旋与磁矩的正负（即粒子电荷的正负）之间的匹配关系。",
+    "regions": [
+      {
+        "pdf_page": 143,
+        "book_page": 124,
+        "bbox": [
+          0,
+          200.66666666666666,
+          595.2755737304688,
+          449.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C2-习题-2-4-p143.jpg",
+        "full_page": "../教材习题/BK06/page-0143.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-2-5",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 2,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "2-5",
+    "question_ocr": "2-5.计算",
+    "regions": [
+      {
+        "pdf_page": 143,
+        "book_page": 124,
+        "bbox": [
+          0,
+          445.3333333333333,
+          595.2755737304688,
+          496.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C2-习题-2-5-p143.jpg",
+        "full_page": "../教材习题/BK06/page-0143.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-2-6",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 2,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "2-6",
+    "question_ocr": "2-6.验算(2.108x）、(2.108g)、(2.108z)式组出的泡利矩阵的直积。",
+    "regions": [
+      {
+        "pdf_page": 143,
+        "book_page": 124,
+        "bbox": [
+          0,
+          492.6666666666667,
+          595.2755737304688,
+          513.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C2-习题-2-6-p143.jpg",
+        "full_page": "../教材习题/BK06/page-0143.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-2-7",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 2,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "2-7",
+    "question_ocr": "2-7.以下各式是氢原子基态电子、质子自旋在SS表象中的矩阵表示：\n2\n0\n0\nd0+0\n0\n0\n0\n0\n0\n0\nOre+Op\n习\n题\n125\n右边三平方项之和应等于下式的4倍：\nF²\nn\n试验算它们的正确性。",
+    "regions": [
+      {
+        "pdf_page": 143,
+        "book_page": 124,
+        "bbox": [
+          0,
+          509.33333333333337,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C2-习题-2-7-p143.jpg",
+        "full_page": "../教材习题/BK06/page-0143.jpg"
+      },
+      {
+        "pdf_page": 144,
+        "book_page": 125,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          776.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C2-习题-2-7-p144.jpg",
+        "full_page": "../教材习题/BK06/page-0144.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-1",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-1",
+    "question_ocr": "3-1.在图3-2（1）中若V。=E/2，则势垒区内粒子的德布罗意波长入'是外边入\n的几倍？若要入'=2入，需要V。=？",
+    "regions": [
+      {
+        "pdf_page": 226,
+        "book_page": 207,
+        "bbox": [
+          0,
+          134.0,
+          595.2755737304688,
+          174.5
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-1-p226.jpg",
+        "full_page": "../教材习题/BK06/page-0226.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-2",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-2",
+    "question_ocr": "3-2. 在图3-2（2）中若|V。\n的几倍？若要A'=入/2，需要|V。|=？",
+    "regions": [
+      {
+        "pdf_page": 226,
+        "book_page": 207,
+        "bbox": [
+          0,
+          170.5,
+          595.2755737304688,
+          213.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-2-p226.jpg",
+        "full_page": "../教材习题/BK06/page-0226.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-3",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-3",
+    "question_ocr": "3-3.粒子经过如图3－2（1）所示的势垒区，与不存在势垒的情况相比，它的德布\n罗意波的波长变长了，还是变短了？差多少倍？",
+    "regions": [
+      {
+        "pdf_page": 226,
+        "book_page": 207,
+        "bbox": [
+          0,
+          209.33333333333334,
+          595.2755737304688,
+          248.0
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-3-p226.jpg",
+        "full_page": "../教材习题/BK06/page-0226.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-4",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-4",
+    "question_ocr": "3-4.粒子经过如图3-2（2）所示的势阱区，与不存在势阱的情况相比，它的德布\n罗意波的波长变长了，还是变短了？差多少倍？",
+    "regions": [
+      {
+        "pdf_page": 226,
+        "book_page": 207,
+        "bbox": [
+          0,
+          244.0,
+          595.2755737304688,
+          284.0
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-4-p226.jpg",
+        "full_page": "../教材习题/BK06/page-0226.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-5",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-5",
+    "question_ocr": "3-5.按势垒隧穿概率的指数公式（3.24）论证，当STM针尖与样品的间隔a变化\n1%时，隧穿电流（正比于隧穿概率）改变2βa%，这里β=√2mΦ/h[参见（3.21）式]，\nΦ是功函数。通常a为nm数量级，设Φ=4eV，估算2βa的数量级。",
+    "regions": [
+      {
+        "pdf_page": 226,
+        "book_page": 207,
+        "bbox": [
+          0,
+          280.0,
+          595.2755737304688,
+          339.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-5-p226.jpg",
+        "full_page": "../教材习题/BK06/page-0226.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-6",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-6",
+    "question_ocr": "3-6.你能否设想，在怎样的场合会有光子的隧穿效应，并如何利用它扫描成象？",
+    "regions": [
+      {
+        "pdf_page": 226,
+        "book_page": 207,
+        "bbox": [
+          0,
+          335.3333333333333,
+          595.2755737304688,
+          357.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-6-p226.jpg",
+        "full_page": "../教材习题/BK06/page-0226.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-7",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-7",
+    "question_ocr": "3-7.爱因斯坦的固体热容理论采用单一频率w振动模型[参见《新概念物理教\n程·热学》（第二版）第二章4.4节]，与金刚石热容量实验曲线拟合得最好的爱因斯坦温\n度0=1320K,其振动频谱若何？",
+    "regions": [
+      {
+        "pdf_page": 226,
+        "book_page": 207,
+        "bbox": [
+          0,
+          353.3333333333333,
+          595.2755737304688,
+          413.5
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-7-p226.jpg",
+        "full_page": "../教材习题/BK06/page-0226.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-8",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-8",
+    "question_ocr": "3-8. 半导体中载流子有效质",
+    "regions": [
+      {
+        "pdf_page": 226,
+        "book_page": 207,
+        "bbox": [
+          0,
+          409.5,
+          595.2755737304688,
+          429.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-8-p226.jpg",
+        "full_page": "../教材习题/BK06/page-0226.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-9",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-9",
+    "question_ocr": "3-9.在能带从上到下的宽度范围内，载流子有效质量的绝对值何处最小，何处最\n大？",
+    "regions": [
+      {
+        "pdf_page": 226,
+        "book_page": 207,
+        "bbox": [
+          0,
+          425.3333333333333,
+          595.2755737304688,
+          465.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-9-p226.jpg",
+        "full_page": "../教材习题/BK06/page-0226.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-10",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-10",
+    "question_ocr": "3-10.本题图a是原子链组成的一维晶格，图b是相应的电子势能曲线。\n~-oolololoo-ololol\nH\n思考题3-10\n（1）在E，和E哪个能级上的电子在相邻原子间的跃迁概率较大？\n（2）哪个能带较宽？\n（3）哪个能带中电子的有效质量较大？\n请简要说明理由。",
+    "regions": [
+      {
+        "pdf_page": 226,
+        "book_page": 207,
+        "bbox": [
+          0,
+          461.3333333333333,
+          595.2755737304688,
+          673.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-10-p226.jpg",
+        "full_page": "../教材习题/BK06/page-0226.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-11",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-11",
+    "question_ocr": "3-11.比较习题3-9里的电子运动周期和习题3-13里的弛豫时间r，你认为习\n题3-9中所讨论的过程在实际有重要性吗？",
+    "regions": [
+      {
+        "pdf_page": 226,
+        "book_page": 207,
+        "bbox": [
+          0,
+          669.3333333333334,
+          595.2755737304688,
+          710.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-11-p226.jpg",
+        "full_page": "../教材习题/BK06/page-0226.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-12",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-12",
+    "question_ocr": "3-12.金属经典电子论认为电流中电子的定向漂移速率是很小的，从量子的观点\n看，这对吗？\n208\n第三章从一维系统到凝聚态物质",
+    "regions": [
+      {
+        "pdf_page": 226,
+        "book_page": 207,
+        "bbox": [
+          0,
+          706.6666666666666,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-12-p226.jpg",
+        "full_page": "../教材习题/BK06/page-0226.jpg"
+      },
+      {
+        "pdf_page": 227,
+        "book_page": 208,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          78.66666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-12-p227.jpg",
+        "full_page": "../教材习题/BK06/page-0227.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-13",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-13",
+    "question_ocr": "3-13.实验室中常用超导磁体，它\n的通常形式就是超导线绕制的螺线管。超\n导磁体的突出优点是能够产生很强的磁\n场，同时又不产生焦耳热。磁体上常配置\n一特别设计的超导开关，如本题图a所示。\n或r\n开关的电阻r可加以控制：或处于r=0的\n超导态，或处于r=r的正常态。当开关电\n浸泡在液氮池内\n阻处于超导态时，磁体可在持续电流模式\n下工作，此时电流通过磁体和超导开关持续地流\na\n动。这样，可不再需要外电源供电而长时间地维持\n20A\n一极为稳定的磁场。\n超导开关结构的细节在图中未画出，它通常是\n2t--3-4t\n由一小段超导线和加热丝绕在一起并和氨液池适\n0\n当隔热而成。加热时，超导线的温度上升并转变到\n有电阻的正常态。r的阻值约为几Ω，本题取为\n50.超导磁体的电感视磁体的大小而定，本题设为\n10H.总电流I可通过调节电阻R的大小而改变。\n0\n34\n超导开关处于正常态r=r时，仅能通过较小\n的电流。在本题中设它小于0.5A，否则开关会被烧\n20A\n坏。假定超导磁体工作在持续电流模式，即I=0，\nI=i（等于20A)，I=-o，如本题图b中第一\n阶段所示。\nI2\n（1）现在要将通过磁体的电流减少到0，以便\n20A\n停止实验。你能让超导开关一下子失超，把20A的\n电流耗散掉吗？若不能，应该采取怎样的步骤？\nOF\n34\n（2）请将你设计的步骤中相应的I、r、I、I2\n在以后阶段的变化补在图b上。\n-20A\n（3）在你设计的步骤中，各阶段持续时间可\nh\n以任意短吗？若不可以，请计算出那些对延续时间\n思考题3-13\n有要求的阶段长短的低限。",
+    "regions": [
+      {
+        "pdf_page": 227,
+        "book_page": 208,
+        "bbox": [
+          0,
+          74.66666666666667,
+          595.2755737304688,
+          570.0
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-13-p227.jpg",
+        "full_page": "../教材习题/BK06/page-0227.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-14",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-14",
+    "question_ocr": "3-14.我们知道，对磁矢势A（r)是可以进行任何规范变换的：\nA（r）→A（r）+Vx（r)，\n这并不影响磁场B（r)在空间的分布，但A（r)本身在空间的分布却变了。AB效应与\nA（r)而不是与B（r)有关，规范变换会在AB效应中产生物理后果吗？",
+    "regions": [
+      {
+        "pdf_page": 227,
+        "book_page": 208,
+        "bbox": [
+          0,
+          566.0,
+          595.2755737304688,
+          634.0
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-14-p227.jpg",
+        "full_page": "../教材习题/BK06/page-0227.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-15",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-15",
+    "question_ocr": "3-15.在转变温度T。以上，一个绕在永磁体上超导环内的磁通量由永磁体的磁化\n强度决定，可取任何值，一般不是量子化的。如果这时把温度降到T。以下，其内的磁通\n突然量子化了。这种变化是怎样发生的？难道磁体的磁化强度突然变了？",
+    "regions": [
+      {
+        "pdf_page": 227,
+        "book_page": 208,
+        "bbox": [
+          0,
+          630.0,
+          595.2755737304688,
+          681.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-15-p227.jpg",
+        "full_page": "../教材习题/BK06/page-0227.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-3-16",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "3-16",
+    "question_ocr": "3-16.描述约瑟夫森结电路与大幅度单摆的方程式，具有相同的数学形式。单摆\n在驱动力足够大时会产生倍周期分岔、混沌等现象，在约瑟夫森结电路中也会发生这类\n现象吗？你认为，用约瑟夫森结电路去模拟单摆的混沌运动，是个很好的主意吗？\n习\n题\n209\n习\n题",
+    "regions": [
+      {
+        "pdf_page": 227,
+        "book_page": 208,
+        "bbox": [
+          0,
+          677.3333333333334,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-16-p227.jpg",
+        "full_page": "../教材习题/BK06/page-0227.jpg"
+      },
+      {
+        "pdf_page": 228,
+        "book_page": 209,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          112.66666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C3-思考题-3-16-p228.jpg",
+        "full_page": "../教材习题/BK06/page-0228.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-1",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-1",
+    "question_ocr": "3-1.1.1节推导了粒子在直角势垒上散射的诸\nV(x）\nE\n多公式，你估计\n（1）在a=0或V。=0的场合，R和T该等于多少？\nVo\n(2）在E<V。而a→∞时R和T趋于多少？\nT\nR\n试用这些特殊情况来检验一下所得到的公式。",
+    "regions": [
+      {
+        "pdf_page": 228,
+        "book_page": 209,
+        "bbox": [
+          0,
+          108.66666666666667,
+          595.2755737304688,
+          202.66666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-1-p228.jpg",
+        "full_page": "../教材习题/BK06/page-0228.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-2",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-2",
+    "question_ocr": "3-2.如本题图，动能为E的粒子在一高度为V。\n的势阶上散射，求反射系数和透射系数。\n习题3-2\n导的公式。",
+    "regions": [
+      {
+        "pdf_page": 228,
+        "book_page": 209,
+        "bbox": [
+          0,
+          198.66666666666666,
+          595.2755737304688,
+          272.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-2-p228.jpg",
+        "full_page": "../教材习题/BK06/page-0228.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-3",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-3",
+    "question_ocr": "3-3.验证无限深势阱内粒子的波函数（3.34)式的正交归一性：\nm（x）n(x）dx=omn",
+    "regions": [
+      {
+        "pdf_page": 228,
+        "book_page": 209,
+        "bbox": [
+          0,
+          268.6666666666667,
+          595.2755737304688,
+          318.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-3-p228.jpg",
+        "full_page": "../教材习题/BK06/page-0228.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-4",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-4",
+    "question_ocr": "3-4.由谐振子波函数的生成式(3.51)推演出n=0，1，2三个波函数的具体表达\n式[见（3.52）式和（3.53）式]。",
+    "regions": [
+      {
+        "pdf_page": 228,
+        "book_page": 209,
+        "bbox": [
+          0,
+          314.6666666666667,
+          595.2755737304688,
+          354.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-4-p228.jpg",
+        "full_page": "../教材习题/BK06/page-0228.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-5",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-5",
+    "question_ocr": "3-5.验算上题中三个波函数的正交归一性。",
+    "regions": [
+      {
+        "pdf_page": 228,
+        "book_page": 209,
+        "bbox": [
+          0,
+          350.6666666666667,
+          595.2755737304688,
+          372.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-5-p228.jpg",
+        "full_page": "../教材习题/BK06/page-0228.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-6",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-6",
+    "question_ocr": "3-6.在量子力学中谐振子第n个能级的方均根位移按下式计算：\n(a²>\nn（x）x²n（x）dc.\n相应的经典计算公式为\n√(x²）=[x²P（x）dx,\n其中经典概率分布为（见146页脚注）\nP（c）=\nπ√A²-x²\n式中A是与第n个量子能级相对应的经典振幅。试分别计算n=0，1，2前三个能级的\n量子和经典的方均根位移，并相互作一比较。",
+    "regions": [
+      {
+        "pdf_page": 228,
+        "book_page": 209,
+        "bbox": [
+          0,
+          368.6666666666667,
+          595.2755737304688,
+          556.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-6-p228.jpg",
+        "full_page": "../教材习题/BK06/page-0228.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-7",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-7",
+    "question_ocr": "3-7.推导包括次近邻格点之间跃迁矩阵元-B的能带公式（3.60）：\nE=E(k)=E。-2Acoska-2Bcos2ka.",
+    "regions": [
+      {
+        "pdf_page": 228,
+        "book_page": 209,
+        "bbox": [
+          0,
+          552.6666666666666,
+          595.2755737304688,
+          591.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-7-p228.jpg",
+        "full_page": "../教材习题/BK06/page-0228.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-8",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-8",
+    "question_ocr": "3-8.已知一维晶格的电子能带可写成\nE（k）=\n-coska+\n1\ncos2ka\nma²（8\n8\n式中a为晶格常量。求(1)能带宽度，(2)带顶和带底电子的有效质量。",
+    "regions": [
+      {
+        "pdf_page": 228,
+        "book_page": 209,
+        "bbox": [
+          0,
+          587.3333333333334,
+          595.2755737304688,
+          658.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-8-p228.jpg",
+        "full_page": "../教材习题/BK06/page-0228.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-9",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-9",
+    "question_ocr": "3-9.从t=0时起在一维晶格上加一恒电场8，设此刻电子位于能带底部且空间c\n=2。处。试证明：t时刻时电子在空间的位置为\nx=x+\ne%\n电子的运动有没有周期性？若有，周期多少？并解释：为什么在恒电场作用下电子会做\n210\n第三章从一维系统到凝聚态物质\n周期运动。",
+    "regions": [
+      {
+        "pdf_page": 228,
+        "book_page": 209,
+        "bbox": [
+          0,
+          654.6666666666666,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-9-p228.jpg",
+        "full_page": "../教材习题/BK06/page-0228.jpg"
+      },
+      {
+        "pdf_page": 229,
+        "book_page": 210,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          97.33333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-9-p229.jpg",
+        "full_page": "../教材习题/BK06/page-0229.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-10",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-10",
+    "question_ocr": "3-10.锗（Ge)的导带与价带之间的能隙为0.72eV，求它吸收电磁波波长的上限。",
+    "regions": [
+      {
+        "pdf_page": 229,
+        "book_page": 210,
+        "bbox": [
+          0,
+          93.33333333333333,
+          595.2755737304688,
+          115.33333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-10-p229.jpg",
+        "full_page": "../教材习题/BK06/page-0229.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-11",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-11",
+    "question_ocr": "3-11.若在NaC1晶体中缺少一个CI离子而留下一个空位，则此空位会俘获一个\n电子。晶格的这种缺陷叫做F心（色心）。●这个电子所处的能级比导带低2.65eV，它跃\n迁到导带时吸收什么颜色的光？含有许多F心的NaCI晶体呈现什么颜色？",
+    "regions": [
+      {
+        "pdf_page": 229,
+        "book_page": 210,
+        "bbox": [
+          0,
+          111.33333333333333,
+          595.2755737304688,
+          168.66666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-11-p229.jpg",
+        "full_page": "../教材习题/BK06/page-0229.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-12",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-12",
+    "question_ocr": "3-12.从PQx的对易关系（3.120）式和a、a的定义（3.121）式导出aa的\n对易关系（3.122）式。",
+    "regions": [
+      {
+        "pdf_page": 229,
+        "book_page": 210,
+        "bbox": [
+          0,
+          164.66666666666666,
+          595.2755737304688,
+          206.0
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-12-p229.jpg",
+        "full_page": "../教材习题/BK06/page-0229.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-13",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-13",
+    "question_ocr": "3-13.已知铜的密度为8.96g/cm²，原子量63.5g/mol，设每个原子提供一个自\n由电子，求自由电子的数密度n.\n已知铜的电导率g=5.88x10'S/m，m*=1.01，利用上面n的结果求弛豫时间r.",
+    "regions": [
+      {
+        "pdf_page": 229,
+        "book_page": 210,
+        "bbox": [
+          0,
+          202.0,
+          595.2755737304688,
+          260.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-13-p229.jpg",
+        "full_page": "../教材习题/BK06/page-0229.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-14",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-14",
+    "question_ocr": "3-14.利用上题所得r的数值求电子的平均自由程入，假定\n（2）已知铜的费米能量ep=7.02eV，A=rUp.如此得到的平均自由程记作入q\n（3）已知铜的晶格常量a=3.61A、Aa和入。各比a大多少倍？你觉得这结果分别从\n经典的和量子的物理图像看可理解吗？",
+    "regions": [
+      {
+        "pdf_page": 229,
+        "book_page": 210,
+        "bbox": [
+          0,
+          256.6666666666667,
+          595.2755737304688,
+          351.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-14-p229.jpg",
+        "full_page": "../教材习题/BK06/page-0229.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-15",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-15",
+    "question_ocr": "3-15.设电场强度为10V/m，费米能量为7eV，试计算\n（1）在弛豫时间r（见习题3-13)内电子动量改变△p；\n（2）电子的费米动量Pr；\n(3）二者之比△p/pp",
+    "regions": [
+      {
+        "pdf_page": 229,
+        "book_page": 210,
+        "bbox": [
+          0,
+          347.3333333333333,
+          595.2755737304688,
+          422.0
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-15-p229.jpg",
+        "full_page": "../教材习题/BK06/page-0229.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-16",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-16",
+    "question_ocr": "3-16.水银的超导转变温度为4.2K，求(1)能隙为多少eV，(2）吸收光子的频率红\n限。",
+    "regions": [
+      {
+        "pdf_page": 229,
+        "book_page": 210,
+        "bbox": [
+          0,
+          418.0,
+          595.2755737304688,
+          456.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-16-p229.jpg",
+        "full_page": "../教材习题/BK06/page-0229.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-17",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-17",
+    "question_ocr": "3-17.天然的铅中含2Pb、2Pb、2Pb、Pb四种同位素，它们的丰度分别为\n1.4%、24.1%、22.1%、52.1%。假设观测到的超导转变温度T。=7.193K是这四种同位\n素各自的T.按丰度的加权平均，试求纯2Pb的T.已知对于铅T。αM-0.4（M为同位\n素原子量）。",
+    "regions": [
+      {
+        "pdf_page": 229,
+        "book_page": 210,
+        "bbox": [
+          0,
+          452.6666666666667,
+          595.2755737304688,
+          530.0
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-17-p229.jpg",
+        "full_page": "../教材习题/BK06/page-0229.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-18",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-18",
+    "question_ocr": "3-18.核子在原子核内受到的其它核子对它的作用，可以近似地看作一较强的平\n均场加上一个较弱的剩余相互作用。这种剩余相互作用使核内的核子互相吸引而形成\n库珀对。实验测出能隙参数近似地为12MeV/A，这里A为原子核内的核子数目。试估\n算2Pb核的超导转变温度T。等于多少MeV/kB",
+    "regions": [
+      {
+        "pdf_page": 229,
+        "book_page": 210,
+        "bbox": [
+          0,
+          526.0,
+          595.2755737304688,
+          604.0
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-18-p229.jpg",
+        "full_page": "../教材习题/BK06/page-0229.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-3-19",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 3,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "3-19",
+    "question_ocr": "3-19.补出9.1节用费曼的简化模型推导约瑟夫森方程时从(3.179)式、(3.180)\n式到（3.181)式、（3.182)式的演算。\n①德语Farbe，颜色。",
+    "regions": [
+      {
+        "pdf_page": 229,
+        "book_page": 210,
+        "bbox": [
+          0,
+          600.0,
+          595.2755737304688,
+          776.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C3-习题-3-19-p229.jpg",
+        "full_page": "../教材习题/BK06/page-0229.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-1",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-1",
+    "question_ocr": "4-1.试从海森伯不确定性原理来说明，为什么氢原子中的电子不会落到原子核\n上静止不动。",
+    "regions": [
+      {
+        "pdf_page": 317,
+        "book_page": 298,
+        "bbox": [
+          0,
+          182.0,
+          595.2755737304688,
+          219.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-1-p317.jpg",
+        "full_page": "../教材习题/BK06/page-0317.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-2",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-2",
+    "question_ocr": "4-2.利用海森伯不确定度关系导出氢原子基态玻尔轨道的半径和能量。\n[提示：基态是能量最低的稳定状态，dE/dp=0.]",
+    "regions": [
+      {
+        "pdf_page": 317,
+        "book_page": 298,
+        "bbox": [
+          0,
+          215.33333333333334,
+          595.2755737304688,
+          251.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-2-p317.jpg",
+        "full_page": "../教材习题/BK06/page-0317.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-3",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-3",
+    "question_ocr": "4-3.试论证：氢原子中在第一玻尔轨道上运动的电子的线速度为v=Qc，其中α\n=e²/ch（静电单位制）=1/137（精细结构常数）。这种运动是相对论性的还是非相对\n论性的？",
+    "regions": [
+      {
+        "pdf_page": 317,
+        "book_page": 298,
+        "bbox": [
+          0,
+          247.33333333333334,
+          595.2755737304688,
+          301.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-3-p317.jpg",
+        "full_page": "../教材习题/BK06/page-0317.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-4",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-4",
+    "question_ocr": "4-4.处于高激发态（主量子数n很大)的原子称为里德伯原子。射电天文观测已\n发现n=630的里德伯原子，试计算其玻尔轨道的半径。为什么在天文上才容易观察到\n这样大的原子？",
+    "regions": [
+      {
+        "pdf_page": 317,
+        "book_page": 298,
+        "bbox": [
+          0,
+          297.3333333333333,
+          595.2755737304688,
+          348.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-4-p317.jpg",
+        "full_page": "../教材习题/BK06/page-0317.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-5",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-5",
+    "question_ocr": "4-5.不同原子的里德伯常量是否相同？里德伯常量随原子量增加还是减少？为什\n么？",
+    "regions": [
+      {
+        "pdf_page": 317,
+        "book_page": 298,
+        "bbox": [
+          0,
+          344.6666666666667,
+          595.2755737304688,
+          381.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-5-p317.jpg",
+        "full_page": "../教材习题/BK06/page-0317.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-6",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-6",
+    "question_ocr": "4-6.试论证：类氢原子的谱线系公式为\n)=\n入\n(（m/Z)²（n/Z）²\n所带电荷与质子电荷之比）。",
+    "regions": [
+      {
+        "pdf_page": 317,
+        "book_page": 298,
+        "bbox": [
+          0,
+          377.3333333333333,
+          595.2755737304688,
+          466.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-6-p317.jpg",
+        "full_page": "../教材习题/BK06/page-0317.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-7",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-7",
+    "question_ocr": "4-7.本题图中虚线代表氢原\n谱\n子的巴耳末线系，实线是毕克林线\n线系\nHβ\nHa\n系，它是天文学家毕克林（E.C.\n限\nHHH\nPickering）于1897年观察船鲈座\n星(我国古称：弧矢增二十二)的光\ncm-1\n25000\n谱中发现的。从图中可以看出，毕\n20000\n15000\n克林线系中每隔一条谱线和巴耳\n思考题4-7\n末线系几乎重合。起初有人认为毕克林线系属于氢原子光谱，并认为星球上的氢原子\n与地球上的氢原子不同。你认为这种看法对吗？若毕克林线系不属于氢光谱，它更像什\n么元素的光谱？",
+    "regions": [
+      {
+        "pdf_page": 317,
+        "book_page": 298,
+        "bbox": [
+          0,
+          462.6666666666667,
+          595.2755737304688,
+          650.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-7-p317.jpg",
+        "full_page": "../教材习题/BK06/page-0317.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-8",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-8",
+    "question_ocr": "4-8.写出下列元素族的电子组态，并总结它们之间相似之处。\n（1）情性气体He、Ne、Ar、Kr、Xe；\n(2）碱金属Li、Na、K、Rb、Cs；\n(3）卤素F、C1、Br、I；\n（4）过渡元素Sc、Ti、V、Cr、Mn、Fe、Co、Ni、Cu、Zn\n习题\n299",
+    "regions": [
+      {
+        "pdf_page": 317,
+        "book_page": 298,
+        "bbox": [
+          0,
+          646.0,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-8-p317.jpg",
+        "full_page": "../教材习题/BK06/page-0317.jpg"
+      },
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          76.66666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-8-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-9",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-9",
+    "question_ocr": "4-9.下列原子态符号中，哪些可以是碱金属原子的基态：\n1²S2,2²S,2²S，2²P52,3²Fs2,3²D3/2,2²P32,4²D/2",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          72.66666666666667,
+          595.2755737304688,
+          114.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-9-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-10",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-10",
+    "question_ocr": "4-10.为什么情性气体基态的原子态总是'S。？",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          110.0,
+          595.2755737304688,
+          131.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-10-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-11",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-11",
+    "question_ocr": "4-11.写出下列各原子态符号所代表的S、L、J值：²S，”D。，P3，F2，²Gz，并\n指出其中哪些是可能的，哪些是不可能的。",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          127.33333333333334,
+          595.2755737304688,
+          167.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-11-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-12",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-12",
+    "question_ocr": "4-12.碳原子的电子组态为（1s)²(2s)²（2p）²，基态的原子态为”P。，试作矢量图\n来描绘两个p电子的轨道角动量和自旋角动量大小及取向的相互关系。",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          163.33333333333334,
+          595.2755737304688,
+          205.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-12-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-13",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-13",
+    "question_ocr": "4-13.参考表4-2中的原子基态，仿照图4-15画出第三周期Z=11~18原子\n基态M壳层单电子态填充图。",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          201.33333333333334,
+          595.2755737304688,
+          242.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-13-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-14",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-14",
+    "question_ocr": "4-14.考虑精细结构后，画出锂原子由3D态返回基态2S时所有可能的能级跃迁\n途径。",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          238.0,
+          595.2755737304688,
+          280.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-14-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-15",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-15",
+    "question_ocr": "4-15.碱金属原子与氢原子能级的精细结构有什么不同？类氢离子原子能级的精\n细结构分裂与何者相似？",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          276.0,
+          595.2755737304688,
+          316.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-15-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-16",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-16",
+    "question_ocr": "4-16.将氢原子能级的精细结构分裂公式（4.120)运用于类氢离子（臂如Li），\n应作怎样的修改？",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          312.0,
+          595.2755737304688,
+          353.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-16-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-17",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-17",
+    "question_ocr": "4-17.写出两个同科d电子可能构成的原子态。",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          349.3333333333333,
+          595.2755737304688,
+          370.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-17-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-18",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-18",
+    "question_ocr": "4-18.确定V（Z=23），Fe（Z=26），Np（Z=93）的原子基态。",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          366.0,
+          595.2755737304688,
+          388.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-18-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-19",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-19",
+    "question_ocr": "4-19.Be原子基态的电子组态是（2s）²，若其中一个电子被激发到3p态。\n（1）按LS耦合制式可形成哪些原子态？\n（2）从这些原子态向低能级跃迁时，可产生几条光谱线？画出相应的能级跃迁图。",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          384.0,
+          595.2755737304688,
+          442.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-19-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-20",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-20",
+    "question_ocr": "4-20.在图4-36所示的氨原子能级由低到高的顺序是S、P、D、F，这刚好与洪德\n定则相反。原因在哪里？",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          438.6666666666667,
+          595.2755737304688,
+          478.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-20-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-21",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-21",
+    "question_ocr": "4-21.用玻尔理论估算氢原子基态电子所感受的磁感强度。\n[答：13T.]",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          474.6666666666667,
+          595.2755737304688,
+          496.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-21-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-4-22",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "4-22",
+    "question_ocr": "4-22.钠双线589.0nm589.6nm分别由P32和P→S的跃迁产生。试以此\n估算价电子感受到的磁感强度。\n[答：18.5T.]\n习题",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          492.6666666666667,
+          595.2755737304688,
+          580.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C4-思考题-4-22-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-1",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-1",
+    "question_ocr": "4-1.用能量为12.5eV的电子去激发基态氢原子，受激发的原子向低能级跃迁时，\n能发生哪些波长的光谱线？",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          576.6666666666666,
+          595.2755737304688,
+          617.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-1-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-2",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-2",
+    "question_ocr": "4-2.μ子是一种粒子，除静质量为电子质量的207倍外，其它性质都与电子一\n样。它可能被质子俘获，形成u原子。试计算u原子的（1）里德伯常量，（2）第一玻尔轨\n道半径，（3）基态能量，（4）莱曼系最短波长。",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          613.3333333333334,
+          595.2755737304688,
+          671.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-2-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-3",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-3",
+    "question_ocr": "4-3.由正电子代替氢原子中的质子而形成的“原子”称为电子偶素（posi-\ntronium）。求n=5时电子偶素的圆玻尔轨道半径和电离能。",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          667.3333333333334,
+          595.2755737304688,
+          708.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-3-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-4",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-4",
+    "question_ocr": "4-4.1932年尤雷（H.C.Urey）在实验中发现，在氢的H线（入=656.279nm）旁还\n有一条入=656.100nm的谱线，两者的波长只差0.179nm.他认为这谱线属于氢的一种\n300\n第四章原子分子\n同位素。试计算此同位素与氢的原子量之比。",
+    "regions": [
+      {
+        "pdf_page": 318,
+        "book_page": 299,
+        "bbox": [
+          0,
+          704.0,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-4-p318.jpg",
+        "full_page": "../教材习题/BK06/page-0318.jpg"
+      },
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          88.66666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-4-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-5",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-5",
+    "question_ocr": "4-5.两个分别处于基态和第一激发态的氢原子以速率v相向运动，要使基态原子\n吸收从激发态原子发出的光子后，刚好跃迁到第二激发态，u/c=？",
+    "regions": [
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          84.66666666666667,
+          595.2755737304688,
+          126.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-5-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-6",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-6",
+    "question_ocr": "4-6.根据氢原子波函数的表达式证明：处于1s和2p态的氢原子中，电子被发现\n的最大概率分别处在r=a和4a的球壳上。",
+    "regions": [
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          122.0,
+          595.2755737304688,
+          162.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-6-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-7",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-7",
+    "question_ocr": "4-7.计算氢原子基态库仑势能V(r）=-e²/r的平均值。",
+    "regions": [
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          158.0,
+          595.2755737304688,
+          180.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-7-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-8",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-8",
+    "question_ocr": "4-8.计算氢原子n=2、l=1量子态上电子径向概率密度最大的位置，以及此态\n上电子径向坐标r的平均值。\ni.s",
+    "regions": [
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          176.0,
+          595.2755737304688,
+          222.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-8-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-9",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-9",
+    "question_ocr": "i.s\n4-9.验证3.与H。[见（4.102）式]和H=g（r）\n都对易。\nh²",
+    "regions": [
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          218.0,
+          595.2755737304688,
+          251.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-9-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-10",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-10",
+    "question_ocr": "4-10.画出Li²+离子主量子数n=3和n=2的精细结构能级以及可能的跃迁（参\n考思考题4-16)。计算其中最大的波数mx和最小的波数mn以及它们之差。此波数\n差与谱线平均波数之比是什么数量级？",
+    "regions": [
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          247.33333333333334,
+          595.2755737304688,
+          309.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-10-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-11",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-11",
+    "question_ocr": "4-11.Pb原子基态的两个价电子都在6p态上，若其中一个激发到7s态，按ji耦\n合制式，此时可形成哪些原子态？",
+    "regions": [
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          305.3333333333333,
+          595.2755737304688,
+          346.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-11-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-12",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-12",
+    "question_ocr": "4-12. 钾原子主线系第一条\n的最短极限）为285.8nm，求相应s、p谱项的量子数亏损值。",
+    "regions": [
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          342.0,
+          595.2755737304688,
+          381.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-12-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-13",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-13",
+    "question_ocr": "4-13.已知某元素的X射线标识谱K。线波长为0.1935nm，试用莫塞莱定律确定\n该元素的原子序数Z.",
+    "regions": [
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          377.3333333333333,
+          595.2755737304688,
+          415.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-13-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-14",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-14",
+    "question_ocr": "4-14.已知铜元素（Z=29)的K。波长为0.154nm，试计算屏蔽数0k·",
+    "regions": [
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          411.3333333333333,
+          595.2755737304688,
+          435.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-14-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-15",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-15",
+    "question_ocr": "4-15.实验测得某X射线管所产生的K。线和K线间频率差为1.015×10Hz，\n试确定该管的阳极由何种物质制成？",
+    "regions": [
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          431.3333333333333,
+          595.2755737304688,
+          472.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-15-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-16",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-16",
+    "question_ocr": "4-16.求钠原子D线（3P2→32S）在0.2T磁场中塞曼分裂的四条谱线之间\n的间距。",
+    "regions": [
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          468.0,
+          595.2755737304688,
+          508.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-16-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-17",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-17",
+    "question_ocr": "4-17.碳原子2p3sP→（2p）²D2的跃迁发出波长为200.0nm的谱线。该谱线\n在0.1T的外磁场中如何分裂？求出各新谱线与原谱线的波长差。",
+    "regions": [
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          504.0,
+          595.2755737304688,
+          543.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-17-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-18",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-18",
+    "question_ocr": "4-18.汽油的分子式为CH2m+2（m≥5的烷烃属化合物），用8.4节介绍的数量级\n估计方法，估算燃烧1kg汽油所释放的能量，并与实际数值10kcal比较。",
+    "regions": [
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          539.3333333333334,
+          595.2755737304688,
+          579.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-18-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-19",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-19",
+    "question_ocr": "4-19.sp杂化轨函中依赖Px、Py、p。的部分给出了化学键取向的信息。要提\n取这信息，需要把其中依赖于s的部分去掉。用狄拉克符号来表示，取\n）=（1-｜s)(s｜）y），\n则两轨函1、2之间形成的键角0可由下式算出：\n<亚1>\ncOSO2=\n<>亚>\n试用这些公式和（4.159）、（4.160)式验算一下氨分子和水分子中与氢原子结合的共价\n键之间的键角。\n习题\n301",
+    "regions": [
+      {
+        "pdf_page": 319,
+        "book_page": 300,
+        "bbox": [
+          0,
+          575.3333333333334,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-19-p319.jpg",
+        "full_page": "../教材习题/BK06/page-0319.jpg"
+      },
+      {
+        "pdf_page": 320,
+        "book_page": 301,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          72.0
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-19-p320.jpg",
+        "full_page": "../教材习题/BK06/page-0320.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-20",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-20",
+    "question_ocr": "4-20.C0和\"CO的J=0→1转动吸收谱线分别是1.153×10\"Hz和1.102×\n10\"Hz，求碳同位素C的质量数.",
+    "regions": [
+      {
+        "pdf_page": 320,
+        "book_page": 301,
+        "bbox": [
+          0,
+          68.0,
+          595.2755737304688,
+          106.66666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-20-p320.jpg",
+        "full_page": "../教材习题/BK06/page-0320.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-4-21",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 4,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "4-21",
+    "question_ocr": "4-21.HC1分子有一个近红外谱带，其相邻的几条谱线的波数为2925.78cm-、\n2906.25cm-、2865.09cm-、2843.56cm、2821.49cm，H和Cl的原子量分别为\n1.008和35.46，求HC1分子的劲度系数k和键长r。，忽略分子的非谐修正项。",
+    "regions": [
+      {
+        "pdf_page": 320,
+        "book_page": 301,
+        "bbox": [
+          0,
+          102.66666666666667,
+          595.2755737304688,
+          776.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C4-习题-4-21-p320.jpg",
+        "full_page": "../教材习题/BK06/page-0320.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-5-1",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "5-1",
+    "question_ocr": "5-1.利用人射粒子作为探针去研究原子核的结构时，随入射粒子质量的增大，所\n需能量增大还是减少？试分别估算以电子、μ子、中子为探针所需最少能量的数量级。",
+    "regions": [
+      {
+        "pdf_page": 397,
+        "book_page": 378,
+        "bbox": [
+          0,
+          360.0,
+          595.2755737304688,
+          399.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C5-思考题-5-1-p397.jpg",
+        "full_page": "../教材习题/BK06/page-0397.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-5-2",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "5-2",
+    "question_ocr": "5-2.通常所说的核磁矩指的是什么？核磁矩有正有负，意味着什么？为什么气核\n的磁矩不等于一个质子与一个中子磁矩之和？",
+    "regions": [
+      {
+        "pdf_page": 397,
+        "book_page": 378,
+        "bbox": [
+          0,
+          395.3333333333333,
+          595.2755737304688,
+          434.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C5-思考题-5-2-p397.jpg",
+        "full_page": "../教材习题/BK06/page-0397.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-5-3",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "5-3",
+    "question_ocr": "5-3.核自旋I取半整数或整数（包括0），由质量数的奇偶来定，为什么？",
+    "regions": [
+      {
+        "pdf_page": 397,
+        "book_page": 378,
+        "bbox": [
+          0,
+          430.6666666666667,
+          595.2755737304688,
+          452.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C5-思考题-5-3-p397.jpg",
+        "full_page": "../教材习题/BK06/page-0397.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-5-4",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "5-4",
+    "question_ocr": "5-4.为什么α衰变中放出的α粒子能量整齐划一，或取几个离散值，而β衰变放\n出的β粒子却是连续分布的？",
+    "regions": [
+      {
+        "pdf_page": 397,
+        "book_page": 378,
+        "bbox": [
+          0,
+          448.6666666666667,
+          595.2755737304688,
+          488.0
+        ],
+        "image": "../教材习题/BK06/BK06-C5-思考题-5-4-p397.jpg",
+        "full_page": "../教材习题/BK06/page-0397.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-5-5",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "5-5",
+    "question_ocr": "5-5.为什么核物理学家发现了那么多放射系，而天然放射系只有三个？",
+    "regions": [
+      {
+        "pdf_page": 397,
+        "book_page": 378,
+        "bbox": [
+          0,
+          484.0,
+          595.2755737304688,
+          505.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C5-思考题-5-5-p397.jpg",
+        "full_page": "../教材习题/BK06/page-0397.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-5-6",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "5-6",
+    "question_ocr": "5-6.创生论者宣称世界是上帝在几千年前创造的，而科学家们则认为地球的年\n龄约46亿年。科学家说话是有根据的，他们的主要证据是什么？",
+    "regions": [
+      {
+        "pdf_page": 397,
+        "book_page": 378,
+        "bbox": [
+          0,
+          501.3333333333333,
+          595.2755737304688,
+          540.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C5-思考题-5-6-p397.jpg",
+        "full_page": "../教材习题/BK06/page-0397.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-5-7",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "5-7",
+    "question_ocr": "5-7.SU(5)大统一理论曾预言，质子可能会衰变，其平均寿命约为10”年。若要测\n量到它的放射性（譬如在一年中测量到几次事件），至少要用多少吨水？",
+    "regions": [
+      {
+        "pdf_page": 397,
+        "book_page": 378,
+        "bbox": [
+          0,
+          536.6666666666666,
+          595.2755737304688,
+          576.0
+        ],
+        "image": "../教材习题/BK06/BK06-C5-思考题-5-7-p397.jpg",
+        "full_page": "../教材习题/BK06/page-0397.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-5-8",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "5-8",
+    "question_ocr": "5-8.核素分布图5－14中随着原子质量数A的增大，中子过剩现象愈来愈显著，\n基本原因是什么？",
+    "regions": [
+      {
+        "pdf_page": 397,
+        "book_page": 378,
+        "bbox": [
+          0,
+          572.0,
+          595.2755737304688,
+          612.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C5-思考题-5-8-p397.jpg",
+        "full_page": "../教材习题/BK06/page-0397.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-5-9",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "5-9",
+    "question_ocr": "5-9.试说明阔能公式（5.42）右端第二项-（M/M）Q代表实验室系里质心的动\n能。",
+    "regions": [
+      {
+        "pdf_page": 397,
+        "book_page": 378,
+        "bbox": [
+          0,
+          608.6666666666666,
+          595.2755737304688,
+          646.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C5-思考题-5-9-p397.jpg",
+        "full_page": "../教材习题/BK06/page-0397.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-5-10",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "5-10",
+    "question_ocr": "5－10.快中子在由质量数为A的元素所组成的物质中慢化。试证明：在每次碰撞\n中中子能量损失的最大比率约为4A/(A+1)2.",
+    "regions": [
+      {
+        "pdf_page": 397,
+        "book_page": 378,
+        "bbox": [
+          0,
+          642.6666666666666,
+          595.2755737304688,
+          682.0
+        ],
+        "image": "../教材习题/BK06/BK06-C5-思考题-5-10-p397.jpg",
+        "full_page": "../教材习题/BK06/page-0397.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-5-11",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "5-11",
+    "question_ocr": "5-11.由液滴模型结合能的唯象公式论证：大多数稳定核的质量数A与电荷数Z\n满足如下关系：\nZ=\nA\n2 + 0.015.423*\n习题\n379\n用此公式在Z-N图上作一曲线，与图5-14中实际的核素分布比较。",
+    "regions": [
+      {
+        "pdf_page": 397,
+        "book_page": 378,
+        "bbox": [
+          0,
+          678.0,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C5-思考题-5-11-p397.jpg",
+        "full_page": "../教材习题/BK06/page-0397.jpg"
+      },
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          89.33333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C5-思考题-5-11-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-5-12",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "5-12",
+    "question_ocr": "5-12.传递弱作用的中间玻色子W*和Z°的质量分别为80GeV/c²和91GeV/c²，\n试以此来估计弱作用力程的数量级。",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          85.33333333333333,
+          595.2755737304688,
+          129.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C5-思考题-5-12-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-思考题-5-13",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "思考题",
+    "original_number": "5-13",
+    "question_ocr": "5-13. 验算一下，表5-4里的强子满足盖尔曼-西岛关系。\n习题",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          125.33333333333334,
+          595.2755737304688,
+          196.66666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C5-思考题-5-13-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-1",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-1",
+    "question_ocr": "5-1.计算He、Cu、2Ra的核半径。",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          192.66666666666666,
+          595.2755737304688,
+          214.0
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-1-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-2",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-2",
+    "question_ocr": "5-2.质量数A为多大的核，其核半径是Th核半径的一半？",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          210.0,
+          595.2755737304688,
+          233.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-2-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-3",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-3",
+    "question_ocr": "5-3.实验上测得质量差如下：\nH-²H=1.5434×10-²u，\n3²H-²C=4.2300×10²u，\n12C'H-16O=3.6364×10-²u.\n求'H、²H、\"O的质量。",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          229.33333333333334,
+          595.2755737304688,
+          328.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-3-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-4",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-4",
+    "question_ocr": "5-4.计算Mg和”Na核结合能之差，已知相应原子的质量分别为22.994124u和\n22. 989 769 u.",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          324.6666666666667,
+          595.2755737304688,
+          365.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-4-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-5",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-5",
+    "question_ocr": "5-5.计算”Fe的比结合能，已知Fe原子的质量为55.934937u",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          361.3333333333333,
+          595.2755737304688,
+          382.0
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-5-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-6",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-6",
+    "question_ocr": "5-6.已知0和He原子的质量分别是15.994915u和4.002603u，试计算将0\n分成四个α粒子时所需的能量。",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          378.0,
+          595.2755737304688,
+          418.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-6-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-7",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-7",
+    "question_ocr": "5-7.试计算下列核反应的反应能：\n(1）α+\"N→\"O+p,\n++d(z)\n有关核素的质量，可查阅附录C.",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          414.6666666666667,
+          595.2755737304688,
+          490.0
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-7-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-8",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-8",
+    "question_ocr": "5-8.已知Co原子基态谱项为F9/2，又测得”Co原子基态分裂成8个超精细能级。\n试确定”Co核的自旋。",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          486.0,
+          595.2755737304688,
+          527.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-8-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-9",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-9",
+    "question_ocr": "5-9.已知放射性核素°Sr的半衰期为28.79yr，经112年后该核素还剩初始数量\n的几分之几？",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          523.3333333333334,
+          595.2755737304688,
+          563.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-9-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-10",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-10",
+    "question_ocr": "5-10.动能为0.025eV的中子束，在2.0m的射程中将衰变掉百分之几?某放射性\n核素在100天内减少到原来的1/1.07，试求它的衰变常量、半衰期和平均寿命。",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          559.3333333333334,
+          595.2755737304688,
+          599.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-10-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-11",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-11",
+    "question_ocr": "5-11.静止的Po放出动能为8.34MeV的α粒子，求其衰变能和子核反冲速度。",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          595.3333333333334,
+          595.2755737304688,
+          616.0
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-11-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-12",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-12",
+    "question_ocr": "5-12.试计算Ra核α衰变到”Rn的衰变能和α粒子的动能。有关核素的质量\n请查附录C.",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          612.0,
+          595.2755737304688,
+          651.5
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-12-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-13",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-13",
+    "question_ocr": "5-13. 226Th从基态进行α衰变\nα粒子，试计算子核各激发态的能量。",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          647.5,
+          595.2755737304688,
+          689.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-13-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-14",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-14",
+    "question_ocr": "5-14.计算静止中子发生β衰变时所产生粒子的总动能。",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          685.3333333333334,
+          595.2755737304688,
+          706.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-14-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-15",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-15",
+    "question_ocr": "5-15.已知Be和Li原子的质量分别是7.016930u和7.016004u，它们之中哪一\n个能够通过β衰变变成另一个？这将通过何种形式的β衰变？衰变能多大？（忽略电子\n380\n第五章原子核粒子\n在原子中的结合能。）",
+    "regions": [
+      {
+        "pdf_page": 398,
+        "book_page": 379,
+        "bbox": [
+          0,
+          702.6666666666666,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-15-p398.jpg",
+        "full_page": "../教材习题/BK06/page-0398.jpg"
+      },
+      {
+        "pdf_page": 399,
+        "book_page": 380,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          89.33333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-15-p399.jpg",
+        "full_page": "../教材习题/BK06/page-0399.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-16",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-16",
+    "question_ocr": "5-16.已知Ca和K原子的质量分别为38.970720u和38.963707u，3Ca能否\n发生β+衰变？若能，β+粒子的最大能量多少？",
+    "regions": [
+      {
+        "pdf_page": 399,
+        "book_page": 380,
+        "bbox": [
+          0,
+          85.33333333333333,
+          595.2755737304688,
+          128.0
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-16-p399.jpg",
+        "full_page": "../教材习题/BK06/page-0399.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-17",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-17",
+    "question_ocr": "5-17.Zn核处于能量为436keV的激发态可放出K层内转换电子回到基态，求\n这时核的反冲能。已知K层电子的结合能为9.7keV.",
+    "regions": [
+      {
+        "pdf_page": 399,
+        "book_page": 380,
+        "bbox": [
+          0,
+          124.0,
+          595.2755737304688,
+          164.0
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-17-p399.jpg",
+        "full_page": "../教材习题/BK06/page-0399.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-18",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-18",
+    "question_ocr": "5-18.测得某古木制品中\"C的含量是活树中的3/5，试确定其年龄（“C的半衰期\n为5.70kyr）。",
+    "regions": [
+      {
+        "pdf_page": 399,
+        "book_page": 380,
+        "bbox": [
+          0,
+          160.0,
+          595.2755737304688,
+          202.0
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-18-p399.jpg",
+        "full_page": "../教材习题/BK06/page-0399.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-19",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-19",
+    "question_ocr": "5-19.利用核素质量表（见附录C），计算下列核反应的反应能：\n（1）²H（p，）*He，（2)²C(α，D)N，（3)N（α，D）O.\n其中D代表气。",
+    "regions": [
+      {
+        "pdf_page": 399,
+        "book_page": 380,
+        "bbox": [
+          0,
+          198.0,
+          595.2755737304688,
+          255.33333333333331
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-19-p399.jpg",
+        "full_page": "../教材习题/BK06/page-0399.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-20",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-20",
+    "question_ocr": "5-20.已知'Li和He的平均结合能分别为5.60MeV和7.07MeV，求'Li（p，\nα）He的反应能。",
+    "regions": [
+      {
+        "pdf_page": 399,
+        "book_page": 380,
+        "bbox": [
+          0,
+          251.33333333333331,
+          595.2755737304688,
+          291.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-20-p399.jpg",
+        "full_page": "../教材习题/BK06/page-0399.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-21",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-21",
+    "question_ocr": "5-21.若以α粒子轰击静止靶核Li，发生Li（α，n）B反应，求人射粒子的阈能，\n及以阔能人射时剩余核B的动能。",
+    "regions": [
+      {
+        "pdf_page": 399,
+        "book_page": 380,
+        "bbox": [
+          0,
+          287.3333333333333,
+          595.2755737304688,
+          328.0
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-21-p399.jpg",
+        "full_page": "../教材习题/BK06/page-0399.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-22",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-22",
+    "question_ocr": "5-22.用动能为50MeV的质子轰击Be靶，观察到有中子出射。在与人射束流相同\n的方向上出射中子的最大动能为48.1MeV.\n（1）写出核反应方程式；\n（2）利用Q方程计算在与人射束流成30°角的方向上中子的最大动能。",
+    "regions": [
+      {
+        "pdf_page": 399,
+        "book_page": 380,
+        "bbox": [
+          0,
+          324.0,
+          595.2755737304688,
+          399.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-22-p399.jpg",
+        "full_page": "../教材习题/BK06/page-0399.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-23",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-23",
+    "question_ocr": "5-23.用动能为7.70MeV的α粒子轰击N，观察到在90°方向上有动能为4.44MeV\n的质子出射。\n（1）确定该反应的反应能；\n(2）求剩余核原子的质量（用反应中其它成员的质量来表示）。",
+    "regions": [
+      {
+        "pdf_page": 399,
+        "book_page": 380,
+        "bbox": [
+          0,
+          395.3333333333333,
+          595.2755737304688,
+          471.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-23-p399.jpg",
+        "full_page": "../教材习题/BK06/page-0399.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-24",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-24",
+    "question_ocr": "5-24.已知B（n，α）'Li反应的截面为4x10b，用流强为10/m²·s的中子流\n照射一年，B的数量减少了百分之几？",
+    "regions": [
+      {
+        "pdf_page": 399,
+        "book_page": 380,
+        "bbox": [
+          0,
+          467.3333333333333,
+          595.2755737304688,
+          506.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-24-p399.jpg",
+        "full_page": "../教材习题/BK06/page-0399.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-25",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-25",
+    "question_ocr": "5-25.能量为1MeV的中子引起U发生裂变的截面约为1b.当这样的中子通过\n单位面积上质量为0.1kg/m²的均匀”U层时，产生裂变的概率多大？",
+    "regions": [
+      {
+        "pdf_page": 399,
+        "book_page": 380,
+        "bbox": [
+          0,
+          502.6666666666667,
+          595.2755737304688,
+          544.0
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-25-p399.jpg",
+        "full_page": "../教材习题/BK06/page-0399.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-26",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-26",
+    "question_ocr": "5-26. 用能量为60MeV的质\n上微分截面do/dΩ=1.3x1b/sr，这时Fe被激发到能量为1.42MeV的第一激发\n态。若探测器窗口面积为10-m²，距靶10\"m，Fe靶单位面积的质量为10-kg/m²，人射\n质子的电流强度为10-A，试计算每秒记录到的事件数。",
+    "regions": [
+      {
+        "pdf_page": 399,
+        "book_page": 380,
+        "bbox": [
+          0,
+          540.0,
+          595.2755737304688,
+          615.5
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-26-p399.jpg",
+        "full_page": "../教材习题/BK06/page-0399.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-27",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-27",
+    "question_ocr": "5-27. 一静止的核H俘获一\n的激发能。",
+    "regions": [
+      {
+        "pdf_page": 399,
+        "book_page": 380,
+        "bbox": [
+          0,
+          611.5,
+          595.2755737304688,
+          650.6666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-27-p399.jpg",
+        "full_page": "../教材习题/BK06/page-0399.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-28",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-28",
+    "question_ocr": "5-28.在”Al（n，n)²Al反应中观察到当中子人射能量为40、155、290和370keV\n时出现共振。求复合核A1相应的激发能。（Al基态的质量=26.981539u.）",
+    "regions": [
+      {
+        "pdf_page": 399,
+        "book_page": 380,
+        "bbox": [
+          0,
+          646.6666666666666,
+          595.2755737304688,
+          686.5
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-28-p399.jpg",
+        "full_page": "../教材习题/BK06/page-0399.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-29",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-29",
+    "question_ocr": "5-29. 10核吸收中子时形成\n0核时其能量与激发能匹配时发生共振，相互作用截面出现极大。\"O核的几个较低\n能级有0.87、3.00、3.80、4.54、5.07和5.36MeV，试求与它们共振的中子动能。\n习题\n381",
+    "regions": [
+      {
+        "pdf_page": 399,
+        "book_page": 380,
+        "bbox": [
+          0,
+          682.5,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-29-p399.jpg",
+        "full_page": "../教材习题/BK06/page-0399.jpg"
+      },
+      {
+        "pdf_page": 400,
+        "book_page": 381,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          72.66666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-29-p400.jpg",
+        "full_page": "../教材习题/BK06/page-0400.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-30",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-30",
+    "question_ocr": "5-30.若知1g纯U在1小时内自发裂变的数目为25个，试求其自发裂变的半衰\n期。",
+    "regions": [
+      {
+        "pdf_page": 400,
+        "book_page": 381,
+        "bbox": [
+          0,
+          68.66666666666667,
+          595.2755737304688,
+          108.0
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-30-p400.jpg",
+        "full_page": "../教材习题/BK06/page-0400.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-31",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-31",
+    "question_ocr": "5-31.在石墨型反应堆中，设中子和”C每次都作弹性正碰，且碰撞前碳核都是静\n止的。试问：动能为1MeV的快中子和碳核作多少次碰撞后，才能成为热中子（动能\n0.025eV)？",
+    "regions": [
+      {
+        "pdf_page": 400,
+        "book_page": 381,
+        "bbox": [
+          0,
+          104.0,
+          595.2755737304688,
+          161.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-31-p400.jpg",
+        "full_page": "../教材习题/BK06/page-0400.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-32",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-32",
+    "question_ocr": "5-32.计算在下列热核反应中燃烧1g核燃料时所产生的能量（焦耳）：\nDT反应；DD反应。",
+    "regions": [
+      {
+        "pdf_page": 400,
+        "book_page": 381,
+        "bbox": [
+          0,
+          157.33333333333334,
+          595.2755737304688,
+          196.66666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-32-p400.jpg",
+        "full_page": "../教材习题/BK06/page-0400.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-33",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-33",
+    "question_ocr": "5-33.试用液滴模型结合能的唯象公式计算Ca的结合能B，所得结果与实际数\n值差百分之几？",
+    "regions": [
+      {
+        "pdf_page": 400,
+        "book_page": 381,
+        "bbox": [
+          0,
+          192.66666666666666,
+          595.2755737304688,
+          232.66666666666666
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-33-p400.jpg",
+        "full_page": "../教材习题/BK06/page-0400.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-34",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-34",
+    "question_ocr": "5-34.1987年2月南天超新星爆发时地面记录到的中微子能量范围为10~40MeV，\n时间区间约2s，假设这些中微子是在这颗超新星爆发时同时辐射出来的，运行了大约\n17万光年后到达地球。试以此估计中微子质量的上限。",
+    "regions": [
+      {
+        "pdf_page": 400,
+        "book_page": 381,
+        "bbox": [
+          0,
+          228.66666666666666,
+          595.2755737304688,
+          286.0
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-34-p400.jpg",
+        "full_page": "../教材习题/BK06/page-0400.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-35",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-35",
+    "question_ocr": "5-35.粒子1与静止靶粒子2作完全非弹性碰撞后，形成一个新粒子3.试用洛伦\n兹不变量法[见《新概念物理教程·力学》（第二版)第八章4.5节]证明：\nM=√M²+M²+2ME/c²，\n式中M代表质量，E代表能量。\n10.2节里描述了发现第一个共振粒子A”的实验：用3219MeV能量的π介子轰击\n质子p，在质心系内1232MeV处获得了一个共振峰。试利用上式证明，这就是在质心系\n内生成粒子的能量。已知π介子和质子的静质量分别为139.6MeV/c²和938.3MeV/c2",
+    "regions": [
+      {
+        "pdf_page": 400,
+        "book_page": 381,
+        "bbox": [
+          0,
+          282.0,
+          595.2755737304688,
+          414.0
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-35-p400.jpg",
+        "full_page": "../教材习题/BK06/page-0400.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-5-36",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": 5,
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "5-36",
+    "question_ocr": "5-36.某一D介子由一个c夸克和一个u夸克组成，求它的自旋、电荷、重子数、\n奇异数和粲数。",
+    "regions": [
+      {
+        "pdf_page": 400,
+        "book_page": 381,
+        "bbox": [
+          0,
+          410.0,
+          595.2755737304688,
+          776.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-C5-习题-5-36-p400.jpg",
+        "full_page": "../教材习题/BK06/page-0400.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-A-1",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": "A",
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "A-1",
+    "question_ocr": "A-1.试证明：任意一组正交归一矢量是线性无关的。",
+    "regions": [
+      {
+        "pdf_page": 450,
+        "book_page": 431,
+        "bbox": [
+          0,
+          642.0,
+          595.2755737304688,
+          663.3333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-CA-习题-A-1-p450.jpg",
+        "full_page": "../教材习题/BK06/page-0450.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-A-2",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": "A",
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "A-2",
+    "question_ocr": "A-2.验算泡利矩阵的对易关系（A.41)式。",
+    "regions": [
+      {
+        "pdf_page": 450,
+        "book_page": 431,
+        "bbox": [
+          0,
+          659.3333333333334,
+          595.2755737304688,
+          682.0
+        ],
+        "image": "../教材习题/BK06/BK06-CA-习题-A-2-p450.jpg",
+        "full_page": "../教材习题/BK06/page-0450.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-A-3",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": "A",
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "A-3",
+    "question_ocr": "A-3.A、B是两个矩阵，试证明[见（A.39)式]：\n(AB)+=BA.\n十代表厄米共轭。\n附录A线性代数\n432",
+    "regions": [
+      {
+        "pdf_page": 450,
+        "book_page": 431,
+        "bbox": [
+          0,
+          678.0,
+          595.2755737304688,
+          785.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-CA-习题-A-3-p450.jpg",
+        "full_page": "../教材习题/BK06/page-0450.jpg"
+      },
+      {
+        "pdf_page": 451,
+        "book_page": 432,
+        "bbox": [
+          0,
+          20,
+          595.2755737304688,
+          74.0
+        ],
+        "image": "../教材习题/BK06/BK06-CA-习题-A-3-p451.jpg",
+        "full_page": "../教材习题/BK06/page-0451.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-A-4",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": "A",
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "A-4",
+    "question_ocr": "A-4.求下列矩阵之逆：\n(1)R(0)=\nCOS0\nsino\n-sinθ\nCOS0\n√2\n0\n-/2",
+    "regions": [
+      {
+        "pdf_page": 451,
+        "book_page": 432,
+        "bbox": [
+          0,
+          70.0,
+          595.2755737304688,
+          190.0
+        ],
+        "image": "../教材习题/BK06/BK06-CA-习题-A-4-p451.jpg",
+        "full_page": "../教材习题/BK06/page-0451.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-A-5",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": "A",
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "A-5",
+    "question_ocr": "A-5.求泡利矩阵之逆，并验证它们是么正的。",
+    "regions": [
+      {
+        "pdf_page": 451,
+        "book_page": 432,
+        "bbox": [
+          0,
+          186.0,
+          595.2755737304688,
+          208.0
+        ],
+        "image": "../教材习题/BK06/BK06-CA-习题-A-5-p451.jpg",
+        "full_page": "../教材习题/BK06/page-0451.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-A-6",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": "A",
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "A-6",
+    "question_ocr": "A-6.转动矩阵R（0）如A-4题所定义，试证明\nR（0)R（0）=R（0,+0).",
+    "regions": [
+      {
+        "pdf_page": 451,
+        "book_page": 432,
+        "bbox": [
+          0,
+          204.0,
+          595.2755737304688,
+          241.33333333333334
+        ],
+        "image": "../教材习题/BK06/BK06-CA-习题-A-6-p451.jpg",
+        "full_page": "../教材习题/BK06/page-0451.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-A-7",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": "A",
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "A-7",
+    "question_ocr": "A-7.求下列矩阵的本征值和本征矢：",
+    "regions": [
+      {
+        "pdf_page": 451,
+        "book_page": 432,
+        "bbox": [
+          0,
+          237.33333333333334,
+          595.2755737304688,
+          312.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-CA-习题-A-7-p451.jpg",
+        "full_page": "../教材习题/BK06/page-0451.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-A-8",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": "A",
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "A-8",
+    "question_ocr": "A-8.接上题，求将矩阵J和J对角化的么正变换矩阵。",
+    "regions": [
+      {
+        "pdf_page": 451,
+        "book_page": 432,
+        "bbox": [
+          0,
+          308.6666666666667,
+          595.2755737304688,
+          330.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-CA-习题-A-8-p451.jpg",
+        "full_page": "../教材习题/BK06/page-0451.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-A-9",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": "A",
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "A-9",
+    "question_ocr": "A-9.接A-7题，试计算矩阵J=J±iJ.它们是J本征矢的升降算符吗？",
+    "regions": [
+      {
+        "pdf_page": 451,
+        "book_page": 432,
+        "bbox": [
+          0,
+          326.6666666666667,
+          595.2755737304688,
+          348.0
+        ],
+        "image": "../教材习题/BK06/BK06-CA-习题-A-9-p451.jpg",
+        "full_page": "../教材习题/BK06/page-0451.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-A-10",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": "A",
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "A-10",
+    "question_ocr": "A-10.接A-7题，求对易式[Jx，J]，[J，J］和[J，J].",
+    "regions": [
+      {
+        "pdf_page": 451,
+        "book_page": 432,
+        "bbox": [
+          0,
+          344.0,
+          595.2755737304688,
+          367.3333333333333
+        ],
+        "image": "../教材习题/BK06/BK06-CA-习题-A-10-p451.jpg",
+        "full_page": "../教材习题/BK06/page-0451.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-A-11",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": "A",
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "A-11",
+    "question_ocr": "A-11.接A-7题，计算矩阵J²=J²+J+J.它的本征值为多少？如果把它的\n本征值写成J(J+1)的形式，J=？",
+    "regions": [
+      {
+        "pdf_page": 451,
+        "book_page": 432,
+        "bbox": [
+          0,
+          363.3333333333333,
+          595.2755737304688,
+          402.6666666666667
+        ],
+        "image": "../教材习题/BK06/BK06-CA-习题-A-11-p451.jpg",
+        "full_page": "../教材习题/BK06/page-0451.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-A-12",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": "A",
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "A-12",
+    "question_ocr": "A-12.接上题，求对易式[JJ]，[J².J]和[JJ].",
+    "regions": [
+      {
+        "pdf_page": 451,
+        "book_page": 432,
+        "bbox": [
+          0,
+          398.6666666666667,
+          595.2755737304688,
+          420.0
+        ],
+        "image": "../教材习题/BK06/BK06-CA-习题-A-12-p451.jpg",
+        "full_page": "../教材习题/BK06/page-0451.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-A-13",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": "A",
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "A-13",
+    "question_ocr": "A-13.分别列出轨道角量子数l=0，1,2,3时磁量子数m的取值，并计算简并本\n征态总数。",
+    "regions": [
+      {
+        "pdf_page": 451,
+        "book_page": 432,
+        "bbox": [
+          0,
+          416.0,
+          595.2755737304688,
+          456.0
+        ],
+        "image": "../教材习题/BK06/BK06-CA-习题-A-13-p451.jpg",
+        "full_page": "../教材习题/BK06/page-0451.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  },
+  {
+    "id": "BK06-习题-A-14",
+    "book": "新概念物理教程·量子物理（第二版）",
+    "chapter": "A",
+    "chapter_title": "",
+    "type": "习题",
+    "original_number": "A-14",
+    "question_ocr": "A-14.轨道角量子数l=2，自旋角量子数s=1/2，像例12中那样，列表说明二者合\n成后总角量子数j和磁量子数m的取值情况，以及本征态的数目。",
+    "regions": [
+      {
+        "pdf_page": 451,
+        "book_page": 432,
+        "bbox": [
+          0,
+          452.0,
+          595.2755737304688,
+          776.5380859375
+        ],
+        "image": "../教材习题/BK06/BK06-CA-习题-A-14-p451.jpg",
+        "full_page": "../教材习题/BK06/page-0451.jpg"
+      }
+    ],
+    "source_pdf": "教材/新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "answer": null,
+    "status": "OCR分题，题面以原图为准；边界待逐题复核"
+  }
+]

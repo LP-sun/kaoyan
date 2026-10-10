@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>物理考研智能诊断</title>
+    <!-- KaTeX 已本地化到 third_party/katex（不依赖外网 CDN，公式离线可用） -->
+    <link rel="stylesheet" href="/vendor/katex/katex.min.css" onerror="window.__katexCssFailed=true" />
+    <style>
+      :root {
+        --bg: #0f1218;
+        --panel: #171b24;
+        --panel2: #1f2531;
+        --line: #2b3342;
+        --fg: #e8ecf3;
+        --muted: #93a0b4;
+        --accent: #4f8cff;
+        --ok: #2fbf71;
+        --bad: #e5484d;
+        --warn: #e0a63a;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font: 15px/1.7 "Segoe UI", "Microsoft YaHei", system-ui, sans-serif;
+      }
+      .wrap { max-width: 880px; margin: 0 auto; padding: 28px 20px 80px; }
+      header { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 6px; }
+      h1 { font-size: 22px; margin: 0; }
+      .sub { color: var(--muted); font-size: 13px; }
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 18px 20px;
+        margin-top: 16px;
+      }
+      .row { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+      label { color: var(--muted); font-size: 13px; }
+      select, button, input {
+        font: inherit;
+        color: var(--fg);
+        background: var(--panel2);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 8px 12px;
+      }
+      button { cursor: pointer; }
+      button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+      button.primary:disabled { opacity: .45; cursor: not-allowed; }
+      button.ghost { background: transparent; }
+      .pill { font-size: 12px; color: var(--muted); border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; }
+      .stem { font-size: 16px; margin: 14px 0 4px; }
+      .options { display: grid; gap: 10px; margin-top: 14px; }
+      .opt {
+        display: flex; gap: 12px; align-items: flex-start; text-align: left;
+        background: var(--panel2); border: 1px solid var(--line); border-radius: 10px;
+        padding: 12px 14px; width: 100%;
+      }
+      .opt:hover:not(:disabled) { border-color: var(--accent); }
+      .opt .key {
+        flex: 0 0 26px; height: 26px; border-radius: 50%; background: #2c3547;
+        display: grid; place-items: center; font-weight: 700; font-size: 13px;
+      }
+      .opt.selected { border-color: var(--accent); box-shadow: 0 0 0 1px var(--accent) inset; }
+      .opt.correct { border-color: var(--ok); background: rgba(47,191,113,.12); }
+      .opt.wrong { border-color: var(--bad); background: rgba(229,72,77,.12); }
+      .opt:disabled { cursor: default; opacity: .95; }
+      .feedback { margin-top: 16px; border-top: 1px dashed var(--line); padding-top: 14px; }
+      .tag { font-weight: 700; }
+      .tag.ok { color: var(--ok); }
+      .tag.bad { color: var(--bad); }
+      .muted { color: var(--muted); }
+      .small { font-size: 13px; }
+      pre.json {
+        background: #0b0e14; border: 1px solid var(--line); border-radius: 8px;
+        padding: 12px; overflow: auto; font-size: 12.5px; color: #cfe3ff;
+      }
+      ul { padding-left: 22px; }
+      .progress { height: 6px; background: var(--panel2); border-radius: 999px; overflow: hidden; margin-top: 10px; }
+      .progress > i { display: block; height: 100%; background: var(--accent); width: 0; transition: width .25s; }
+      .banner { border-left: 3px solid var(--warn); padding: 8px 12px; background: rgba(224,166,58,.08); border-radius: 6px; font-size: 13px; }
+      .banner.err { border-color: var(--bad); background: rgba(229,72,77,.08); }
+      .footer { margin-top: 26px; color: var(--muted); font-size: 12.5px; }
+      .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      @media (max-width: 700px) { .grid2 { grid-template-columns: 1fr; } }
+      .katex { font-size: 1.02em; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>物理考研智能诊断</h1>
+        <span class="sub">Physics Diagnostic Tutor · 本地独立实现（与 FastGPT 并行）</span>
+      </header>
+      <div class="banner small" id="bankBanner">正在加载题库…</div>
+
+      <!-- 起手：选择科目与章节 -->
+      <section class="card" id="startCard">
+        <div class="row">
+          <div>
+            <label for="subject">科目</label><br />
+            <select id="subject"></select>
+          </div>
+          <div>
+            <label for="chapter">章节</label><br />
+            <select id="chapter"></select>
+          </div>
+          <div>
+            <label for="limit">题量</label><br />
+            <select id="limit">
+              <option value="5">5 题</option>
+              <option value="10" selected>10 题</option>
+            </select>
+          </div>
+          <div style="align-self: flex-end">
+            <button class="primary" id="startBtn">开始诊断</button>
+          </div>
+        </div>
+        <div class="small muted" style="margin-top: 10px">
+          判分使用题库固定答案，不会让模型猜测正确选项；模型只用于「错因分析」和「学习建议」。
+        </div>
+      </section>
+
+      <!-- 答题区 -->
+      <section class="card" id="quizCard" style="display: none">
+        <div class="row" style="justify-content: space-between">
+          <div class="row">
+            <span class="pill" id="qIndex">第 1 / 10 题</span>
+            <span class="pill" id="qMeta">力学 · 刚体转动</span>
+            <span class="pill" id="qDifficulty">中等</span>
+          </div>
+          <button class="ghost" id="stopBtn">结束并查看报告</button>
+        </div>
+        <div class="progress"><i id="progressBar"></i></div>
+        <div class="stem" id="stem"></div>
+        <div class="options" id="options"></div>
+        <div class="feedback" id="feedback" style="display: none"></div>
+        <div class="row" style="margin-top: 16px; justify-content: flex-end">
+          <button class="primary" id="nextBtn" style="display: none">下一题</button>
+          <button class="primary" id="reportBtn" style="display: none">生成诊断报告</button>
+        </div>
+      </section>
+
+      <!-- 报告区 -->
+      <section class="card" id="reportCard" style="display: none">
+        <h2 style="margin-top: 0; font-size: 18px">诊断报告</h2>
+        <div id="reportBody"></div>
+        <div class="row" style="margin-top: 18px">
+          <button class="primary" id="againBtn">再测一次</button>
+        </div>
+      </section>
+
+      <div class="footer">
+        数据仅保存在本机 <code>data/diagnosis-sessions.json</code>；不写入 PhysicsPrep 的数据库，不上传任何密钥。
+      </div>
+    </div>
+
+    <script defer src="/vendor/katex/katex.min.js" onerror="window.__katexJsFailed=true"></script>
+    <script>
+      // ---------------------------------------------------------------- 小工具
+      const $ = (id) => document.getElementById(id);
+      let sessionId = null;
+      let current = null;
+      let selectedKey = null;
+      let answered = false;
+
+      /** 渲染可能包含 $...$ / $$...$$ LaTeX 的文本；KaTeX 不可用时优雅降级为原文 */
+      function renderMath(el, text) {
+        el.textContent = '';
+        if (!text) return;
+        const hasKatex = typeof window.katex !== 'undefined';
+        if (!hasKatex) {
+          el.textContent = text;
+          return;
+        }
+        // 先按 $$...$$ 再按 $...$ 切分
+        const parts = [];
+        let rest = text;
+        const re = /\$\$([\s\S]+?)\$\$|\$([\s\S]+?)\$/g;
+        let last = 0;
+        let m;
+        while ((m = re.exec(rest)) !== null) {
+          if (m.index > last) parts.push({ t: rest.slice(last, m.index), math: false });
+          parts.push({ t: m[1] !== undefined ? m[1] : m[2], math: true, display: m[1] !== undefined });
+          last = m.index + m[0].length;
+        }
+        if (last < rest.length) parts.push({ t: rest.slice(last), math: false });
+        for (const p of parts) {
+          if (!p.math) {
+            el.appendChild(document.createTextNode(p.t));
+          } else {
+            const span = document.createElement('span');
+            try {
+              window.katex.render(p.t, span, { throwOnError: false, displayMode: !!p.display });
+            } catch {
+              span.textContent = p.t;
+            }
+            el.appendChild(span);
+          }
+        }
+      }
+
+      async function api(path, options) {
+        const res = await fetch(path, {
+          headers: { 'Content-Type': 'application/json' },
+          ...options
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok) throw new Error(data.error || `HTTP ${res.status}`);
+        return data;
+      }
+
+      // ---------------------------------------------------------------- 初始化
+      async function init() {
+        try {
+          const h = await api('/api/health');
+          $('bankBanner').innerHTML =
+            `题库共 <b>${h.bankQuestions}</b> 题；GenAI ${h.genaiConfigured ? '<b>已配置</b>' : '<b>未配置</b>（判分可用，错因分析不可用）'}；` +
+            `模型分析${h.llmEnabled ? '已启用' : '已禁用'}。`;
+          if (!h.genaiConfigured) $('bankBanner').classList.add('banner');
+
+          const tax = await api('/api/taxonomy');
+          const subjectSel = $('subject');
+          subjectSel.innerHTML = '';
+          for (const s of Object.keys(tax.subjects)) {
+            const o = document.createElement('option');
+            o.value = s;
+            o.textContent = s;
+            subjectSel.appendChild(o);
+          }
+          fillChapters(tax);
+          subjectSel.onchange = () => fillChapters(tax);
+
+          function fillChapters(tax) {
+            const s = subjectSel.value;
+            const chSel = $('chapter');
+            chSel.innerHTML = '<option value="">全部章节</option>';
+            for (const [c, n] of Object.entries(tax.subjects[s] || {})) {
+              const o = document.createElement('option');
+              o.value = c;
+              o.textContent = `${c}（${n} 题）`;
+              chSel.appendChild(o);
+            }
+          }
+        } catch (e) {
+          $('bankBanner').textContent = '加载失败：' + e.message;
+          $('bankBanner').classList.add('banner', 'err');
+        }
+      }
+
+      // ---------------------------------------------------------------- 开始诊断
+      $('startBtn').onclick = async () => {
+        $('startBtn').disabled = true;
+        try {
+          const data = await api('/api/session', {
+            method: 'POST',
+            body: JSON.stringify({
+              subject: $('subject').value,
+              chapter: $('chapter').value || null,
+              limit: Number($('limit').value)
+            })
+          });
+          sessionId = data.sessionId;
+          $('startCard').style.display = 'none';
+          $('reportCard').style.display = 'none';
+          $('quizCard').style.display = '';
+          showQuestion(data.question);
+        } catch (e) {
+          alert('无法开始诊断：' + e.message);
+        } finally {
+          $('startBtn').disabled = false;
+        }
+      };
+
+      // ---------------------------------------------------------------- 渲染题目
+      function showQuestion(q) {
+        if (!q) return;
+        current = q;
+        selectedKey = null;
+        answered = false;
+        $('qIndex').textContent = `第 ${q.index} / ${q.total} 题`;
+        $('qMeta').textContent = `${q.subject} · ${q.chapter}`;
+        $('qDifficulty').textContent = q.difficulty;
+        $('progressBar').style.width = `${((q.index - 1) / q.total) * 100}%`;
+        renderMath($('stem'), q.stem);
+
+        const box = $('options');
+        box.innerHTML = '';
+        for (const o of q.options) {
+          const btn = document.createElement('button');
+          btn.className = 'opt';
+          btn.dataset.key = o.key;
+          const k = document.createElement('span');
+          k.className = 'key';
+          k.textContent = o.key;
+          const t = document.createElement('span');
+          renderMath(t, o.text);
+          btn.appendChild(k);
+          btn.appendChild(t);
+          btn.onclick = () => selectOption(o.key);
+          box.appendChild(btn);
+        }
+        $('feedback').style.display = 'none';
+        $('feedback').innerHTML = '';
+        $('nextBtn').style.display = 'none';
+        $('reportBtn').style.display = 'none';
+        $('stopBtn').disabled = false;
+      }
+
+      function selectOption(key) {
+        if (answered) return;
+        selectedKey = key;
+        for (const b of document.querySelectorAll('.opt')) {
+          b.classList.toggle('selected', b.dataset.key === key);
+        }
+        submitAnswer();
+      }
+
+      // ---------------------------------------------------------------- 提交答案
+      async function submitAnswer() {
+        if (answered || !selectedKey) return;
+        answered = true;
+        $('stopBtn').disabled = true;
+        for (const b of document.querySelectorAll('.opt')) b.disabled = true;
+        $('feedback').style.display = '';
+        $('feedback').innerHTML = '<span class="muted">判分中…（错误题会调用模型做错因分析，可能需要几秒）</span>';
+
+        try {
+          const r = await api('/api/answer', {
+            method: 'POST',
+            body: JSON.stringify({ sessionId, questionId: current.id, choice: selectedKey })
+          });
+          paintFeedback(r);
+        } catch (e) {
+          $('feedback').innerHTML = `<span class="tag bad">提交失败：</span> ${e.message}`;
+          answered = false;
+          for (const b of document.querySelectorAll('.opt')) b.disabled = false;
+          $('stopBtn').disabled = false;
+        }
+      }
+
+      function paintFeedback(r) {
+        for (const b of document.querySelectorAll('.opt')) {
+          if (b.dataset.key === r.correctOption) b.classList.add('correct');
+          if (b.dataset.key === r.chosenKey && !r.correct) b.classList.add('wrong');
+        }
+        const fb = $('feedback');
+        fb.innerHTML = '';
+
+        const head = document.createElement('div');
+        head.innerHTML = r.correct
+          ? '<span class="tag ok">✓ 回答正确</span>'
+          : `<span class="tag bad">✗ 回答错误</span> <span class="muted">你选 ${r.chosenKey}，正确答案 ${r.correctOption}</span>`;
+        fb.appendChild(head);
+
+        const exp = document.createElement('div');
+        exp.style.marginTop = '10px';
+        const lbl = document.createElement('div');
+        lbl.className = 'small muted';
+        lbl.textContent = '解析';
+        exp.appendChild(lbl);
+        const body = document.createElement('div');
+        renderMath(body, r.explanation);
+        exp.appendChild(body);
+        fb.appendChild(exp);
+
+        if (r.commonMisconceptions && r.commonMisconceptions.length) {
+          const d = document.createElement('details');
+          d.style.marginTop = '10px';
+          const s = document.createElement('summary');
+          s.className = 'small muted';
+          s.textContent = '本题常见误区';
+          d.appendChild(s);
+          const ul = document.createElement('ul');
+          ul.className = 'small';
+          for (const m of r.commonMisconceptions) {
+            const li = document.createElement('li');
+            renderMath(li, m);
+            ul.appendChild(li);
+          }
+          d.appendChild(ul);
+          fb.appendChild(d);
+        }
+
+        // 模型错因分析（可能不存在）
+        if (r.analysis) {
+          const box = document.createElement('div');
+          box.style.marginTop = '12px';
+          const a = r.analysis;
+          box.appendChild(
+            Object.assign(document.createElement('div'), {
+              className: 'small muted',
+              textContent: `模型错因分析（推断，非确定结论；置信度 ${a.confidence}）`
+            })
+          );
+          const ul = document.createElement('ul');
+          ul.className = 'small';
+          for (const m of a.possible_misconceptions) {
+            const li = document.createElement('li');
+            renderMath(li, m);
+            ul.appendChild(li);
+          }
+          box.appendChild(ul);
+          if (a.recommended_review.length) {
+            box.appendChild(
+              Object.assign(document.createElement('div'), { className: 'small muted', textContent: '建议复习' })
+            );
+            const ul2 = document.createElement('ul');
+            ul2.className = 'small';
+            for (const m of a.recommended_review) {
+              const li = document.createElement('li');
+              renderMath(li, m);
+              ul2.appendChild(li);
+            }
+            box.appendChild(ul2);
+          }
+          if (a.follow_up_question) {
+            const fu = document.createElement('div');
+            fu.className = 'small';
+            fu.style.marginTop = '8px';
+            fu.innerHTML = '<b>追问（用于区分上述可能原因）</b>：';
+            const sp = document.createElement('span');
+            renderMath(sp, a.follow_up_question);
+            fu.appendChild(sp);
+            box.appendChild(fu);
+          }
+          fb.appendChild(box);
+        } else if (r.analysisError && !r.correct) {
+          const w = document.createElement('div');
+          w.className = 'small';
+          w.style.marginTop = '10px';
+          w.innerHTML = `<span class="muted">模型错因分析不可用：${r.analysisError}</span>`;
+          fb.appendChild(w);
+        }
+
+        $('progressBar').style.width = `${(r.progress.answered / r.progress.total) * 100}%`;
+        if (r.finished) {
+          $('reportBtn').style.display = '';
+        } else {
+          $('nextBtn').style.display = '';
+          $('nextBtn').onclick = () => showQuestion(r.nextQuestion);
+        }
+        $('stopBtn').disabled = false;
+      }
+
+      // ---------------------------------------------------------------- 报告
+      $('reportBtn').onclick = () => loadReport();
+      $('stopBtn').onclick = async () => {
+        if (!sessionId) return;
+        if (!confirm('确定结束本次诊断并生成报告吗？')) return;
+        try {
+          await api('/api/session/stop', { method: 'POST', body: JSON.stringify({ sessionId }) });
+        } catch (e) {
+          /* 忽略：即使停止失败也可直接取报告 */
+        }
+        loadReport();
+      };
+      $('againBtn').onclick = () => {
+        sessionId = null;
+        $('reportCard').style.display = 'none';
+        $('quizCard').style.display = 'none';
+        $('startCard').style.display = '';
+      };
+
+      async function loadReport() {
+        $('reportBtn').disabled = true;
+        $('reportBody').innerHTML = '<span class="muted">正在生成报告…</span>';
+        $('quizCard').style.display = 'none';
+        $('reportCard').style.display = '';
+        try {
+          const r = await api('/api/report', { method: 'POST', body: JSON.stringify({ sessionId }) });
+          paintReport(r);
+        } catch (e) {
+          $('reportBody').innerHTML = `<div class="banner err">生成报告失败：${e.message}</div>`;
+        } finally {
+          $('reportBtn').disabled = false;
+        }
+      }
+
+      function paintReport(r) {
+        const rr = r.ruleReport;
+        const el = $('reportBody');
+        el.innerHTML = '';
+
+        const sum = document.createElement('div');
+        sum.className = 'grid2';
+        sum.innerHTML = `
+          <div class="card" style="margin-top:0">
+            <div class="muted small">作答</div>
+            <div style="font-size:26px;font-weight:700">${rr.correctCount} / ${rr.total}</div>
+            <div class="muted small">正确率 ${(rr.accuracy * 100).toFixed(1)}%</div>
+          </div>
+          <div class="card" style="margin-top:0">
+            <div class="muted small">覆盖章节</div>
+            <div style="font-size:15px">${rr.testedChapters.join('、') || '—'}</div>
+          </div>`;
+        el.appendChild(sum);
+
+        const mkList = (title, arr, cls) => {
+          const d = document.createElement('div');
+          d.style.marginTop = '14px';
+          d.innerHTML = `<div class="small muted">${title}</div>`;
+          if (!arr.length) {
+            d.innerHTML += '<div class="small">无</div>';
+          } else {
+            const ul = document.createElement('ul');
+            ul.className = 'small';
+            for (const e of arr) {
+              const li = document.createElement('li');
+              li.innerHTML = `<b>${e.chapter}</b>：错 ${e.wrong} / 共 ${e.asked} 题（题号 ${e.wrongIds.join(', ')}）`;
+              ul.appendChild(li);
+            }
+            d.appendChild(ul);
+          }
+          el.appendChild(d);
+        };
+        mkList('可确认的薄弱环节（多次或高比例出错）', rr.confirmedWeakAreas);
+        mkList('疑似薄弱环节（证据不足，需追问确认）', rr.suspectedWeakAreas);
+
+        const pt = document.createElement('div');
+        pt.style.marginTop = '14px';
+        pt.innerHTML = '<div class="small muted">本次测试到的知识点</div>';
+        const ulp = document.createElement('ul');
+        ulp.className = 'small';
+        rr.testedPoints.forEach((p) => {
+          const li = document.createElement('li');
+          li.textContent = p;
+          ulp.appendChild(li);
+        });
+        pt.appendChild(ulp);
+        el.appendChild(pt);
+
+        if (rr.nextPractice.length) {
+          const np = document.createElement('div');
+          np.style.marginTop = '14px';
+          np.innerHTML = '<div class="small muted">下一组练习建议</div>';
+          const ul = document.createElement('ul');
+          ul.className = 'small';
+          for (const p of rr.nextPractice) {
+            const li = document.createElement('li');
+            li.textContent = `${p.chapter}：建议再练 ${p.suggestedQuestionIds.join('、')}`;
+            ul.appendChild(li);
+          }
+          np.appendChild(ul);
+          el.appendChild(np);
+        }
+
+        if (r.llmAdvice) {
+          const adv = document.createElement('div');
+          adv.style.marginTop = '16px';
+          adv.innerHTML = '<div class="small muted">模型复习建议（基于上述统计生成）</div>';
+          const body = document.createElement('div');
+          body.style.whiteSpace = 'pre-wrap';
+          body.textContent = r.llmAdvice.advice;
+          adv.appendChild(body);
+          el.appendChild(adv);
+        } else if (r.llmAdviceError) {
+          const w = document.createElement('div');
+          w.className = 'banner err small';
+          w.style.marginTop = '14px';
+          w.textContent = '模型学习建议不可用：' + r.llmAdviceError;
+          el.appendChild(w);
+        }
+
+        const caveat = document.createElement('div');
+        caveat.className = 'banner small';
+        caveat.style.marginTop = '16px';
+        caveat.textContent = rr.caveat;
+        el.appendChild(caveat);
+
+        const disc = document.createElement('div');
+        disc.className = 'small muted';
+        disc.style.marginTop = '10px';
+        disc.textContent = r.disclaimer;
+        el.appendChild(disc);
+      }
+
+      init();
+    </script>
+  </body>
+</html>

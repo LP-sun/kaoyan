@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "physics-prep"
+version = "1.0.0"
+description = "物理考研 AI 自适应诊断与复习平台（本地单用户，Gradio + SQLite）"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "gradio>=5.0,<6",
+    "sqlalchemy>=2,<3",
+    "sympy>=1.13,<2",
+    "pydantic>=2,<3",
+    "plotly>=6,<7",
+    "python-dotenv>=1,<2",
+    "openai>=1,<3",
+    "httpx>=0.27,<1",
+    "pyyaml>=6,<7",
+]
+
+[project.optional-dependencies]
+# 仅用于真实浏览器视觉检查（tools/ui_visual_check.py），运行应用本身不需要。
+ui-check = ["playwright>=1.40"]
+
+[project.scripts]
+physics-prep = "app:main"
+
+[tool.setuptools]
+packages = ["physics_prep", "physics_prep.database", "physics_prep.database.migrations",
+            "physics_prep.diagnosis", "physics_prep.llm", "physics_prep.questions",
+            "physics_prep.services", "physics_prep.ui"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"
+# 这里不把弃用警告升级为失败：Gradio 5.x 在构造组件时会发出多条 Gradio 6.0 迁移提示，
+# 逐条 ignore 既脆弱又会掩盖新提示。真正要守住的约束是“本项目代码不产生任何警告”，
+# 由 tools/preflight_check.py 用 warnings.catch_warnings(record=True) 硬性检查。
+filterwarnings = [
+    # SQLAlchemy 的默认值机制会在内部调用 datetime.utcnow，与本项目代码无关
+    "ignore:datetime.datetime.utcnow\\(\\) is deprecated:DeprecationWarning",
+]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"

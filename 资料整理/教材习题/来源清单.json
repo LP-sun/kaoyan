@@ -1,0 +1,56 @@
+[
+  {
+    "file": "教材\\光学新概念物理教程 新概念物理教程 (赵凯华) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "bytes": 66558473,
+    "sha256": "84bb910222bf5bf84eb385de70d42dc58df61be7674b159c9a25b5b245a5e466",
+    "role": "教材习题来源"
+  },
+  {
+    "file": "教材\\新概念物理教程 3 电磁学 第三版（习题答案详解） (赵凯华) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "bytes": 34907735,
+    "sha256": "54e16dcfee3512fe9e826cde9fc9c9fd797a8db20d73f807ecebfd0bd8866e73",
+    "role": "答案整份参考"
+  },
+  {
+    "file": "教材\\新概念物理教程 4 光学 - 赵凯华（习题答案） (赵凯华) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "bytes": 57238296,
+    "sha256": "cf9b076e4e61d6d08b90753b21b51d5f482f443eb100995226e36a4861604049",
+    "role": "答案整份参考"
+  },
+  {
+    "file": "教材\\新概念物理教程 力学(第二版) (Kaihua Zhao (赵凯华), Weiyin Luo (罗蔚茵)) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "bytes": 83227323,
+    "sha256": "e9a6a58fc00aeb87308e95464ea38dffb51d46c7720b912ca645c6dcba8576ec",
+    "role": "教材习题来源"
+  },
+  {
+    "file": "教材\\新概念物理教程 电磁学(第二版) 电磁学 (赵凯华 陈熙谋) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "bytes": 69559916,
+    "sha256": "9ec807bea6a3a3b833d98b1b7a19ba8905058b4595fb9e7fc6c24d83ee5b3f9c",
+    "role": "教材习题来源"
+  },
+  {
+    "file": "教材\\新概念物理教程 量子物理 第2版 (赵凯华，罗蔚茵著, ZHAO KAI HUA LUO WEI YIN etc.) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "bytes": 98448099,
+    "sha256": "6420aa209d2b00868ab42de33905e1228a3b6a25a93b9dad738c9196711744ee",
+    "role": "教材习题来源"
+  },
+  {
+    "file": "教材\\新概念物理教程·热学 (赵凯华) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "bytes": 34337336,
+    "sha256": "84598ce566aa55ec52dd513ccab245f9a2e32fb05f187d8346a9727fc289c9cc",
+    "role": "教材习题来源"
+  },
+  {
+    "file": "教材\\新概念物理教程――量子物理 量子物理 (赵凯华 罗蔚茵) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+    "bytes": 67912108,
+    "sha256": "25ce744dded6c85d3fc4e28fde98851e8599eb39d17a686b9e29a8d5326d5942",
+    "role": "教材习题来源"
+  },
+  {
+    "file": "教材\\量子力学教程.pdf",
+    "bytes": 3476028,
+    "sha256": "f8cf82c09bb227a930bae6a9c2636db2a27e4ee7cfe1de88b00c05d4fdfb7131",
+    "role": "排除：单页DRM提示"
+  }
+]

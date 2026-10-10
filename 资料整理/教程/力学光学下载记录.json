@@ -1,0 +1,14 @@
+[
+  {
+    "file": "资料整理\\教程\\Tong动力学与相对论.pdf",
+    "url": "https://www.damtp.cam.ac.uk/user/tong/relativity/dynrel.pdf",
+    "status": "失败",
+    "error": "<urlopen error [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1010)>"
+  },
+  {
+    "file": "资料整理\\教程\\清华陈曦光学讲义.pdf",
+    "url": "https://ithatron.phys.tsinghua.edu.cn/downloads/optics.pdf",
+    "status": "失败",
+    "error": "The read operation timed out"
+  }
+]

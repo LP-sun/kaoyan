@@ -1,0 +1,32 @@
+{
+  "id": "BK01-思考题-1-1",
+  "book_id": "BK01",
+  "original_number": "1-1",
+  "statement": "为什么透过茂密树叶缝隙投射到地面的阳光形成圆形光斑？你能设想在日偏食的情况下这种光斑的形状会有变化吗？",
+  "subquestions": [],
+  "figures": [],
+  "syllabus_topics": [],
+  "sources": [
+    {
+      "pdf_path": "教材/光学新概念物理教程 新概念物理教程 (赵凯华) (z-library.sk, 1lib.sk, z-lib.sk).pdf",
+      "pdf_page": 46,
+      "printed_page": 31,
+      "role": "statement"
+    }
+  ],
+  "solution": {
+    "origin": "original_derivation",
+    "assumptions": [],
+    "steps": [],
+    "final_answer": "",
+    "checks": [],
+    "common_errors": []
+  },
+  "review": {
+    "statement_status": "draft",
+    "solution_status": "not_started",
+    "method": "",
+    "issues": [],
+    "updated_at": "2026-10-10"
+  }
+}

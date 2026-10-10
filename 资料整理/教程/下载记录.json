@@ -1,0 +1,30 @@
+[
+  {
+    "file": "资料整理\\教程\\OpenStax大学物理1.pdf",
+    "url": "https://assets.openstax.org/oscms-prodcms/media/documents/University_Physics_Volume_1_-_WEB.pdf",
+    "status": "下载失败",
+    "error": "HTTP Error 403: Forbidden"
+  },
+  {
+    "file": "资料整理\\教程\\Tong量子力学.pdf",
+    "url": "https://www.damtp.cam.ac.uk/user/tong/qm/qm.pdf",
+    "pages": 133,
+    "bytes": 6016673,
+    "sha256": "34b3882872333dc125af57a4327a3601ffe65c857edae50a643c485982d545f0",
+    "status": "已下载并验证PDF"
+  },
+  {
+    "file": "资料整理\\教程\\Tong电磁学.pdf",
+    "url": "https://www.damtp.cam.ac.uk/user/tong/em/electromagnetism.pdf",
+    "status": "下载失败",
+    "error": "HTTP Error 404: Not Found"
+  },
+  {
+    "file": "资料整理\\教程\\Tong统计物理.pdf",
+    "url": "https://www.damtp.cam.ac.uk/user/tong/statphys/statphys.pdf",
+    "pages": 191,
+    "bytes": 1951403,
+    "sha256": "9d41ab5d5751a44e3a5e117da30f25ad555e6e023bddec8366f9450570dcf5d4",
+    "status": "已下载并验证PDF"
+  }
+]

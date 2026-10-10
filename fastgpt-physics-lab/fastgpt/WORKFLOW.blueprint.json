@@ -1,0 +1,248 @@
+{
+  "$comment": [
+    "本文件是 FastGPT v4.17.x 工作流的**实施蓝图**，用于在界面中照着搭建，以及在重建时作为规格说明。",
+    "它不是 FastGPT 的导入文件格式。FastGPT 工作流的导入/导出 JSON 由界面『导出』按钮产生，",
+    "其内部字段（nodes/edges/位置坐标/inputs 的 id 等）随版本变化，手写无法保证与当前版本完全兼容。",
+    "为避免交付一个『看着像能导入、导入后却报错』的文件，这里只给出经源码核验的节点类型与字段名。",
+    "",
+    "节点类型与字段来源：packages/global/core/workflow/node/constant.ts（FlowNodeTypeEnum）与",
+    "packages/global/core/workflow/template/system/interactive/{userSelect,formInput}.ts @ tag v4.17.1。",
+    "本文件由 tools/workflow-check.mjs 校验：节点类型必须存在于 FlowNodeTypeEnum，",
+    "交互节点的输入/输出键必须与源码一致，跨节点引用必须指向已声明的输出键。",
+    "",
+    "phase 字段是**本蓝图自定义**的语义标注（FastGPT 本身没有这个字段），用于表达",
+    "『该节点在提交作答之前还是之后执行』，由校验器强制：phase=pre-submit 的 answerNode",
+    "绝不允许引用 correctKey / explanation，从机制上防止把答案提前泄露给学生。"
+  ],
+  "app": {
+    "name": "Physics Diagnostic Tutor",
+    "displayName": "物理考研智能诊断",
+    "type": "workflow",
+    "version": "v4.17.x",
+    "bank": "bank/questions.json（10 题，固定答案判分）",
+    "requiresEmbedding": false,
+    "requiresSystemPlugins": false,
+    "usesHttpRequestNode": false
+  },
+  "workflowVariables": [
+    { "key": "bankJson", "type": "string", "note": "题库 JSON 文本（由 bank/questions.json 生成，见 fastgpt/bank-embed.md）" },
+    { "key": "subject", "type": "string", "note": "用户在节点 A 选择的科目" },
+    { "key": "chapter", "type": "string", "note": "用户在节点 B 选择的章节" },
+    { "key": "qIndex", "type": "number", "note": "当前题目下标，从 0 开始" },
+    { "key": "records", "type": "array", "note": "已答题记录：[{qId, chapter, chosen, correct}]" }
+  ],
+  "nodes": [
+    {
+      "key": "A",
+      "flowNodeType": "userSelect",
+      "phase": "pre-submit",
+      "title": "选择科目",
+      "inputs": {
+        "description": "请选择要诊断的科目。",
+        "userSelectOptions": [
+          { "key": "力学", "value": "力学" }
+        ]
+      },
+      "outputs": { "selectResult": "string → 变量 subject" },
+      "notes": "物理考研第一版只开力学；后续扩展量子力学/电磁学时在此加选项。"
+    },
+    {
+      "key": "B",
+      "flowNodeType": "userSelect",
+      "phase": "pre-submit",
+      "title": "选择章节",
+      "inputs": {
+        "description": "请选择章节。",
+        "userSelectOptions": [
+          { "key": "牛顿运动定律", "value": "牛顿运动定律" },
+          { "key": "功和能", "value": "功和能" },
+          { "key": "动量守恒", "value": "动量守恒" },
+          { "key": "刚体转动", "value": "刚体转动" },
+          { "key": "纯滚动", "value": "纯滚动" },
+          { "key": "简谐振动", "value": "简谐振动" },
+          { "key": "混合诊断", "value": "ALL" }
+        ]
+      },
+      "outputs": { "selectResult": "string → 变量 chapter" },
+      "notes": "选项值需与题库 question.chapter 完全一致；『混合诊断』映射为 ALL 表示不限章节。"
+    },
+    {
+      "key": "C",
+      "flowNodeType": "code",
+      "phase": "pre-submit",
+      "title": "取当前题目",
+      "inputs": ["bankJson", "chapter", "qIndex"],
+      "outputs": {
+        "qId": "string",
+        "chapterOfQ": "string（当前题所属章节，供报告统计使用）",
+        "stem": "string（含 LaTeX，用 $...$）",
+        "optionA": "string",
+        "optionB": "string",
+        "optionC": "string",
+        "optionD": "string",
+        "correctKey": "string（仅用于判分与解析，禁止在 phase=pre-submit 的节点中引用）",
+        "explanation": "string（同上，禁止提交前引用）",
+        "commonMisconceptions": "string（同上）",
+        "isLast": "boolean"
+      },
+      "notes": "按 chapter 过滤题库（ALL 时不过滤），取第 qIndex 题。这一段逻辑可直接照抄 tools/diagnosis-server.mjs 的 buildQueue()/publicQuestion()。"
+    },
+    {
+      "key": "D",
+      "flowNodeType": "answerNode",
+      "phase": "pre-submit",
+      "title": "展示题目",
+      "inputs": {
+        "text": "**第 {{qIndex+1}} 题**\n\n{{stem}}\n\n- A. {{optionA}}\n- B. {{optionB}}\n- C. {{optionC}}\n- D. {{optionD}}"
+      },
+      "notes": "只引用 stem 与 optionA..D。绝对不要在这里引用 correctKey / explanation / commonMisconceptions。"
+    },
+    {
+      "key": "E",
+      "flowNodeType": "userSelect",
+      "phase": "pre-submit",
+      "title": "收集作答",
+      "inputs": {
+        "description": "请选择你的答案：",
+        "userSelectOptions": [
+          { "key": "A", "value": "A" },
+          { "key": "B", "value": "B" },
+          { "key": "C", "value": "C" },
+          { "key": "D", "value": "D" }
+        ]
+      },
+      "outputs": { "selectResult": "string → 当前轮变量 chosen" },
+      "notes": "每次进入此节点都必须重新读取 selectResult；不要跨轮复用，否则下一题会保留上一题选择。"
+    },
+    {
+      "key": "F",
+      "flowNodeType": "ifElseNode",
+      "phase": "post-submit",
+      "title": "判分（固定答案）",
+      "branches": [
+        { "name": "正确", "condition": "{{E.selectResult}} == {{C.correctKey}}" },
+        { "name": "错误", "condition": "else" }
+      ],
+      "notes": "字符串相等比较，不调用模型。这是『判分不用 LLM 猜』的落实点。这个节点位于提交之后，因此可以安全引用 correctKey。"
+    },
+    {
+      "key": "G1",
+      "flowNodeType": "answerNode",
+      "phase": "post-submit",
+      "title": "正确反馈",
+      "inputs": { "text": "✓ 回答正确（{{E.selectResult}}）\n\n**解析**：{{C.explanation}}" },
+      "notes": "位于 F 的『正确』分支上，此时学生已提交，展示解析是教学上必要的。"
+    },
+    {
+      "key": "G2",
+      "flowNodeType": "chatNode",
+      "phase": "post-submit",
+      "title": "错因分析",
+      "inputs": {
+        "model": "<在模型提供商中配置的语言模型>",
+        "temperature": 0.2,
+        "maxTokens": 700,
+        "systemPrompt": "见 fastgpt/WORKFLOW.md §5 系统提示词",
+        "userPrompt": "见 fastgpt/WORKFLOW.md §5 用户提示词"
+      },
+      "outputs": { "answerText": "string（JSON，含 possible_misconceptions / confidence / follow_up_question）" },
+      "notes": "必须在提示词里强制『只能提出可能误区』并输出 follow_up_question 以区分原因。位于 F 的『错误』分支上。"
+    },
+    {
+      "key": "H",
+      "flowNodeType": "code",
+      "phase": "post-submit",
+      "title": "记录本轮结果",
+      "inputs": ["records", "C.qId", "C.chapterOfQ", "E.selectResult", "C.correctKey"],
+      "outputs": {
+        "records": "array（追加一条 {qId, chapter, chosen, correct}）",
+        "wasCorrect": "boolean（本轮是否答对，供统计与分支使用）"
+      },
+      "notes": "用新值覆盖工作流变量 records，保证状态显式更新、可追溯。判分在此节点内用字符串相等完成，等价于 F 的判断，供统计使用。"
+    },
+    {
+      "key": "I",
+      "flowNodeType": "formInput",
+      "phase": "post-submit",
+      "title": "是否继续",
+      "inputs": {
+        "description": "是否继续下一题？",
+        "userInputForms": [
+          {
+            "key": "continue",
+            "label": "继续诊断",
+            "type": "select",
+            "required": true,
+            "list": [
+              { "label": "继续下一题", "value": "continue" },
+              { "label": "结束并查看报告", "value": "stop" }
+            ]
+          }
+        ]
+      },
+      "outputs": { "formInputResult": "object → 必须写成 {{I.formInputResult.continue}}" },
+      "notes": "formInput 的输出是对象，取字段必须写成 {{I.formInputResult.continue}}，写 {{I.continue}} 会取不到值。"
+    },
+    {
+      "key": "J",
+      "flowNodeType": "ifElseNode",
+      "phase": "post-submit",
+      "title": "继续或结束",
+      "branches": [
+        { "name": "结束", "condition": "{{I.formInputResult.continue}} == \"stop\" || {{C.isLast}} == true" },
+        { "name": "继续", "condition": "else" }
+      ]
+    },
+    {
+      "key": "K",
+      "flowNodeType": "code",
+      "phase": "post-submit",
+      "title": "汇总统计（确定性，不调用模型）",
+      "inputs": ["records"],
+      "outputs": {
+        "answeredCount": "number（已答题数）",
+        "correctCount": "number（答对题数）",
+        "testedChapters": "string（本次覆盖的章节，去重后用、连接）",
+        "confirmedWeakAreas": "string（已确认薄弱：该章节错题≥2 或 错题/该章节题数≥0.5 且题数≥2）",
+        "suspectedWeakAreas": "string（疑似薄弱：该章节有错题但未达已确认阈值）",
+        "nextPractice": "string（下一组练习建议，按薄弱程度排序取前 2 个章节）"
+      },
+      "notes": "报告里的所有统计量都从这里来。必须由 code 节点算，保证确定性与可复现，不依赖模型（与 tools/diagnosis-server.mjs 的 ruleBasedReport() 同规则）。"
+    },
+    {
+      "key": "M",
+      "flowNodeType": "chatNode",
+      "phase": "post-submit",
+      "title": "学习建议",
+      "inputs": {
+        "model": "<同上语言模型>",
+        "temperature": 0.3,
+        "maxTokens": 800,
+        "systemPrompt": "见 fastgpt/WORKFLOW.md §6 系统提示词",
+        "userPrompt": "本次作答汇总：\n{{records}}\n\n统计：答对 {{K.correctCount}} / {{K.answeredCount}}，已确认薄弱：{{K.confirmedWeakAreas}}，疑似薄弱：{{K.suspectedWeakAreas}}\n\n请按上述要求给出学习建议。"
+      },
+      "outputs": { "answerText": "string（中文分点建议，≤350 字）" }
+    },
+    {
+      "key": "L",
+      "flowNodeType": "answerNode",
+      "phase": "post-submit",
+      "title": "诊断报告",
+      "inputs": {
+        "text": "## 诊断报告\n\n- 作答：{{K.correctCount}} / {{K.answeredCount}}\n- 覆盖章节：{{K.testedChapters}}\n- 已确认薄弱环节：{{K.confirmedWeakAreas}}\n- 疑似薄弱环节：{{K.suspectedWeakAreas}}\n- 下一组练习建议：{{K.nextPractice}}\n\n### 复习建议\n{{M.answerText}}\n\n> 以上薄弱环节是基于选择题对错的推断，不是确定诊断结论。"
+      },
+      "notes": "所有数字都来自 K（code 节点），因此报告可复现、不受模型影响。"
+    }
+  ],
+  "verificationChecklist": [
+    "选项可以点击（userSelect 节点渲染）",
+    "公式正确显示（LaTeX $...$ 由前端 KaTeX 渲染）",
+    "题目切换流畅（Loop 无阻塞回流）",
+    "提交前不显示正确答案（phase=pre-submit 的节点不含 correctKey/explanation，已由 tools/workflow-check.mjs 强制）",
+    "提交后显示反馈（G1 解析 / G2 错因分析）",
+    "下一题不保留上一题选择（chosen 每轮重新读取 E.selectResult）",
+    "用户可以随时停止（I 节点 stop 选项 / 输入任意消息中断）",
+    "多次调用状态不混乱（records 显式更新，会话间相互独立）",
+    "报告数字可复现（全部来自 K 这个 code 节点，不依赖模型）"
+  ]
+}

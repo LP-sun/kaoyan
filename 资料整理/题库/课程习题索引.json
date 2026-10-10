@@ -1,0 +1,912 @@
+[
+  {
+    "id": "BNU-HW01-1",
+    "topic": "傅里叶归一化",
+    "source": "../教程/北师大量子力学/hw1.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw1_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW01-2",
+    "topic": "有限支撑态概率与矩",
+    "source": "../教程/北师大量子力学/hw1.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw1_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW01-3",
+    "topic": "动量表象的位置算符",
+    "source": "../教程/北师大量子力学/hw1.pdf",
+    "page": 1,
+    "original_number": "3",
+    "answer_set": "../教程/北师大量子力学/hw1_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW01-4",
+    "topic": "高斯态动量矩",
+    "source": "../教程/北师大量子力学/hw1.pdf",
+    "page": 1,
+    "original_number": "4",
+    "answer_set": "../教程/北师大量子力学/hw1_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW01-5",
+    "topic": "Buffon概率（拓展）",
+    "source": "../教程/北师大量子力学/hw1.pdf",
+    "page": 1,
+    "original_number": "5",
+    "answer_set": "../教程/北师大量子力学/hw1_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW02-1",
+    "topic": "定态正交性",
+    "source": "../教程/北师大量子力学/hw2.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw2_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW02-2",
+    "topic": "叠加态位置随时间",
+    "source": "../教程/北师大量子力学/hw2.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw2_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW02-3",
+    "topic": "内积守恒",
+    "source": "../教程/北师大量子力学/hw2.pdf",
+    "page": 1,
+    "original_number": "3",
+    "answer_set": "../教程/北师大量子力学/hw2_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW02-4",
+    "topic": "能量实数性",
+    "source": "../教程/北师大量子力学/hw2.pdf",
+    "page": 1,
+    "original_number": "4",
+    "answer_set": "../教程/北师大量子力学/hw2_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW02-5",
+    "topic": "虚势与衰减（拓展）",
+    "source": "../教程/北师大量子力学/hw2.pdf",
+    "page": 1,
+    "original_number": "5",
+    "answer_set": "../教程/北师大量子力学/hw2_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW02-6",
+    "topic": "Ehrenfest定理",
+    "source": "../教程/北师大量子力学/hw2.pdf",
+    "page": 1,
+    "original_number": "6",
+    "answer_set": "../教程/北师大量子力学/hw2_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW02-7",
+    "topic": "势阱热布居（拓展）",
+    "source": "../教程/北师大量子力学/hw2.pdf",
+    "page": 1,
+    "original_number": "7",
+    "answer_set": "../教程/北师大量子力学/hw2_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW02-8",
+    "topic": "无限深势阱不确定性",
+    "source": "../教程/北师大量子力学/hw2.pdf",
+    "page": 1,
+    "original_number": "8",
+    "answer_set": "../教程/北师大量子力学/hw2_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW02-9",
+    "topic": "期望值振荡",
+    "source": "../教程/北师大量子力学/hw2.pdf",
+    "page": 1,
+    "original_number": "9",
+    "answer_set": "../教程/北师大量子力学/hw2_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW03-1",
+    "topic": "半无限势阱束缚条件",
+    "source": "../教程/北师大量子力学/hw3.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw3_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW03-2",
+    "topic": "环上粒子量子化",
+    "source": "../教程/北师大量子力学/hw3.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw3_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW03-3",
+    "topic": "正弦立方初态演化",
+    "source": "../教程/北师大量子力学/hw3.pdf",
+    "page": 1,
+    "original_number": "3",
+    "answer_set": "../教程/北师大量子力学/hw3_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW03-4a",
+    "topic": "势阱中δ势",
+    "source": "../教程/北师大量子力学/hw3.pdf",
+    "page": 1,
+    "original_number": "4a",
+    "answer_set": "../教程/北师大量子力学/hw3_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW03-4b",
+    "topic": "双势阱模型",
+    "source": "../教程/北师大量子力学/hw3.pdf",
+    "page": 1,
+    "original_number": "4b",
+    "answer_set": "../教程/北师大量子力学/hw3_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW04-1",
+    "topic": "Hermite递推与位置矩阵",
+    "source": "../教程/北师大量子力学/hw4.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw4_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW04-2",
+    "topic": "动量矩阵",
+    "source": "../教程/北师大量子力学/hw4.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw4_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW04-3",
+    "topic": "谐振子不确定性",
+    "source": "../教程/北师大量子力学/hw4.pdf",
+    "page": 1,
+    "original_number": "3",
+    "answer_set": "../教程/北师大量子力学/hw4_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW04-4",
+    "topic": "半谐振子",
+    "source": "../教程/北师大量子力学/hw4.pdf",
+    "page": 1,
+    "original_number": "4",
+    "answer_set": "../教程/北师大量子力学/hw4_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW04-5",
+    "topic": "阶梯势反射透射",
+    "source": "../教程/北师大量子力学/hw4.pdf",
+    "page": 1,
+    "original_number": "5",
+    "answer_set": "../教程/北师大量子力学/hw4_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW04-6",
+    "topic": "量子与经典比较",
+    "source": "../教程/北师大量子力学/hw4.pdf",
+    "page": 1,
+    "original_number": "6",
+    "answer_set": "../教程/北师大量子力学/hw4_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW04-7",
+    "topic": "Griffiths 2.38（需外部题干）",
+    "source": "../教程/北师大量子力学/hw4.pdf",
+    "page": 1,
+    "original_number": "7",
+    "answer_set": "../教程/北师大量子力学/hw4_ans.pdf",
+    "status": "需外部题干",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW04-8",
+    "topic": "Griffiths 2.39（需外部题干）",
+    "source": "../教程/北师大量子力学/hw4.pdf",
+    "page": 1,
+    "original_number": "8",
+    "answer_set": "../教程/北师大量子力学/hw4_ans.pdf",
+    "status": "需外部题干",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW05-1",
+    "topic": "自旋谱分解",
+    "source": "../教程/北师大量子力学/hw5.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw5_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW05-2",
+    "topic": "Dirac内积与范数",
+    "source": "../教程/北师大量子力学/hw5.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw5_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW05-3",
+    "topic": "对易矩阵",
+    "source": "../教程/北师大量子力学/hw5.pdf",
+    "page": 1,
+    "original_number": "3",
+    "answer_set": "../教程/北师大量子力学/hw5_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW05-4",
+    "topic": "迹与厄密乘积",
+    "source": "../教程/北师大量子力学/hw5.pdf",
+    "page": 1,
+    "original_number": "4",
+    "answer_set": "../教程/北师大量子力学/hw5_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW05-5",
+    "topic": "反厄密算符",
+    "source": "../教程/北师大量子力学/hw5.pdf",
+    "page": 1,
+    "original_number": "5",
+    "answer_set": "../教程/北师大量子力学/hw5_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW06-0",
+    "topic": "角动量对易",
+    "source": "../教程/北师大量子力学/hw6.pdf",
+    "page": 1,
+    "original_number": "0",
+    "answer_set": "../教程/北师大量子力学/hw6_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW06-1",
+    "topic": "Sy本征态",
+    "source": "../教程/北师大量子力学/hw6.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw6_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW06-2",
+    "topic": "自旋期望值",
+    "source": "../教程/北师大量子力学/hw6.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw6_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW06-3",
+    "topic": "任意方向自旋测量",
+    "source": "../教程/北师大量子力学/hw6.pdf",
+    "page": 1,
+    "original_number": "3",
+    "answer_set": "../教程/北师大量子力学/hw6_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW06-4",
+    "topic": "两能级对角化",
+    "source": "../教程/北师大量子力学/hw6.pdf",
+    "page": 1,
+    "original_number": "4",
+    "answer_set": "../教程/北师大量子力学/hw6_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW06-5",
+    "topic": "Pauli矩阵指数",
+    "source": "../教程/北师大量子力学/hw6.pdf",
+    "page": 1,
+    "original_number": "5",
+    "answer_set": "../教程/北师大量子力学/hw6_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW06-6",
+    "topic": "自旋旋转",
+    "source": "../教程/北师大量子力学/hw6.pdf",
+    "page": 1,
+    "original_number": "6",
+    "answer_set": "../教程/北师大量子力学/hw6_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW07-1",
+    "topic": "自旋时间演化",
+    "source": "../教程/北师大量子力学/hw7.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw7_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW07-2",
+    "topic": "矩阵表象",
+    "source": "../教程/北师大量子力学/hw7.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw7_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW07-3",
+    "topic": "两能级振荡",
+    "source": "../教程/北师大量子力学/hw7.pdf",
+    "page": 1,
+    "original_number": "3",
+    "answer_set": "../教程/北师大量子力学/hw7_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW07-4",
+    "topic": "基底相位不变性",
+    "source": "../教程/北师大量子力学/hw7.pdf",
+    "page": 1,
+    "original_number": "4",
+    "answer_set": "../教程/北师大量子力学/hw7_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW08-1",
+    "topic": "谐振子动量表象",
+    "source": "../教程/北师大量子力学/hw8.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw8_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW08-2",
+    "topic": "位置本征函数",
+    "source": "../教程/北师大量子力学/hw8.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw8_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW08-3",
+    "topic": "动量厄密性",
+    "source": "../教程/北师大量子力学/hw8.pdf",
+    "page": 1,
+    "original_number": "3",
+    "answer_set": "../教程/北师大量子力学/hw8_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW08-4",
+    "topic": "动量矩阵",
+    "source": "../教程/北师大量子力学/hw8.pdf",
+    "page": 1,
+    "original_number": "4",
+    "answer_set": "../教程/北师大量子力学/hw8_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW08-5",
+    "topic": "定态平均动量",
+    "source": "../教程/北师大量子力学/hw8.pdf",
+    "page": 1,
+    "original_number": "5",
+    "answer_set": "../教程/北师大量子力学/hw8_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW09-1",
+    "topic": "横向角动量期望",
+    "source": "../教程/北师大量子力学/hw9.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw9_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW09-2",
+    "topic": "角动量平方对易",
+    "source": "../教程/北师大量子力学/hw9.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw9_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW09-3",
+    "topic": "角动量不确定性",
+    "source": "../教程/北师大量子力学/hw9.pdf",
+    "page": 1,
+    "original_number": "3",
+    "answer_set": "../教程/北师大量子力学/hw9_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW09-4",
+    "topic": "球谐与Lx",
+    "source": "../教程/北师大量子力学/hw9.pdf",
+    "page": 1,
+    "original_number": "4",
+    "answer_set": "../教程/北师大量子力学/hw9_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW09-5",
+    "topic": "正则对易运算",
+    "source": "../教程/北师大量子力学/hw9.pdf",
+    "page": 1,
+    "original_number": "5",
+    "answer_set": "../教程/北师大量子力学/hw9_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW10-1",
+    "topic": "Heisenberg自旋演化",
+    "source": "../教程/北师大量子力学/hw10.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw10_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW10-2",
+    "topic": "恒定电场演化",
+    "source": "../教程/北师大量子力学/hw10.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw10_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW10-3",
+    "topic": "磁场近似守恒",
+    "source": "../教程/北师大量子力学/hw10.pdf",
+    "page": 1,
+    "original_number": "3",
+    "answer_set": "../教程/北师大量子力学/hw10_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW10-4",
+    "topic": "谐振子动能矩",
+    "source": "../教程/北师大量子力学/hw10.pdf",
+    "page": 1,
+    "original_number": "4",
+    "answer_set": "../教程/北师大量子力学/hw10_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW10-5",
+    "topic": "含时相干态（拓展）",
+    "source": "../教程/北师大量子力学/hw10.pdf",
+    "page": 1,
+    "original_number": "5",
+    "answer_set": "../教程/北师大量子力学/hw10_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW10-6",
+    "topic": "l=1矩阵",
+    "source": "../教程/北师大量子力学/hw10.pdf",
+    "page": 1,
+    "original_number": "6",
+    "answer_set": "../教程/北师大量子力学/hw10_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW10-7",
+    "topic": "压缩态（拓展）",
+    "source": "../教程/北师大量子力学/hw10.pdf",
+    "page": 1,
+    "original_number": "7",
+    "answer_set": "../教程/北师大量子力学/hw10_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW10-8",
+    "topic": "二次型谐振子（拓展）",
+    "source": "../教程/北师大量子力学/hw10.pdf",
+    "page": 1,
+    "original_number": "8",
+    "answer_set": "../教程/北师大量子力学/hw10_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW11-0",
+    "topic": "矢量对易",
+    "source": "../教程/北师大量子力学/hw11.pdf",
+    "page": 1,
+    "original_number": "0",
+    "answer_set": "../教程/北师大量子力学/hw11_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW11-1",
+    "topic": "径向动量",
+    "source": "../教程/北师大量子力学/hw11.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw11_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW11-2",
+    "topic": "Hellmann-Feynman关系",
+    "source": "../教程/北师大量子力学/hw11.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw11_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW11-3",
+    "topic": "对数势位力定理",
+    "source": "../教程/北师大量子力学/hw11.pdf",
+    "page": 1,
+    "original_number": "3",
+    "answer_set": "../教程/北师大量子力学/hw11_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW11-4",
+    "topic": "氢原子不确定性",
+    "source": "../教程/北师大量子力学/hw11.pdf",
+    "page": 1,
+    "original_number": "4",
+    "answer_set": "../教程/北师大量子力学/hw11_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW11-5",
+    "topic": "球势阱压力",
+    "source": "../教程/北师大量子力学/hw11.pdf",
+    "page": 1,
+    "original_number": "5",
+    "answer_set": "../教程/北师大量子力学/hw11_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW11-6",
+    "topic": "量子亏损（拓展）",
+    "source": "../教程/北师大量子力学/hw11.pdf",
+    "page": 1,
+    "original_number": "6",
+    "answer_set": "../教程/北师大量子力学/hw11_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW12-1",
+    "topic": "两能级微扰与精确解",
+    "source": "../教程/北师大量子力学/hw12.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw12_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW12-2",
+    "topic": "势阱δ微扰",
+    "source": "../教程/北师大量子力学/hw12.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw12_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW12-3",
+    "topic": "转子弱磁场",
+    "source": "../教程/北师大量子力学/hw12.pdf",
+    "page": 1,
+    "original_number": "3",
+    "answer_set": "../教程/北师大量子力学/hw12_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW13-1",
+    "topic": "三阶矩阵微扰",
+    "source": "../教程/北师大量子力学/hw13.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw13_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW13-2",
+    "topic": "二维势阱简并",
+    "source": "../教程/北师大量子力学/hw13.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw13_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW13-3",
+    "topic": "环势简并微扰",
+    "source": "../教程/北师大量子力学/hw13.pdf",
+    "page": 1,
+    "original_number": "3",
+    "answer_set": "../教程/北师大量子力学/hw13_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW13-4",
+    "topic": "角动量耦合系数",
+    "source": "../教程/北师大量子力学/hw13.pdf",
+    "page": 1,
+    "original_number": "4",
+    "answer_set": "../教程/北师大量子力学/hw13_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW13-5",
+    "topic": "耦合态测量",
+    "source": "../教程/北师大量子力学/hw13.pdf",
+    "page": 1,
+    "original_number": "5",
+    "answer_set": "../教程/北师大量子力学/hw13_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW13-6",
+    "topic": "耦合态Sz",
+    "source": "../教程/北师大量子力学/hw13.pdf",
+    "page": 1,
+    "original_number": "6",
+    "answer_set": "../教程/北师大量子力学/hw13_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW13-7",
+    "topic": "相对论能量修正",
+    "source": "../教程/北师大量子力学/hw13.pdf",
+    "page": 1,
+    "original_number": "7",
+    "answer_set": "../教程/北师大量子力学/hw13_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW14-1",
+    "topic": "强场Zeeman",
+    "source": "../教程/北师大量子力学/hw14.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw14_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW14-2",
+    "topic": "弱场Zeeman",
+    "source": "../教程/北师大量子力学/hw14.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw14_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW14-3",
+    "topic": "n=3 Stark效应",
+    "source": "../教程/北师大量子力学/hw14.pdf",
+    "page": 1,
+    "original_number": "3",
+    "answer_set": "../教程/北师大量子力学/hw14_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW15-1",
+    "topic": "单重态关联",
+    "source": "../教程/北师大量子力学/hw15.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw15_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW15-2",
+    "topic": "两自旋交换演化",
+    "source": "../教程/北师大量子力学/hw15.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw15_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW15-3",
+    "topic": "三自旋能级",
+    "source": "../教程/北师大量子力学/hw15.pdf",
+    "page": 1,
+    "original_number": "3",
+    "answer_set": "../教程/北师大量子力学/hw15_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW15-4",
+    "topic": "两自旋1耦合",
+    "source": "../教程/北师大量子力学/hw15.pdf",
+    "page": 1,
+    "original_number": "4",
+    "answer_set": "../教程/北师大量子力学/hw15_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW15-5",
+    "topic": "全同粒子谐振子（拓展）",
+    "source": "../教程/北师大量子力学/hw15.pdf",
+    "page": 1,
+    "original_number": "5",
+    "answer_set": "../教程/北师大量子力学/hw15_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW15-6",
+    "topic": "Pauli乘积对易",
+    "source": "../教程/北师大量子力学/hw15.pdf",
+    "page": 1,
+    "original_number": "6",
+    "answer_set": "../教程/北师大量子力学/hw15_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW15-7",
+    "topic": "占据数计数（拓展）",
+    "source": "../教程/北师大量子力学/hw15.pdf",
+    "page": 1,
+    "original_number": "7",
+    "answer_set": "../教程/北师大量子力学/hw15_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW16-1",
+    "topic": "两能级含时跃迁",
+    "source": "../教程/北师大量子力学/hw16.pdf",
+    "page": 1,
+    "original_number": "1",
+    "answer_set": "../教程/北师大量子力学/hw16_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW16-2",
+    "topic": "谐振子偶极选择规则",
+    "source": "../教程/北师大量子力学/hw16.pdf",
+    "page": 1,
+    "original_number": "2",
+    "answer_set": "../教程/北师大量子力学/hw16_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  },
+  {
+    "id": "BNU-HW16-4",
+    "topic": "氢原子脉冲跃迁",
+    "source": "../教程/北师大量子力学/hw16.pdf",
+    "page": 1,
+    "original_number": "4",
+    "answer_set": "../教程/北师大量子力学/hw16_ans.pdf",
+    "status": "源PDF题目索引",
+    "answer_status": "配套答案整套链接；逐题对应待核对"
+  }
+]

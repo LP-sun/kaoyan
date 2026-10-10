@@ -1,0 +1,49 @@
+# ============================================================
+# fastgpt-physics-lab — 禁止提交任何密钥与运行时数据
+# ============================================================
+
+# 真实密钥文件（绝不入库）
+.env
+.env.bak
+.env.*.bak
+.env.local
+.env.*.local
+**/.env
+**/.env.bak
+!**/.env.example
+!env/.env.example
+
+# GenAI 接入密钥
+*.key
+*.pem
+secrets/
+env/secrets.local.*
+
+# 运行期数据与日志（数据卷在 Docker 中，这里是本地回退/导出目录）
+data/
+logs/
+*.log
+diagnosis-db.json
+diagnosis-sessions.json
+
+# 备份产物
+backups/
+*.tar.gz
+*.zip
+
+# 本地上游源码核查缓存（体积大，可重新获取）
+upstream/
+.fastgpt-lab-notes/
+
+# 编辑器/系统
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+node_modules/
+__pycache__/
+*.pyc
+
+# 本地校验用的独立 Compose 解析器二进制与解析输出（可随时重新下载）
+.verify/
+

@@ -54,6 +54,8 @@ class Repository:
     def save_questions(self, items, allow_ai_verification=False):
         values=[validate_question(x) for x in items]
         for data in values:
+            # Client-supplied validation flags are not executable evidence.
+            data['machine_validated'] = False
             if data['source_type']=='ai_generated' and not allow_ai_verification:
                 data['verified']=False
         if len({q['id'] for q in values})!=len(values): raise ValueError('导入含重复题目 ID')
@@ -77,7 +79,8 @@ class Repository:
             q=s.get(Question,question_id)
             if not q: raise ValueError('题目不存在')
             q.verified=bool(verified)
-            q.payload=q.payload | {'verified':bool(verified),'review_evidence':str(evidence)}
+            q.payload=q.payload | {'verified':bool(verified),'human_verified':bool(verified),
+                'content_status':'practice_ready' if verified else 'needs_review', 'review_evidence':str(evidence)}
             q.version+=1
         return question_id
 

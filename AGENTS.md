@@ -1,5 +1,12 @@
 # AGENTS.md
 
+## 2026-10-13 连续教学增量
+
+PhysicsPrep连续教师入口与可运行范围见 `PhysicsPrep/docs/AI_TUTOR.md`。
+新增 `tutor_turns` 保存对话；提示层级保存在题目快照和反馈。
+`machine_validated` 与 `human_verified` 必须分开表述；两个本地基础模型允许机器校验后练习，不要求用户逐题人工核验。
+复杂教材题仍不得从模型建议推断为可信答案。新生成题ID以GEN-开头，不修改原教材稳定ID。
+
 本文件为在工作区 `考研专业课/` 中接续工作的 Agent 提供指导说明。
 学习者请先读 [README.md](README.md)；写题与改题库再读 [题库写作指南](题库写作指南.md)。
 

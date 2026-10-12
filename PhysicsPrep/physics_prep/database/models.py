@@ -110,3 +110,12 @@ class QuestionMark(Base):
     user_id: Mapped[str] = mapped_column(ForeignKey('users.id'), primary_key=True)
     question_id: Mapped[str] = mapped_column(String, primary_key=True)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=_now_naive)
+
+
+class TutorTurn(Base):
+    __tablename__ = 'tutor_turns'
+    id: Mapped[int] = mapped_column(Integer, primary_key=True)
+    session_id: Mapped[str] = mapped_column(ForeignKey('exam_sessions.id'))
+    question_id: Mapped[str] = mapped_column(String)
+    payload: Mapped[dict] = mapped_column(JSON)
+    created_at: Mapped[datetime] = mapped_column(DateTime, default=_now_naive)

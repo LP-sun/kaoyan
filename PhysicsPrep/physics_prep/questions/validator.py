@@ -31,6 +31,6 @@ def validate_question(data):
     result = QuestionInput.model_validate(data).model_dump()
     if result['source_type'] == 'ai_generated' and result['content_status'] == 'practice_ready':
         result['content_status'] = 'solution_checked'
-    if result['verified'] and result['content_status'] == 'normalized':
+    if result['verified'] and result['source_type'] != 'ai_generated' and result['content_status'] == 'normalized':
         result['content_status'] = 'practice_ready'
     return result

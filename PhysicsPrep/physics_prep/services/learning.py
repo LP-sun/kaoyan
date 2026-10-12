@@ -43,7 +43,7 @@ class LearningService:
         snapshot = None
         if question_id:
             matches = [q for q in self.repository.list_questions() if q['id'] == question_id]
-            if (not matches or not matches[0]['verified']
+            if (not matches or not (matches[0]['verified'] or matches[0].get('machine_validated'))
                     or matches[0].get('content_status', 'practice_ready') != 'practice_ready'
                     or matches[0]['source_type'] == 'official_exam' or matches[0].get('frozen')):
                 raise ValueError('题目不存在、尚未核验或属于冻结模拟卷')
@@ -79,6 +79,21 @@ class LearningService:
 
     def next(self, session_id):
         """取下一题；同一会话内重复调用返回同一题，保证刷新不会换题。"""
+        # Generated foundation exercises use a different parameter variant for
+        # remedy/transfer. Reuse persisted generation; no paid model retry.
+        with self.factory() as s:
+            state = self._session(s, session_id)
+            last = s.scalar(select(Attempt).where(Attempt.session_id == session_id).order_by(Attempt.id.desc()))
+            gen = last.snapshot.get('generation') if last else None
+            needs_variant = not state.current_snapshot and gen and (last.status == 'incorrect' or last.feedback.get('hint_level'))
+        if needs_variant:
+            qid = self.generate_practice(gen['model'], last.snapshot['topic_ids'][0], gen['variant']+1)
+            with self.factory.begin() as s:
+                state = self._session(s, session_id)
+                if not state.current_snapshot:
+                    q = s.get(Question, qid).payload
+                    state.current_question_id = qid
+                    state.current_snapshot = q | {'recommendation_reason':'前题需补救或借助提示；用新参数独立验证基础定律。'}
         with self.lock, self.factory.begin() as session:
             current = self._session(session, session_id)
             rows = list(session.scalars(select(Attempt).where(
@@ -110,7 +125,48 @@ class LearningService:
             current.current_snapshot = question
             return self._public(question, len(rows))
 
-    def hint(self, question_id):
+    def tutor(self, session_id, question_id, text, client=None, full=False):
+        from .tutor import respond
+        return respond(self, session_id, question_id, text, client, full)
+
+    def tutor_history(self, session_id):
+        from .tutor import conversation
+        return conversation(self, session_id)
+
+    def generate_practice(self, model, topic_id, variant=0):
+        from ..questions.generation import generate
+        question = generate(model, topic_id, variant)
+        existing = next((q for q in self.list_questions() if q['id'] == question['id']), None)
+        if not existing:
+            self.repository.save_questions([question])
+            with self.factory.begin() as s:
+                row = s.get(Question, question['id'])
+                row.payload = row.payload | {'machine_validated':True, 'content_status':'practice_ready'}
+        return question['id']
+
+    def start_route(self, mode, subject=None, chapter=None):
+        if mode == '从零开始':
+            model = 'born' if subject == 'quantum' else 'newton'
+            topic = 'PHY-QM-SPIN-001' if model == 'born' else 'PHY-MECH-DYN-001'
+            return self.start(question_id=self.generate_practice(model, topic))
+        data = self.dashboard()
+        candidates = self.list_questions(subject=subject or None)
+        usable_topics = {t for q in candidates if q.get('verified') or q.get('machine_validated') for t in q['topic_ids']}
+        if mode == '到期复习':
+            due = [r['topic_id'] for r in data['due_reviews'] if r['topic_id'] in usable_topics]
+            if not due:
+                raise ValueError('当前科目暂无到期复测。可以选择快速诊断。')
+            chapter = due[0]
+        elif mode == '专项补弱' and not chapter:
+            weak = [r['topic_id'] for r in data['weak_topics'] if r['topic_id'] in usable_topics]
+            chapter = weak[0] if weak else None
+        elif mode == '指定章节' and not chapter:
+            raise ValueError('请选择一个章节或知识点。')
+        return self.start(subject=subject or None, chapter=chapter or None)
+
+    def hint(self, question_id, session_id=None):
+        if session_id:
+            return self.tutor(session_id, question_id, '提示一下')['teacher']
         rows = [q for q in self.repository.list_questions() if q['id'] == question_id]
         return rows[0].get('hint', '先列已知量、适用物理定律与边界条件；不要急于代入数值。') if rows else ''
 
@@ -141,6 +197,8 @@ class LearningService:
                        ('allowed_symbols', 'positive_symbols', 'assumptions', 'numeric_tolerance', 'expected_unit')
                        if key in question}
             feedback = grade(answer, question['correct_answer'], question['question_type'], options=options)
+            if question.get('reported_issue'):
+                feedback = {'status': 'uncertain', 'message': '本题已报告问题，暂停确定性评分。'}
             status = feedback['status']
             category, reason = error_analysis(status, question['question_type'])
             names = {t['id']: t['name'] for t in self.repository.topic_tree()}
@@ -151,12 +209,19 @@ class LearningService:
                 'error_analysis': reason,
                 'topic_names': [names.get(t, t) for t in question['topic_ids']],
                 'mastery': [],
+                'hint_level': question.get('hint_level', 0),
+                'independent': not bool(question.get('hint_level', 0)),
             }
             if status in ('correct', 'incorrect'):
                 for topic in question['topic_ids']:
                     record = session.get(MasteryRecord, (self.user_id, topic)) or MasteryRecord(
                         user_id=self.user_id, topic_id=topic, attempts=0, correct=0, recent=[])
-                    interval, due = update_mastery(record, status == 'correct', question['difficulty'])
+                    independent = not question.get('hint_level', 0)
+                    if status == 'correct' and not independent:
+                        # Assistance is not independent mastery evidence.
+                        interval, due = 1, naive_utcnow() + timedelta(days=1)
+                    else:
+                        interval, due = update_mastery(record, status == 'correct', question['difficulty'])
                     session.add(record)
                     review = session.get(ReviewSchedule, (self.user_id, topic)) or ReviewSchedule(
                         user_id=self.user_id, topic_id=topic)
@@ -208,6 +273,10 @@ class LearningService:
             'uncertain': len(rows) - len(certain),
             'accuracy': sum(a.status == 'correct' for a in certain) / len(certain) if certain else None,
             'topics': list({t for a in rows for t in a.snapshot['topic_ids']}),
+            'independent_attempts': sum(not a.feedback.get('hint_level') for a in rows),
+            'independent_correct': sum(a.status == 'correct' and not a.feedback.get('hint_level') for a in rows),
+            'needs_independent_retest': sorted({t for a in rows if a.status != 'correct' or a.feedback.get('hint_level') for t in a.snapshot['topic_ids']}),
+            'next_suggestion': '先完成到期无提示复测；错误后用基础变式检验，再返回原考点。',
             'coverage_notice': '仅反映本次有限样本，题库覆盖不足或未知考点不可据此认定掌握。',
         }
 
@@ -230,7 +299,7 @@ class LearningService:
             'today_count': sum(a.created_at >= today for a in attempts),
             'seven_day_accuracy': sum(a.status == 'correct' for a in recent) / len(recent) if recent else None,
             'mastery': mastery,
-            'weak_topics': sorted(mastery, key=lambda x: x['estimate'])[:8],
+            'weak_topics': sorted(mastery, key=lambda x: x['estimate'] if x['estimate'] is not None else -1)[:8],
             'due_reviews': [{'topic_id': r.topic_id, 'name': names.get(r.topic_id, r.topic_id),
                              'due_at': to_iso(r.due_at)} for r in reviews],
             'recent_sessions': self.history()[:5],

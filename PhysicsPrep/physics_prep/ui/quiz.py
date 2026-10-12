@@ -107,6 +107,8 @@ def feedback_text(feedback):
     analysis = feedback.get('error_analysis', '')
 
     summary = [f'### {label}', explanation]
+    if feedback.get('hint_level'):
+        summary.append(f"**借助提示完成**（层级 {feedback['hint_level']}）：不计为独立正确证据，已安排无提示复测。")
     if topics:
         summary.append(f'**关联知识点：** {"、".join(topics)}')
     summary.append(f'**错因判断：** {category}')

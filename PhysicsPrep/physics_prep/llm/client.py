@@ -55,7 +55,7 @@ from .prompts import CONNECTION_TEST_PROMPT, CONNECTION_TEST_SYSTEM, ERROR_ANALY
 __all__ = ['LLMClient', 'MockLLMClient', 'OfficialGenAIClient', 'create_client', 'LLMUnavailable']
 
 MAX_PROMPT_CHARS = 6000
-MAX_RESPONSE_TOKENS = 1024
+MAX_RESPONSE_TOKENS = 3000
 # 换模型前的短暂停顿：给按 key 计算的限流一点恢复时间，但不做长退避。
 SWITCH_MODEL_DELAY_SECONDS = 1.0
 

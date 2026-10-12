@@ -173,6 +173,34 @@ def build_app(service, llm_factory=None, settings=None):
             return 'AI 客户端尚未就绪。'
         return connection_report(client())
 
+    def tutor_chat(session_id, question_id, prompt, full):
+        if not session_id or not question_id:
+            raise ValueError('请先开始或继续学习。')
+        service.tutor(session_id, question_id, prompt, client() if llm_factory else None, full)
+        transcript = '\n\n---\n\n'.join('**学生：** '+r['student']+'\n\n**教师：** '+r['teacher']
+            for r in service.tutor_history(session_id))
+        from sqlalchemy import select
+        from ..database.models import Attempt
+        with service.factory() as s:
+            row = service._session(s, session_id)
+            submitted = not row.current_snapshot
+            last = s.scalar(select(Attempt).where(Attempt.session_id == session_id).order_by(Attempt.id.desc()))
+        summary, detail = feedback_text(last.feedback) if submitted and last else ('','')
+        return transcript, gr.update(interactive=not submitted), gr.update(interactive=True), summary, detail
+
+    def restore_chat(session_id):
+        return '\n\n---\n\n'.join('**学生：** '+r['student']+'\n\n**教师：** '+r['teacher']
+            for r in service.tutor_history(session_id)) if session_id else ''
+
+    def foundation(model):
+        topic = 'PHY-MECH-DYN-001' if model == 'newton' else 'PHY-QM-SPIN-001'
+        q = service.generate_practice(model, topic)
+        return redo(q)
+
+    def route_start(mode, subject, chapter):
+        sid = service.start_route(mode, subject, chapter)
+        return render_question(service.next(sid), sid)
+
     def configure(base_url, model, timeout, retries, mock_mode):
         if runtime_settings[0] is None:
             raise ValueError('配置对象尚未就绪。')
@@ -204,6 +232,12 @@ def build_app(service, llm_factory=None, settings=None):
                     subject = gr.Dropdown(SUBJECTS,value='',label='科目',scale=1,elem_id='subject-select')
                     chapter = gr.Dropdown(topics_choices(),value='',label='知识点 / 章节',scale=2,elem_id='chapter-select')
                     start_btn = gr.Button('开始诊断',variant='primary',scale=1,elem_id='start-btn')
+                with gr.Row():
+                    route_mode = gr.Dropdown(['从零开始','快速诊断','指定章节','专项补弱','到期复习'],value='快速诊断',label='学习路线')
+                    route_btn = gr.Button('开始这条学习路线')
+                with gr.Row():
+                    foundation_model = gr.Dropdown([('从牛顿第二定律开始','newton'),('从Born概率开始','born')],value='newton',label='零基础练习（本地机器校验）')
+                    foundation_btn = gr.Button('从基础开始')
                 metadata = gr.Markdown('选择科目或知识点后点击「开始诊断」。未知掌握度需要多次、不同难度的作答证据才能更新。',elem_id='quiz-meta')
                 stem = gr.Markdown('### 准备好开始了吗？\n每道题先独立思考；遇到困难可以查看提示。',latex_delimiters=LATEX,elem_id='question-card')
                 radio = gr.Radio([],label='请选择一个选项',visible=False,elem_id='quiz-options')
@@ -223,11 +257,12 @@ def build_app(service, llm_factory=None, settings=None):
                     report_btn = gr.Button('查看本轮诊断报告')
                 mark_status = gr.Markdown()
                 report = gr.Markdown()
-                with gr.Accordion('向 AI 教师提问',open=False):
+                with gr.Accordion('与私人教师连续学习',open=True):
                     ai_prompt = gr.Textbox(label='想问什么？',placeholder='这个模型为什么适用？请解释推导第二步。',elem_id='ai-prompt')
                     full_solution = gr.Checkbox(label='我主动请求完整解析',value=False,elem_id='full-solution')
                     ai_btn = gr.Button('向 AI 提问',elem_id='ai-btn')
                     ai_response = gr.Markdown(latex_delimiters=LATEX,elem_id='ai-response')
+                    legacy_ai = gr.Button('legacy', visible=False)
             with gr.Tab('知识树', id='tree'):
                 gr.Markdown('### 知识结构与掌握证据\n未知表示尚未积累足够作答证据。依赖关系用于补救推荐，不代表官方大纲版本。')
                 tree_outline = gr.Markdown()
@@ -292,7 +327,7 @@ def build_app(service, llm_factory=None, settings=None):
             with gr.Tab('设置与备份', id='settings'):
                 gr.Markdown('### 本地运行与 AI 连接\n默认只监听本机（127.0.0.1），不开启公开分享链接。密钥只从本地 `.env` / 环境变量读取，界面不显示完整密钥。修改 `.env` 后需重启生效；没有密钥时自动使用 Mock 模式，全部核心功能可用。')
                 mode_md = gr.Markdown(mode_summary(settings, client() if llm_factory else None))
-                gr.Markdown('AI 请求仅发送你在下方主动输入的提问，不自动上传教材、题库或学习历史。学校模型地址与 ID 必须填写实际提供的值，不要猜测。')
+                gr.Markdown('连续教师会发送当前题面、关联知识点及本会话最近六轮对话，以便接续讲解；不发送整份教材、密钥或全部学习数据库。离线模式不发送网络请求。')
                 with gr.Row():
                     base_url = gr.Textbox(label='GenAI API Address',value=getattr(settings,'base_url',''))
                     model = gr.Textbox(label='模型 ID',value=getattr(settings,'model',''))
@@ -326,14 +361,18 @@ def build_app(service, llm_factory=None, settings=None):
         def clear_explanation(): return '', '', '', '', '', '', False
         clear_outputs=[solution,feedback_state,ai_response,report,mark_status,ai_prompt,full_solution]
         start_btn.click(safe(start),[subject,chapter],outputs).then(clear_explanation,outputs=clear_outputs)
-        continue_btn.click(safe(resume),outputs=outputs).then(lambda:gr.update(selected='quiz'),outputs=tabs).then(clear_explanation,outputs=clear_outputs)
+        foundation_btn.click(safe(foundation,'foundation'),[foundation_model],outputs).then(clear_explanation,outputs=clear_outputs)
+        route_btn.click(safe(route_start,'route_start'),[route_mode,subject,chapter],outputs).then(clear_explanation,outputs=clear_outputs)
+        continue_btn.click(safe(resume),outputs=outputs).then(lambda:gr.update(selected='quiz'),outputs=tabs).then(clear_explanation,outputs=clear_outputs).then(safe(restore_chat,'restore_tutor_chat'),[sid],[ai_response])
         next_btn.click(safe(advance),[sid],outputs).then(clear_explanation,outputs=clear_outputs)
         submit_btn.click(safe(submit),[sid,qid,token,radio,multiple,answer],[feedback,feedback_state,submit_btn,next_btn],concurrency_limit=1)
-        hint_btn.click(safe(lambda q:service.hint(q),'hint'),[qid],[hint])
+        hint_btn.click(safe(lambda q,s:service.hint(q,s),'hint'),[qid,sid],[hint])
         solution_btn.click(safe(reveal,'reveal'),[qid,feedback_state],[solution])
         report_btn.click(safe(lambda s: '### 诊断报告\n```json\n'+json.dumps(service.report(s),ensure_ascii=False,indent=2)+'\n```' if s else '请先开始诊断。','report'),[sid],[report])
         mark_btn.click(safe(lambda q:service.mark_question(q) if hasattr(service,'mark_question') else '题目标记暂不可用。','mark_question'),[qid],[mark_status])
-        ai_btn.click(safe(ask,'ask'),[qid,feedback_state,ai_prompt,full_solution],[ai_response])
+        ai_btn.click(safe(tutor_chat,'tutor_chat'),[sid,qid,ai_prompt,full_solution],[ai_response,submit_btn,next_btn,feedback,feedback_state])
+        # Keep the legacy API available for existing integrations.
+        legacy_ai.click(safe(ask,'ask'),[qid,feedback_state,ai_prompt,full_solution],[ai_response])
         refresh.click(safe(lambda:dashboard_view(service.dashboard()),'refresh_dashboard'),outputs=[stats,activity,suggestions])
         tree_refresh.click(safe(lambda:(tree_view(),tree_structure()),'refresh_tree'),outputs=[tree,tree_outline])
         topic_practice.click(safe(lambda t:start('',t),'practice_topic'),[tree_topic],outputs).then(lambda:gr.update(selected='quiz'),outputs=tabs).then(clear_explanation,outputs=clear_outputs)

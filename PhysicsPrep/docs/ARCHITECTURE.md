@@ -1,5 +1,12 @@
 # PhysicsPrep 架构说明
 
+2026-10-13更新：默认主入口为`ui/practice.py`，业务状态机为`services/practice.py`。
+追加`practice_states`保存阶段、补救、预备题与生成预算，`tutor_turns`保存教学对话。
+版本化迁移已追加第4项；旧提交事务、快照与题库ID保持兼容。
+生成模型、可信门槛、并发恢复及回滚说明见[连续刷题说明](CONTINUOUS_PRACTICE.md)。
+下文旧诊断路径仍可用；生成题只要经新的可执行校验入口授予machine_validated就可练习，
+不再要求所有生成题都先人工核验。人工核验与机器校验分开记录。
+
 本文说明代码分层、数据库设计、判分流水线与安全边界。诊断算法的具体公式见
 [DIAGNOSIS_ALGORITHM.md](DIAGNOSIS_ALGORITHM.md)，测试证据见 [TEST_REPORT.md](TEST_REPORT.md)。
 
@@ -177,7 +184,7 @@ connection_btn.click(safe(connection, 'connection'), outputs=connection_result)
 | --- | --- |
 | 不硬编码密钥 | 只从 `.env` / 环境变量读取；`.env` 在 `.gitignore` |
 | 不泄露密钥 | 界面只显示长度与末四位（短于 12 字符只显示长度）；错误信息只留异常类别 |
-| 不上传学习数据 | 只有用户主动输入的提问会发给模型；教材、题库、学习记录都不发送 |
+| 最小教学上下文 | 发送当前题、关联节点与有限对话；过程评估发送当前作答，不发送整份教材或数据库 |
 | 不绕过访问控制 | 只使用标准 HTTPS Chat Completions，不做任何绕过或并发突破 |
 | 不伪造教材内容 | 种子题 `source_type` 全为 `original`、`source_reference` 为 `null` |
 | 不伪造官方大纲 | 大纲只按 SHA256 归档，状态标注“用户导入，年份与官方有效性待核” |

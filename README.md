@@ -4,6 +4,10 @@
 
 ## 入口
 
+- **主学习应用**：`PhysicsPrep/app.py`，默认「连续刷题」，无需事先维护教材解析。
+  启动：`PhysicsPrep\.venv\Scripts\python.exe PhysicsPrep\app.py`，访问`http://127.0.0.1:7860`。
+  功能与质量边界见 [连续刷题说明](PhysicsPrep/docs/CONTINUOUS_PRACTICE.md)。
+
 - `资料整理/题库/index.html`：单题刷题工作台（使用本地静态服务器打开）
 - `资料整理/题库/batch_adapt_mcq.py`：调用 DeepSeek 批量生成选择题改编草稿
 - `资料整理/题库/exam_adaptations.json`：人工编写的改编题草稿

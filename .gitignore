@@ -52,3 +52,6 @@ fastgpt-physics-lab/third_party/
 .fastgpt-lab-notes/
 PhysicsPrep/data/
 
+# Local test reports (may include workstation metadata)
+archive/practice-pytest-report.xml
+

@@ -109,11 +109,19 @@ def feedback_text(feedback):
     summary = [f'### {label}', explanation]
     if feedback.get('hint_level'):
         summary.append(f"**借助提示完成**（层级 {feedback['hint_level']}）：不计为独立正确证据，已安排无提示复测。")
+    elif feedback.get('evidence_kind')=='original_revisit':
+        summary.append('**原题回练**：不能替代不同题面验证或延迟独立复测。')
     if topics:
         summary.append(f'**关联知识点：** {"、".join(topics)}')
     summary.append(f'**错因判断：** {category}')
     if analysis:
         summary.append(f'{analysis}')
+    if feedback.get('process_assessment'):
+        advice=feedback['process_assessment']
+        summary.append('**过程评估（模型建议，仍为暂无法确认）：** '+advice.get('next_action',''))
+        issues=advice.get('possible_issues') or []
+        if issues:
+            summary.append('可能问题：'+'；'.join(issues))
 
     mastery = feedback.get('mastery') or []
     if mastery:

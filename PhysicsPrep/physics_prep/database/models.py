@@ -119,3 +119,9 @@ class TutorTurn(Base):
     question_id: Mapped[str] = mapped_column(String)
     payload: Mapped[dict] = mapped_column(JSON)
     created_at: Mapped[datetime] = mapped_column(DateTime, default=_now_naive)
+
+
+class PracticeState(Base):
+    __tablename__ = 'practice_states'
+    session_id: Mapped[str] = mapped_column(ForeignKey('exam_sessions.id'), primary_key=True)
+    payload: Mapped[dict] = mapped_column(JSON)

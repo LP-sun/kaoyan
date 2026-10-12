@@ -11,6 +11,7 @@ class Repository:
 
     def save_topics(self, items):
         with self.factory.begin() as s:
+            s.connection().exec_driver_sql('BEGIN IMMEDIATE')
             existing = {t.id: {'id':t.id,'name':t.name,'parent_id':t.parent_id,'difficulty':t.difficulty,'source_references':t.source_references,'prerequisite_ids':[]} for t in s.scalars(select(Topic))}
             for edge in s.scalars(select(TopicPrerequisite)):
                 existing[edge.topic_id]['prerequisite_ids'].append(edge.prerequisite_id)
@@ -58,8 +59,10 @@ class Repository:
             data['machine_validated'] = False
             if data['source_type']=='ai_generated' and not allow_ai_verification:
                 data['verified']=False
+                data['human_verified']=False
         if len({q['id'] for q in values})!=len(values): raise ValueError('导入含重复题目 ID')
         with self.factory.begin() as s:
+            s.connection().exec_driver_sql('BEGIN IMMEDIATE')
             for data in values:
                 for topic in data['topic_ids']:
                     if not s.get(Topic,topic): raise ValueError('不存在的知识点: '+topic)
@@ -93,6 +96,9 @@ class Repository:
         path=Path(path)
         if path.suffix.lower()=='.json':
             items=json.loads(path.read_text(encoding='utf-8-sig'))
+            if isinstance(items,dict) and 'statement' in items and 'review' in items:
+                from .importer import adapt_writing_record
+                items=[adapt_writing_record(items)]
             if isinstance(items,dict): items=items.get('questions',[])
         elif path.suffix.lower()=='.csv':
             with path.open(encoding='utf-8-sig',newline='') as f: items=list(csv.DictReader(f))

@@ -217,8 +217,10 @@ def build_app(service, llm_factory=None, settings=None):
         qid = gr.State(None)
         token = gr.State(None)
         feedback_state = gr.State('')
-        gr.HTML('<div class="hero"><h1>PhysicsPrep · 物理考研</h1><p>用一次短诊断，找到下一步值得练习的内容。原创核验题库 · 自适应选题 · 本地学习记录</p></div>')
+        gr.HTML('<div class="hero"><h1>PhysicsPrep · 物理考研</h1><p>点击开始刷题，让系统选题；不会就提示，错了就补弱，下次继续。</p></div>')
         with gr.Tabs() as tabs:
+            from .practice import mount_practice
+            mount_practice(service,client if llm_factory else None)
             with gr.Tab('学习总览', id='dashboard'):
                 stats = gr.HTML()
                 with gr.Row():

@@ -41,10 +41,17 @@ def _migration_003_attempt_created_at(connection):
             {'now': naive_utcnow().isoformat(sep=' ')})
 
 
+def _migration_004_practice_state(connection):
+    from ..models import PracticeState, TutorTurn
+    TutorTurn.__table__.create(connection, checkfirst=True)
+    PracticeState.__table__.create(connection, checkfirst=True)
+
+
 MIGRATIONS = (
     (1, '建立 users/topics/questions/sessions/attempts/mastery/review/llm_usage 等基础表', _migration_001_create_schema),
     (2, '规范化 exam_sessions.status', _migration_002_web_sessions),
     (3, '回填 attempts.created_at', _migration_003_attempt_created_at),
+    (4, '追加连续刷题状态及教师对话表，不改历史列', _migration_004_practice_state),
 )
 
 

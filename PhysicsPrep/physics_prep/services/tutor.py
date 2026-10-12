@@ -9,7 +9,7 @@ def classify(text):
         return 'report'
     if any(x in text for x in ('完整解析', '直接看答案', '完整答案')):
         return 'solution'
-    if any(x in text for x in ('不会', '看不懂', '提示', '基础', '卡住')):
+    if any(x in text for x in ('不会', '看不懂', '提示', '基础', '卡住','没思路','什么公式','为什么','讲一下')):
         return 'help'
     if text.startswith(('答案:', '答案：', '最终答案:', '最终答案：')):
         return 'final'
@@ -44,7 +44,7 @@ def respond(service, sid, qid, text, client=None, full=False):
                 q = dict(last.snapshot)
                 active = False
             if kind in ('help', 'solution', 'equation', 'concept_or_calculation') and active:
-                q['hint_level'] = min(4, max(q.get('hint_level', 0), 4 if kind == 'solution' else q.get('hint_level', 0)+1))
+                q['hint_level'] = 4 if kind == 'solution' or q.get('hint_level')==4 else min(3,q.get('hint_level',0)+1)
                 current.current_snapshot = q
         history = conversation(service, sid)
         level = q.get('hint_level', 1)
@@ -84,7 +84,8 @@ def respond(service, sid, qid, text, client=None, full=False):
                 result = client.ask(json.dumps(context, ensure_ascii=False)[:5800], system=system) if client else {'mode': 'mock', 'error': None}
             except Exception as exc:
                 result = {'mode': 'mock', 'error': type(exc).__name__}
-            local = (q.get('hints') or {}).get(str(level)) or q.get('hint') or '先确定研究对象、已知量和未知量。哪个物理定律能连接这些量？'
+            from .hint_material import local_hint
+            local = local_hint(q,level)
             reply = result.get('text') if result.get('mode') == 'online' and not result.get('error') else local
             if result.get('mode') != 'online':
                 reply = '【离线引导】' + reply

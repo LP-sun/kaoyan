@@ -1,5 +1,13 @@
 # AGENTS.md
 
+## 连续刷题维护入口
+
+PhysicsPrep默认主界面为`ui/practice.py`，状态机为`services/practice.py`。
+新增功能必须经控制器实际调用，不要把调度堆入Gradio回调。
+质量资格统一使用`questions/eligibility.py`；提交也检查最新题目是否停用。
+原始题和学习历史仍保留；新状态表使用迁移4追加，回滚说明见`PhysicsPrep/docs/CONTINUOUS_PRACTICE.md`。
+真实浏览器验收使用`tools/practice_browser_check.py`，只操作独立临时库及自己创建的服务进程。
+
 ## 2026-10-13 连续教学增量
 
 PhysicsPrep连续教师入口与可运行范围见 `PhysicsPrep/docs/AI_TUTOR.md`。

@@ -1,4 +1,5 @@
 from datetime import datetime
+from ..questions.eligibility import is_practice_eligible
 
 # 能被确定性判分器给出 correct/incorrect 的题型（与 math_grader.grade 的分支保持一致）。
 # 简答/推导题（short_answer）只能得到 uncertain：不更新掌握度、占用诊断名额，
@@ -10,8 +11,7 @@ AUTO_GRADED_TYPES = frozenset({'single_choice', 'multiple_choice', 'numeric', 's
 def select_question(questions, attempts, mastery, prerequisites=None, due=None):
     """Explainable ranking with coverage, remedy, level fit and repetition penalty."""
     prerequisites=prerequisites or {}; due=due or set()
-    eligible=[q for q in questions if (q.get('verified') or q.get('machine_validated')) and q.get('source_type')!='official_exam' and not q.get('frozen',False)
-              and q.get('content_status', 'practice_ready') == 'practice_ready']
+    eligible=[q for q in questions if is_practice_eligible(q)]
     if not eligible: return None
     gradable=[q for q in eligible if q.get('question_type') in AUTO_GRADED_TYPES]
     if gradable: eligible=gradable
@@ -23,7 +23,7 @@ def select_question(questions, attempts, mastery, prerequisites=None, due=None):
     if not eligible: return None
     last=attempts[-1] if attempts else None
     remedy=set()
-    if last and last['status']=='incorrect':
+    if last and last['status']=='incorrect' and last.get('error_category') not in ('数学计算错误','计算粗心'):
         for t in last['topic_ids']:
             remedy.add(t); remedy.update(prerequisites.get(t,[]))
     last_topics=set(last['topic_ids']) if last else set()
@@ -39,6 +39,11 @@ def select_question(questions, attempts, mastery, prerequisites=None, due=None):
             if t in remedy: val+=4; reasons.append('错误后补救或前置知识')
             if estimate is None: reasons.append('未测试考点')
             if t in repeated_topics: val-=7; reasons.append('控制连续同考点练习')
+            unmet=[p for p in prerequisites.get(t,[]) if mastery.get(p,{}).get('estimate') is None or mastery.get(p,{}).get('estimate',0)<.5]
+            if unmet and t not in remedy:
+                val-=2*len(unmet); reasons.append('前置证据不足，控制综合题难度')
+            if estimate is not None:
+                reasons.append('依据已保存作答证据匹配难度（启发式）')
             val-=abs(q['difficulty']-target)*1.2
             scores.append(val)
         return max(scores), reasons

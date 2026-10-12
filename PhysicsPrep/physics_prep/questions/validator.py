@@ -19,6 +19,8 @@ class QuestionInput(BaseModel):
     content_priority: int = Field(default=0, ge=0, le=100)
     @model_validator(mode='after')
     def check_choice(self):
+        if (self.verified or self.content_status=='practice_ready') and self.correct_answer in (None,'',[]):
+            raise ValueError('可练习题必须有非空标准答案。')
         if self.question_type in ('single_choice','multiple_choice'):
             if len(self.options) < 2:
                 raise ValueError('选择题至少两个选项')

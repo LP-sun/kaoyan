@@ -4,11 +4,11 @@ import sqlite3
 import threading
 from pathlib import Path
 from uuid import uuid4
-from datetime import timedelta
+from datetime import timedelta, datetime
 from sqlalchemy import select, func
 from ..clock import naive_utcnow, to_iso
 from ..database.session import initialize_database
-from ..database.models import ExamSession, Attempt, MasteryRecord, ReviewSchedule, Topic, Question, QuestionMark
+from ..database.models import ExamSession, Attempt, MasteryRecord, ReviewSchedule, Topic, Question, QuestionMark, QuestionTopic
 from ..questions.repository import Repository
 from ..diagnosis.selector import select_question
 from ..diagnosis.mastery import update_mastery
@@ -22,7 +22,8 @@ class LearningService:
         self.path = Path(db_path).resolve()
         self.engine, self.factory = initialize_database(self.path)
         self.repository = Repository(self.factory)
-        self.lock = threading.RLock()
+        from .locks import database_lock
+        self.lock = database_lock(self.path)
         self.user_id = 'local'
         if seed_dir:
             seed_dir = Path(seed_dir)
@@ -43,9 +44,8 @@ class LearningService:
         snapshot = None
         if question_id:
             matches = [q for q in self.repository.list_questions() if q['id'] == question_id]
-            if (not matches or not (matches[0]['verified'] or matches[0].get('machine_validated'))
-                    or matches[0].get('content_status', 'practice_ready') != 'practice_ready'
-                    or matches[0]['source_type'] == 'official_exam' or matches[0].get('frozen')):
+            from ..questions.eligibility import is_practice_eligible
+            if not matches or not is_practice_eligible(matches[0]):
                 raise ValueError('题目不存在、尚未核验或属于冻结模拟卷')
             snapshot = matches[0]
         with self.factory.begin() as session:
@@ -70,7 +70,8 @@ class LearningService:
     def _public(self, question, progress):
         """只把不含答案的字段送到前端，避免作答前泄露标准答案或解析。"""
         allowed = ('id', 'subject', 'topic_ids', 'difficulty', 'question_type', 'stem', 'options',
-                   'image', 'images', 'source_type', 'source_reference', 'recommendation_reason')
+                   'image', 'images', 'source_type', 'source_reference', 'recommendation_reason',
+                   'allowed_symbols','physical_conditions','answer_unit','estimated_minutes','difficulty_source','time_source')
         result = {key: question[key] for key in allowed if key in question}
         names = {t['id']: t['name'] for t in self.repository.topic_tree()}
         result['topic_names'] = [names.get(t, t) for t in question['topic_ids']]
@@ -136,13 +137,51 @@ class LearningService:
     def generate_practice(self, model, topic_id, variant=0):
         from ..questions.generation import generate
         question = generate(model, topic_id, variant)
-        existing = next((q for q in self.list_questions() if q['id'] == question['id']), None)
-        if not existing:
-            self.repository.save_questions([question])
-            with self.factory.begin() as s:
-                row = s.get(Question, question['id'])
-                row.payload = row.payload | {'machine_validated':True, 'content_status':'practice_ready'}
-        return question['id']
+        return self.store_generated(question)['id']
+
+    def store_generated(self, question):
+        from ..questions.generated_validation import validate_generated
+        from ..questions.candidates import MODEL_TOPICS
+        if question.get('topic_ids') != [MODEL_TOPICS.get(question.get('generation',{}).get('model'))]:
+            raise ValueError('生成题模型与考点映射不一致。')
+        result = validate_generated(question)
+        if not result['passed']:
+            raise ValueError('生成题未通过独立程序校验。')
+        if question['topic_ids'] == ['PHY-MECH-ROT-TORQUE'] and not any(t['id']=='PHY-MECH-ROT-TORQUE' for t in self.repository.topic_tree()):
+            self.repository.save_topics([{'id':'PHY-MECH-ROT-TORQUE','name':'力矩大小与力臂',
+                'parent_id':'PHY-MECH-ROT','prerequisite_ids':['PHY-MECH-DYN-001'],
+                'source_references':['定义：力矩为位置矢量与力的叉积；基础诊断节点，非官方大纲条目。']}])
+        from ..questions.validator import validate_question
+        data=validate_question(question) | {'machine_validated':True,'verified':False,
+            'human_verified':False,'source_type':'ai_generated','content_status':'practice_ready','validation':result,
+            'generation':question['generation'] | {'status':'machine_validated'}}
+        with self.lock, self.factory.begin() as s:
+            s.connection().exec_driver_sql('BEGIN IMMEDIATE')
+            existing=s.get(Question,data['id'])
+            if existing:
+                old=existing.payload
+                if (existing.version==1 and old.get('machine_validated') and not old.get('verified') and
+                    not old.get('human_verified') and not old.get('reported_issue') and not old.get('review_evidence') and
+                    old.get('content_status')=='practice_ready' and old.get('source_type')=='ai_generated' and
+                    old.get('generation',{}).get('model')==data['generation']['model'] and
+                    old.get('generation',{}).get('variant')==data['generation']['variant'] and
+                    not validate_generated(old)['passed']):
+                    # Correct an untouched program-owned cache definition. IDs
+                    # and historic attempt snapshots remain unchanged.
+                    existing.payload=data; existing.version+=1
+                    return data | {'version':existing.version}
+                # A reported or edited cached item is never overwritten by
+                # regeneration, even across separate application instances.
+                return existing.payload | {'version':existing.version}
+            for topic in data['topic_ids']:
+                if not s.get(Topic,topic):
+                    raise ValueError('生成题所需知识点不存在。')
+            s.add(Question(id=data['id'],subject=data['subject'],difficulty=data['difficulty'],
+                question_type=data['question_type'],verified=False,version=1,payload=data))
+            s.flush()
+            for topic in data['topic_ids']:
+                s.add(QuestionTopic(question_id=data['id'],topic_id=topic))
+            return data | {'version':1}
 
     def start_route(self, mode, subject=None, chapter=None):
         if mode == '从零开始':
@@ -193,12 +232,14 @@ class LearningService:
             if current.current_question_id != question_id or not current.current_snapshot:
                 raise ValueError('请先获取当前题，或本题已提交')
             question = dict(current.current_snapshot)
+            live = session.get(Question,question_id)
             options = {key: question[key] for key in
                        ('allowed_symbols', 'positive_symbols', 'assumptions', 'numeric_tolerance', 'expected_unit')
                        if key in question}
             feedback = grade(answer, question['correct_answer'], question['question_type'], options=options)
-            if question.get('reported_issue'):
-                feedback = {'status': 'uncertain', 'message': '本题已报告问题，暂停确定性评分。'}
+            from ..questions.eligibility import is_practice_eligible
+            if not live or not is_practice_eligible(live.payload) or not is_practice_eligible(question):
+                feedback = {'status': 'uncertain', 'explanation': '本题已报告问题或暂停，停止确定性评分。'}
             status = feedback['status']
             category, reason = error_analysis(status, question['question_type'])
             names = {t['id']: t['name'] for t in self.repository.topic_tree()}
@@ -210,18 +251,46 @@ class LearningService:
                 'topic_names': [names.get(t, t) for t in question['topic_ids']],
                 'mastery': [],
                 'hint_level': question.get('hint_level', 0),
-                'independent': not bool(question.get('hint_level', 0)),
+                'independent': not bool(question.get('hint_level', 0) or question.get('prior_exposure')),
+                'confidence': 'deterministic' if status in ('correct','incorrect') else 'uncertain',
+                'elapsed_seconds': max(0, min(1200, (naive_utcnow()-datetime.fromisoformat(question['practice_started_at']).replace(tzinfo=None)).total_seconds())) if question.get('practice_started_at') else 0,
+                'timing_source': 'question_open_to_submit_capped_20min' if question.get('practice_started_at') else 'unobserved',
+                'delayed_retest': False,
+                'remediation_stage': question.get('remediation_stage'),
+                'question_attempt_number': 1+session.scalar(select(func.count()).select_from(Attempt).where(Attempt.session_id==session_id,Attempt.question_id==question_id)),
             }
             if status in ('correct', 'incorrect'):
+                prior_successes=list(session.scalars(select(Attempt).where(Attempt.user_id==self.user_id,
+                    Attempt.status=='correct',Attempt.created_at>=naive_utcnow()-timedelta(days=1))))
+                family=question.get('generation',{}).get('model')
+                same_day_repeat = status=='correct' and any(not a.feedback.get('hint_level') and
+                    (a.question_id==question_id or (family and a.snapshot.get('generation',{}).get('model')==family)) for a in prior_successes)
+                feedback['same_day_repeat']=same_day_repeat
                 for topic in question['topic_ids']:
                     record = session.get(MasteryRecord, (self.user_id, topic)) or MasteryRecord(
                         user_id=self.user_id, topic_id=topic, attempts=0, correct=0, recent=[])
-                    independent = not question.get('hint_level', 0)
-                    if status == 'correct' and not independent:
+                    independent = feedback['independent']
+                    previous_review = session.get(ReviewSchedule,(self.user_id,topic))
+                    delayed = independent and previous_review is not None and previous_review.due_at <= naive_utcnow() and record.last_practiced is not None and record.last_practiced <= naive_utcnow()-timedelta(days=1)
+                    feedback['delayed_retest'] = feedback['delayed_retest'] or delayed
+                    if status == 'correct' and (not independent or same_day_repeat):
                         # Assistance is not independent mastery evidence.
                         interval, due = 1, naive_utcnow() + timedelta(days=1)
+                        if same_day_repeat and independent and previous_review is not None:
+                            interval, due = previous_review.interval_days, previous_review.due_at
                     else:
-                        interval, due = update_mastery(record, status == 'correct', question['difficulty'])
+                        interval, due = update_mastery(record, status == 'correct', question['difficulty'],now=naive_utcnow())
+                        if status == 'correct' and not delayed:
+                            # Same-day success is exploratory evidence, never a
+                            # reason to extend the delayed retention interval.
+                            interval, due = 3, naive_utcnow()+timedelta(days=3)
+                    if previous_review is not None and status=='correct' and not delayed and independent:
+                        # Exploratory practice must not postpone a pending
+                        # retention test. A genuinely delayed result may move it.
+                        interval,due=previous_review.interval_days,previous_review.due_at
+                    # This is observed practice time, including assisted work;
+                    # it does not imply an increase in independent mastery.
+                    record.last_practiced=naive_utcnow()
                     session.add(record)
                     review = session.get(ReviewSchedule, (self.user_id, topic)) or ReviewSchedule(
                         user_id=self.user_id, topic_id=topic)
@@ -230,6 +299,13 @@ class LearningService:
                     session.add(review)
                     feedback['mastery'].append({'topic_id': topic, 'estimate': record.estimate,
                                                 'attempts': record.attempts, 'due_at': to_iso(due)})
+            feedback['evidence_kind'] = ('uncertain' if status=='uncertain' else
+                'solution_assisted' if question.get('hint_level')==4 else
+                'hint_assisted' if question.get('hint_level') else
+                'original_revisit' if question.get('prior_exposure') else
+                'same_day_repeat' if feedback.get('same_day_repeat') else
+                'delayed_independent' if feedback['delayed_retest'] else
+                'independent_transfer' if question.get('remediation_stage')=='verification' else 'independent_attempt')
             session.add(Attempt(user_id=self.user_id, session_id=session_id, question_id=question_id,
                                 token=token, answer=answer, snapshot=question, feedback=feedback, status=status))
             current.current_question_id = None
@@ -273,8 +349,13 @@ class LearningService:
             'uncertain': len(rows) - len(certain),
             'accuracy': sum(a.status == 'correct' for a in certain) / len(certain) if certain else None,
             'topics': list({t for a in rows for t in a.snapshot['topic_ids']}),
-            'independent_attempts': sum(not a.feedback.get('hint_level') for a in rows),
-            'independent_correct': sum(a.status == 'correct' and not a.feedback.get('hint_level') for a in rows),
+            'independent_attempts': sum(a.feedback.get('independent',not a.feedback.get('hint_level')) for a in rows),
+            'independent_correct': sum(a.status == 'correct' and a.feedback.get('independent',not a.feedback.get('hint_level')) for a in rows),
+            'independent_accuracy': sum(a.status=='correct' for a in certain if a.feedback.get('independent',not a.feedback.get('hint_level'))) / len([a for a in certain if a.feedback.get('independent',not a.feedback.get('hint_level'))]) if any(a.feedback.get('independent',not a.feedback.get('hint_level')) for a in certain) else None,
+            'delayed_independent_count': sum(bool(a.feedback.get('delayed_retest')) for a in rows),
+            'delayed_independent_correct': sum(a.status=='correct' and bool(a.feedback.get('delayed_retest')) for a in rows),
+            'remediation_attempts': sum(a.feedback.get('remediation_stage')=='remediation' for a in rows),
+            'independent_transfer_correct': sum(a.status=='correct' and not a.feedback.get('hint_level') and a.feedback.get('remediation_stage')=='verification' for a in rows),
             'needs_independent_retest': sorted({t for a in rows if a.status != 'correct' or a.feedback.get('hint_level') for t in a.snapshot['topic_ids']}),
             'next_suggestion': '先完成到期无提示复测；错误后用基础变式检验，再返回原考点。',
             'coverage_notice': '仅反映本次有限样本，题库覆盖不足或未知考点不可据此认定掌握。',

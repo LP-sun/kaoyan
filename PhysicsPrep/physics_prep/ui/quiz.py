@@ -134,7 +134,7 @@ def feedback_text(feedback):
     if status == 'incorrect':
         summary.append('**建议复习：** 先回看该考点的前置知识，再用同考点的低难度题确认概念，最后回到本题重做。')
     elif status == 'uncertain':
-        summary.append('**建议：** 系统无法确定性判分。请检查表达式书写（显式乘号、括号、符号名），或点击「查看解析」自行比对。')
+        summary.append('**建议：** 系统暂无法确认。请按上方具体提示检查符号大小写、括号和乘号；有歧义时用 * 明确相乘，或点击「查看解析」自行比对。')
 
     detail = [f"### 标准答案\n{feedback.get('correct_answer', '需要进一步核对')}"]
     detail.append(f"### 推导与检验\n{feedback.get('solution', '本地题库暂无该题解析。')}")

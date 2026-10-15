@@ -8,9 +8,9 @@ from ..questions.eligibility import is_practice_eligible
 AUTO_GRADED_TYPES = frozenset({'single_choice', 'multiple_choice', 'numeric', 'symbolic',
                                'numeric_calculation', 'symbolic_expression'})
 
-def select_question(questions, attempts, mastery, prerequisites=None, due=None):
+def select_question(questions, attempts, mastery, prerequisites=None, due=None, difficulty_preferences=None):
     """Explainable ranking with coverage, remedy, level fit and repetition penalty."""
-    prerequisites=prerequisites or {}; due=due or set()
+    prerequisites=prerequisites or {}; due=due or set(); difficulty_preferences=difficulty_preferences or {}
     eligible=[q for q in questions if is_practice_eligible(q)]
     if not eligible: return None
     gradable=[q for q in eligible if q.get('question_type') in AUTO_GRADED_TYPES]
@@ -40,6 +40,11 @@ def select_question(questions, attempts, mastery, prerequisites=None, due=None):
             if estimate is None: reasons.append('未测试考点')
             if t in repeated_topics: val-=7; reasons.append('控制连续同考点练习')
             unmet=[p for p in prerequisites.get(t,[]) if mastery.get(p,{}).get('estimate') is None or mastery.get(p,{}).get('estimate',0)<.5]
+            preferred=difficulty_preferences.get(t)
+            if preferred and t not in remedy and t not in due:
+                target=max(target,min(preferred,2) if unmet else preferred)
+                val+=4 if q['difficulty']>=preferred and not unmet else -4 if q['difficulty']<preferred else 0
+                reasons.append('你反馈本考点过于简单，优先提高难度（不计掌握证据）')
             if unmet and t not in remedy:
                 val-=2*len(unmet); reasons.append('前置证据不足，控制综合题难度')
             if estimate is not None:

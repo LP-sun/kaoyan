@@ -28,6 +28,24 @@ class InputError(ValueError):
     """受控解析失败：输入越界、含非白名单语法或数学上无定义。"""
 
 
+def _symbol_product(name, names):
+    """Split an implicit product only when the allowed symbols give one reading."""
+    paths={len(name):[()]}
+    for index in range(len(name)-1,-1,-1):
+        matches=[]
+        for symbol in names:
+            if name.startswith(symbol,index):
+                for suffix in paths.get(index+len(symbol),[]):
+                    if len(suffix)<20:
+                        matches.append((symbol,)+suffix)
+                    if len(matches)>=2:
+                        break
+            if len(matches)>=2:
+                break
+        paths[index]=matches
+    return paths[0][0] if len(paths[0])==1 else None
+
+
 def _check_deadline(deadline):
     if deadline is not None and time.monotonic() > deadline:
         raise TimeoutError('数学判分超时')
@@ -82,6 +100,20 @@ def controlled_parse(text, symbols):
         if isinstance(node, ast.Name):
             if node.id in names:
                 return names[node.id]
+            product=_symbol_product(node.id,symbols.get('names') or [])
+            if product:
+                return sp.Mul(*(names[name] for name in product))
+            alternative=_symbol_product(node.id.lower(),[name for name in symbols.get('names') or [] if name.islower()])
+            case_names=[name for name in symbols.get('names') or [] if name.lower()==node.id.lower() and name!=node.id]
+            # Case has physical meaning: N may be particle count while n is
+            # amount of substance. Never silently rename a student's symbol.
+            for name in symbols.get('names') or []:
+                if len(name)==1 and name.swapcase() in node.id and name not in node.id:
+                    candidate=node.id.replace(name.swapcase(),name)
+                    if _symbol_product(candidate,symbols.get('names') or []):
+                        raise InputError(f'符号大小写需确认：题面使用 {name}，你输入了 {name.swapcase()}；若表示题面同一物理量，请改为 {candidate}（可省略乘号）')
+            if case_names or alternative:
+                raise InputError('符号大小写需确认，请使用题面给定的符号；不自动替换不同物理量')
             raise InputError(f'未允许的符号或函数：{node.id}')
         if isinstance(node, ast.UnaryOp) and isinstance(node.op, (ast.UAdd, ast.USub)):
             operand = walk(node.operand, depth + 1)

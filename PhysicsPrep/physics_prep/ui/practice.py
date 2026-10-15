@@ -23,6 +23,7 @@ def mount_practice(service, client_factory=None):
     def summary_text(view):
         r=view['summary']; state=view['state']
         return (f"本轮作答 {r['attempts']} 题 · 独立正确 {r['independent_correct']} 题 / 独立尝试 {r['independent_attempts']} 题\n\n"
+            f"过于简单跳过 {r.get('too_easy_count',0)} 题（不计成绩）\n\n"
             f"作答窗口累计 {state['elapsed_seconds']/60:.1f} 分钟（不是专注时间测量）\n\n"
             f"仍需无提示复测：{'、'.join(r['needs_independent_retest']) or '尚无待确认错误；仍按计划延迟复测'}\n\n"
             f"题目覆盖缺口：{'、'.join(r.get('coverage_gaps',[])) or '本轮未发现不可出题的指定考点'}\n\n{r['next_suggestion']}")
@@ -53,17 +54,29 @@ def mount_practice(service, client_factory=None):
             values[3] += f" · 独立正确率 {report['independent_accuracy']:.0%}（排除无法确认）"
         q=view.get('question') or {}
         if q.get('allowed_symbols'):
-            values[3] += '\n\n可用符号：'+', '.join(q['allowed_symbols'])+'；乘号用*，乘方用**。'
+            values[3] += '\n\n可用符号：'+', '.join(q['allowed_symbols'])+'；注意大小写，可省略无歧义的符号间乘号，乘方用**。'
         if state['phase'] in ('FEEDBACK','SAVED'):
             values[10]=gr.update(interactive=False)
             values[11]=gr.update(interactive=False)
             values[12]=gr.update(interactive=state['phase']=='FEEDBACK')
             if state.get('last_feedback'):
                 values[9]=feedback_text(state['last_feedback'])[0]
-        return (*values,side_text(view),summary_text(view),'')
+        elif state.get('notice'):
+            values[9]=state['notice']
+        return (*values,side_text(view),summary_text(view),'',
+            gr.update(interactive=bool(q) and state['phase'] not in ('FEEDBACK','SAVED')),
+            gr.update(value=state.get('question_filter','all')))
 
-    def practice_start(subject,mode,chapter):
-        return render(controller.start(subject,mode,chapter or None))
+    def practice_start(subject,mode,chapter,question_filter='all'):
+        return render(controller.start(subject,mode,chapter or None,question_filter))
+
+    def practice_too_easy(sid,qid):
+        if not sid: raise ValueError('请先开始刷题。')
+        return render(controller.too_easy(sid,qid))
+
+    def practice_filter(sid,question_filter):
+        view=controller.set_question_filter(sid,question_filter)
+        return render(view) if view else tuple(gr.update() for _ in outputs)
 
     def practice_continue():
         view=controller.resume()
@@ -91,7 +104,8 @@ def mount_practice(service, client_factory=None):
         from ..services.tutor import classify
         result=controller.hint(sid,qid,text=text)
         return (result['teacher'],gr.update(interactive=True) if classify(text)=='report' or result.get('submitted') else gr.update(),
-            gr.update(interactive=False) if result.get('submitted') else gr.update())
+            gr.update(interactive=False) if result.get('submitted') else gr.update(),
+            gr.update(interactive=False) if result.get('submitted') or classify(text)=='report' else gr.update())
 
     def practice_finish(sid):
         if not sid: raise ValueError('请先开始刷题。')
@@ -111,26 +125,29 @@ def mount_practice(service, client_factory=None):
         with gr.Row():
             subject=gr.Dropdown([('自动安排','auto'),('651 普通物理','general'),('803 量子力学','quantum')],value='auto',label='科目')
             mode=gr.Dropdown([('自适应刷题','adaptive'),('从基础开始','foundation'),('指定章节','chapter'),('错题补弱','weakness'),('到期复习','review')],value='adaptive',label='模式')
+            question_filter=gr.Dropdown([('全部题型','all'),('只做选择题','choice')],value='all',label='题型',elem_id='practice-type-filter')
             begin=gr.Button('开始刷题',variant='primary',elem_id='practice-start')
             resume=gr.Button('继续刷题',elem_id='practice-continue')
         with gr.Accordion('可选：指定章节',open=False):
             chapter=gr.Dropdown(tree_choices(service),value='',label='章节 / 知识点')
         with gr.Row():
             with gr.Column(scale=3):
-                metadata=gr.Markdown('点击开始刷题，系统会自动选择下一道题。',elem_id='practice-meta')
-                stem=gr.Markdown(latex_delimiters=LATEX,elem_id='practice-card')
+                stem=gr.Markdown('### 准备开始\n点击「开始刷题」，在这里查看题目并作答。',latex_delimiters=LATEX,elem_id='practice-card')
                 radio=gr.Radio([],visible=False,label='单选',elem_id='practice-radio')
                 many=gr.CheckboxGroup([],visible=False,label='多选',elem_id='practice-many')
                 answer=gr.Textbox(visible=False,lines=3,label='答案',placeholder='例如 sqrt(2*g*h)，乘号用*，幂用**',elem_id='practice-answer')
                 with gr.Row():
                     submit=gr.Button('提交答案',variant='primary',interactive=False,elem_id='practice-submit')
                     hint_btn=gr.Button('不会 / 提示',interactive=False,elem_id='practice-hint-button')
-                    solution_btn=gr.Button('查看解析',elem_id='practice-solution-button')
                     next_btn=gr.Button('下一题',interactive=False,elem_id='practice-next')
-                    end=gr.Button('结束会话',elem_id='practice-end')
-                with gr.Row():
-                    retry=gr.Button('本题继续尝试（不作为变式验证）')
-                    remediate=gr.Button('完全没思路：先补基础')
+                    easy_btn=gr.Button('本题过于简单',interactive=False,elem_id='practice-too-easy')
+                with gr.Accordion('题目信息与推荐理由',open=False):
+                    metadata=gr.Markdown('点击开始刷题，系统会自动选择下一道题。',elem_id='practice-meta')
+                with gr.Accordion('更多操作',open=False):
+                    with gr.Row():
+                        solution_btn=gr.Button('查看解析',elem_id='practice-solution-button')
+                        retry=gr.Button('本题继续尝试（不作为变式验证）')
+                        remediate=gr.Button('完全没思路：先补基础')
                 hint=gr.Markdown(latex_delimiters=LATEX,elem_id='practice-hint')
                 feedback=gr.Markdown(latex_delimiters=LATEX,elem_id='practice-feedback')
                 solution=gr.Markdown(latex_delimiters=LATEX)
@@ -141,16 +158,21 @@ def mount_practice(service, client_factory=None):
                     error_type=gr.Dropdown(list(ERROR_TYPES),value='暂无法确定',label='我认为的错误原因')
                     error_btn=gr.Button('保存错因')
             with gr.Column(scale=1):
-                side=gr.Markdown(elem_id='practice-sidebar')
-                summary=gr.Markdown(elem_id='practice-summary')
-        outputs=[sid,qid,token,metadata,stem,radio,many,answer,hint,feedback,submit,hint_btn,next_btn,side,summary,solution]
-        begin.click(safe(practice_start),[subject,mode,chapter],outputs,concurrency_limit=1)
+                with gr.Accordion('学习路线',open=False):
+                    side=gr.Markdown(elem_id='practice-sidebar')
+                with gr.Accordion('本轮统计',open=False):
+                    summary=gr.Markdown(elem_id='practice-summary')
+                end=gr.Button('结束会话',elem_id='practice-end')
+        outputs=[sid,qid,token,metadata,stem,radio,many,answer,hint,feedback,submit,hint_btn,next_btn,side,summary,solution,easy_btn,question_filter]
+        begin.click(safe(practice_start),[subject,mode,chapter,question_filter],outputs,concurrency_limit=1)
+        question_filter.input(safe(practice_filter),[sid,question_filter],outputs,concurrency_limit=1)
+        easy_btn.click(safe(practice_too_easy),[sid,qid],outputs,concurrency_limit=1)
         resume.click(safe(practice_continue),outputs=outputs,concurrency_limit=1)
         next_btn.click(safe(practice_next),[sid],outputs,concurrency_limit=1)
         submit.click(safe(practice_submit),[sid,qid,token,radio,many,answer],outputs,concurrency_limit=1)
         hint_btn.click(safe(practice_hint),[sid,qid],[hint],concurrency_limit=1)
         solution_btn.click(safe(practice_solution),[sid,qid],[solution],concurrency_limit=1)
-        ask.click(safe(practice_question),[sid,qid,prompt],[hint,next_btn,submit],concurrency_limit=1)
+        ask.click(safe(practice_question),[sid,qid,prompt],[hint,next_btn,submit,easy_btn],concurrency_limit=1)
         end.click(safe(practice_finish),[sid],outputs,concurrency_limit=1)
         error_btn.click(safe(practice_error),[sid,error_type],outputs,concurrency_limit=1)
         retry.click(safe(practice_retry),[sid],outputs,concurrency_limit=1)

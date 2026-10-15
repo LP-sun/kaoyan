@@ -20,6 +20,9 @@ from playwright.sync_api import sync_playwright, expect
 parser=argparse.ArgumentParser()
 parser.add_argument('--questions',type=int,default=20)
 parser.add_argument('--minutes',type=float,default=0)
+parser.add_argument('--choice-only',action='store_true')
+parser.add_argument('--skip-easy',action='store_true')
+parser.add_argument('--mobile',action='store_true')
 args=parser.parse_args()
 root=Path(__file__).resolve().parents[1]
 folder=Path(tempfile.mkdtemp(prefix='physicsprep-practice-check-'))
@@ -75,14 +78,25 @@ try:
     start()
     with sync_playwright() as pw:
         browser=pw.chromium.launch()
-        page=browser.new_page(viewport={'width':1400,'height':950})
+        page=browser.new_page(viewport={'width':430,'height':932} if args.mobile else {'width':1400,'height':950})
         page.goto(base)
+        if args.choice_only:
+            page.locator('#practice-type-filter input').click()
+            page.locator('#practice-type-filter [role="option"][data-index="1"]').click()
         page.locator('#practice-start').click()
         expect(page.locator('#practice-submit')).to_be_enabled(timeout=30000)
+        if args.skip_easy:
+            skipped=current()['id']
+            page.locator('#practice-too-easy').click()
+            expect(page.locator('#practice-meta')).not_to_contain_text(skipped,timeout=30000)
+            assert count()==0 and current()['id']!=skipped
+            print('PASS easy skip does not create a grade',flush=True)
         begun=time.monotonic(); seen=[]
         total=max(args.questions,40 if args.minutes else args.questions)
         for i in range(total):
             q=current(); seen.append(q['id'])
+            if args.choice_only:
+                assert q['question_type'] in ('single_choice','multiple_choice')
             assert q['id'] in page.locator('#practice-meta').inner_text()
             assert '标准答案' not in page.locator('#practice-card').inner_text()
             if i%7==3:
@@ -106,6 +120,8 @@ try:
                 page.locator('#practice-continue').click()
                 expect(page.locator('#practice-submit')).to_be_enabled(timeout=30000)
                 assert current()['id']==before and count()==old_count
+                if args.choice_only:
+                    assert page.locator('#practice-type-filter input').input_value()=='只做选择题'
                 print('PASS real process restart and UI resume',flush=True)
         page.screenshot(path=str(folder/'continuous-practice.png'),full_page=True)
         page.locator('#practice-end').click()

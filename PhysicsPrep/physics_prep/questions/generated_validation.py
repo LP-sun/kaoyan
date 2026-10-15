@@ -67,10 +67,12 @@ def validate_generated(record):
         else:
             return {'status':'needs_review','passed':False,'checks':{},'errors':['unsupported_model']}
         # Accept only the canonical answer syntax, then compare independent expected result.
-        from .generation import canonical
-        reference=canonical(model,gen['variant'])
+        from .generation import canonical, canonical_choice
+        choice=gen.get('question_format')=='single_choice'
+        checks['supported_format']=gen.get('question_format') in (None,'single_choice')
+        reference=canonical_choice(model,gen['variant']) if choice else canonical(model,gen['variant'])
         checks['canonical_subject']=record.get('subject')==reference['subject']
-        checks['canonical_type']=record.get('question_type')==('symbolic' if model=='normalization' else 'numeric')
+        checks['canonical_type']=record.get('question_type')==('single_choice' if choice else 'symbolic' if model=='normalization' else 'numeric')
         checks['canonical_difficulty']=record.get('difficulty')==(3 if model=='pulley' else 1)
         checks['canonical_parameters']=p==reference['parameters']
         checks['canonical_statement']=record['stem']==reference['stem']
@@ -81,7 +83,13 @@ def validate_generated(record):
         checks['dimensional_consistency']=dimensional_check(model,gen['variant'],record.get('answer_unit'))
         answer=record['correct_answer']
         checks['canonical_answer_syntax']=isinstance(answer,str) and answer==reference['answer']
-        if checks['canonical_answer_syntax']:
+        if choice:
+            checks['canonical_options']=record.get('options')==reference['options']
+            values=[sp.sympify(x,locals={'sqrt':sp.sqrt}) for x in reference['option_values']]
+            checks['four_distinct_options']=len(values)==4 and all(sp.simplify(values[i]-values[j])!=0 for i in range(4) for j in range(i))
+            checks['unique_correct_option']=sum(sp.simplify(x-expected)==0 for x in values)==1
+            checks['independent_answer']=checks['canonical_answer_syntax'] and sp.simplify(values[ord(reference['answer'])-65]-expected)==0
+        elif checks['canonical_answer_syntax']:
             actual=sp.sympify(answer,locals={'sqrt':sp.sqrt})
             checks['independent_answer']=sp.simplify(actual-expected)==0
         else:

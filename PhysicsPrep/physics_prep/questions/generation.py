@@ -59,19 +59,59 @@ def canonical(model, variant=0):
     raise ValueError('unsupported canonical model')
 
 
-def generate(model, topic_id, variant=0):
+def canonical_choice(model, variant=0):
+    """Four distinct expressions, one correct; original practice, never exam copies."""
+    import sympy as sp
     data=canonical(model,variant)
+    value=sp.sympify(data['answer'],locals={'sqrt':sp.sqrt})
+    p=data['parameters']
+    mistakes={
+        'newton':[sp.Integer(p.get('force',1))*p.get('mass',1),1/value,value*2],
+        'born':[sp.sqrt(value),1-value,value**2],
+        'torque':[value/2,value*2,1/value],
+        'angular_acceleration':[1/value,value*2,value/2],
+        'normalization':[value**2,1/value,sp.sqrt(2)*value],
+        'rope_no_slip':[value*10,value/10,1/value],
+        'pulley':[sp.Integer(10),value*2,value/2],
+    }[model]
+    distractors=[]
+    for candidate in mistakes+[value*3,value*4,value*5]:
+        if sp.simplify(candidate-value)!=0 and all(sp.simplify(candidate-x)!=0 for x in distractors):
+            distractors.append(candidate)
+        if len(distractors)==3:
+            break
+    values=distractors[:]
+    index=variant%4
+    values.insert(index,value)
+    unit='' if data['unit']=='dimensionless' else ' '+data['unit']
+    return data | {'stem':data['stem']+'（单选：以下四个选项中只有一个正确。）',
+        'options':[str(sp.simplify(x))+unit for x in values],
+        'option_values':[str(sp.simplify(x)) for x in values],
+        'answer':chr(65+index),
+        'solution':data['solution']+f' 因此选择 {chr(65+index)}。'}
+
+
+def generate(model, topic_id, variant=0, question_format=None):
+    if question_format not in (None,'single_choice'):
+        raise ValueError('unsupported generated question format')
+    data=canonical_choice(model,variant) if question_format else canonical(model,variant)
     # Keep v1 keys for the original two families to preserve existing stable IDs.
     version=1 if model in ('newton','born') else 2
-    key=hashlib.sha256(f'{model}:{topic_id}:{variant}:v{version}'.encode()).hexdigest()[:16]
+    identity=f'{model}:{topic_id}:{variant}:v{version}'
+    if question_format:
+        identity+=':'+question_format
+    key=hashlib.sha256(identity.encode()).hexdigest()[:16]
     hints={str(i+1):value for i,value in enumerate(data['hints'])}
     record={'id':'GEN-'+key,'subject':data['subject'],'topic_ids':[topic_id],'difficulty':3 if model=='pulley' else 1,
-        'question_type':'symbolic' if model=='normalization' else 'numeric','stem':data['stem'],
+        'question_type':question_format or ('symbolic' if model=='normalization' else 'numeric'),'stem':data['stem'],
         'correct_answer':data['answer'],'solution':data['solution'],'source_type':'ai_generated',
         'verified':False,'human_verified':False,'machine_validated':False,'content_status':'solution_draft',
         'generation':{'model':model,'variant':variant,'version':version,'parameters':data['parameters'],'status':'generated','source':'local_canonical'},
         'hints':hints,'hint':hints['1'],'estimated_minutes':2,'time_source':'template_estimate',
         'difficulty_source':'template_design','physical_conditions':data['conditions'],'answer_unit':data['unit']}
+    if question_format:
+        record['options']=data['options']
+        record['generation']['question_format']=question_format
     record['generation']['status']='validating'
     from .generated_validation import validate_generated
     record['validation']=validate_generated(record)

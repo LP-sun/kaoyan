@@ -77,19 +77,31 @@ class PracticeSessionController:
                 data['_revision']=1
                 s.add(PracticeState(session_id=sid, payload=deepcopy(data)))
 
-    def start(self, subject='auto', mode='adaptive', chapter=None):
+    def _difficulty_preferences(self):
+        with self.service.factory() as s:
+            states=s.scalars(select(PracticeState).join(ExamSession).where(ExamSession.user_id==self.service.user_id))
+            preferences={}
+            for row in states:
+                for topic,level in row.payload.get('difficulty_preferences',{}).items():
+                    preferences[topic]=max(preferences.get(topic,1),level)
+        return preferences
+
+    def start(self, subject='auto', mode='adaptive', chapter=None, question_filter='all'):
         if subject not in ('auto','general','quantum'):
             raise ValueError('请选择普通物理、量子力学或自动安排。')
         if mode not in ('adaptive','foundation','chapter','weakness','review'):
             raise ValueError('未知刷题模式。')
         if mode == 'chapter' and not chapter:
             raise ValueError('指定章节模式需要选择章节。')
+        if question_filter not in ('all','choice'):
+            raise ValueError('未知题型筛选。')
         sid = self.service.start(subject='quantum' if subject == 'quantum' else None)
         data = {'session_id':sid,'phase':'READY','subject':subject,'mode':mode,'chapter':chapter,
             'started_at':to_iso(naive_utcnow()),'ended_at':None,'elapsed_seconds':0,
             'current_id':None,'hint_level':0,'attempts':0,'independent':True,
             'recent_errors':[],'remedy':None,'prepared':None,'last_feedback':None,
-            'processed_attempt':0,'generation_calls':0,'generation_events':[], 'trace':['READY']}
+            'processed_attempt':0,'generation_calls':0,'generation_events':[], 'trace':['READY'],
+            'question_filter':question_filter,'difficulty_preferences':self._difficulty_preferences(),'too_easy_events':[]}
         self._save(sid,data)
         return self.next(sid)
 
@@ -106,6 +118,8 @@ class PracticeSessionController:
 
     def _candidates(self, data):
         qs = [q for q in self.service.list_questions() if eligible(q)]
+        if data.get('question_filter')=='choice':
+            qs=[q for q in qs if q['question_type'] in ('single_choice','multiple_choice')]
         if data['subject'] == 'general':
             qs = [q for q in qs if q['subject'] != 'quantum']
         elif data['subject'] == 'quantum':
@@ -129,7 +143,10 @@ class PracticeSessionController:
         signatures = {(q.get('generation',{}).get('model'),str(sorted(q.get('generation',{}).get('parameters',{}).items()))) for q in prior if q.get('generation')}
         from ..questions.generation import generate, MODEL_PERIODS
         for variant in range(MODEL_PERIODS[model]):
-            q = generate(model,target,variant)
+            question_format='single_choice' if data.get('question_filter')=='choice' else None
+            q = generate(model,target,variant,question_format)
+            if not data.get('remedy') and data['mode']!='review' and q['difficulty']<data.get('difficulty_preferences',{}).get(target,1):
+                return None
             if q['id'] in seen or (model,str(sorted(q['generation']['parameters'].items()))) in signatures:
                 continue
             existing = next((r for r in self.service.list_questions() if r['id'] == q['id']), None)
@@ -152,13 +169,20 @@ class PracticeSessionController:
                         'recent_errors':data['recent_errors'][-3:],
                         'recent_questions':[{'id':p['id'],'topic_ids':p['topic_ids']} for p in prior[-3:]]}
                     proposed = generate_candidate(self._client(),target,[model],variant,context)
+                    if question_format:
+                        proposal_generation=proposed['generation']
+                        proposed=generate(proposal_generation['model'],target,proposal_generation['variant'],question_format)
+                        proposed['generation'].update({k:v for k,v in proposal_generation.items() if k in ('proposal_evidence','proposal_source','model_id')})
                     data['generation_events'].append(proposed.get('proposal_evidence', proposed.get('generation',{})))
                     live_proposal = next((r for r in self.service.list_questions() if r['id']==proposed['id']),None)
                     if (live_proposal is None or eligible(live_proposal)) and proposed['id'] not in seen and (model,str(sorted(proposed['generation']['parameters'].items()))) not in signatures:
                         q = proposed
                 except Exception as exc:
                     data['generation_events'].append({'status':'rejected','error':type(exc).__name__})
-            return self.service.store_generated(q)
+            stored=self.service.store_generated(q)
+            if not eligible(stored) or target not in stored['topic_ids'] or (question_format and stored['question_type']!='single_choice'):
+                continue
+            return stored
         return None
 
     def _choose(self, sid, data):
@@ -187,7 +211,8 @@ class PracticeSessionController:
                 q['recommendation_reason'] = '前置知识变式已独立答对，返回原知识目标；本次仍需独立验证。'
                 return q
             target = remedy['target']
-            pool = [q for q in self.service.list_questions() if eligible(q) and target in q['topic_ids'] and q['id'] not in seen and q['difficulty'] <= 2]
+            pool = [q for q in self.service.list_questions() if eligible(q) and target in q['topic_ids'] and q['id'] not in seen and q['difficulty'] <= 2
+                and (data.get('question_filter')!='choice' or q['question_type'] in ('single_choice','multiple_choice'))]
             signatures={(r.snapshot.get('generation',{}).get('model'),str(sorted(r.snapshot.get('generation',{}).get('parameters',{}).items()))) for r in rows if r.snapshot.get('generation')}
             pool=[q for q in pool if not q.get('generation') or (q['generation']['model'],str(sorted(q['generation'].get('parameters',{}).items()))) not in signatures]
             # Verification must differ from the last rendered statement.
@@ -198,6 +223,10 @@ class PracticeSessionController:
             data['remedy'] = None
             data['notice'] = '该前置考点暂无可信基础题，切换其他考点，保留待复测目标。'
         unseen = [q for q in qs if q['id'] not in seen]
+        # A self-reported preference suppresses easier normal practice, but
+        # never cancels due retests or independently observed remediation.
+        unseen=[q for q in unseen if set(q['topic_ids']) & due or any(
+            q['difficulty']>=data.get('difficulty_preferences',{}).get(t,1) for t in q['topic_ids'])]
         if data['mode'] == 'review':
             review_pool = [q for q in unseen if set(q['topic_ids']) & due]
             unseen = review_pool or unseen
@@ -213,7 +242,7 @@ class PracticeSessionController:
         if unseen:
             # Use global recent behaviour for difficulty but exclude this
             # session's repeats. Prefer existing records before generating.
-            return select_question(unseen,history,records,{t:v['prerequisite_ids'] for t,v in tree.items()},due)
+            return select_question(unseen,history,records,{t:v['prerequisite_ids'] for t,v in tree.items()},due,data.get('difficulty_preferences'))
         supported = [t for t in MODEL_TOPICS.values() if t in tree and
             (data['subject'] != 'quantum' or t.startswith('PHY-QM')) and
             (data['subject'] != 'general' or not t.startswith('PHY-QM'))]
@@ -222,7 +251,7 @@ class PracticeSessionController:
             supported = [t for t in supported if t in targets or t == data['chapter']]
         # Rotate model families; parameter changes alone aren't new coverage.
         last_topic = rows[-1].snapshot['topic_ids'][0] if rows else None
-        supported.sort(key=lambda t:(t == last_topic, sum(t in r.snapshot['topic_ids'] for r in rows),t))
+        supported.sort(key=lambda t:(t in data.get('difficulty_preferences',{}),t == last_topic, sum(t in r.snapshot['topic_ids'] for r in rows),t))
         for target in supported:
             if target=='PHY-MECH-ROT-PULLEY' and data.get('chapter')!=target and any(
                 records.get(p,{}).get('estimate') is None or records.get(p,{}).get('estimate',0)<.5
@@ -233,9 +262,12 @@ class PracticeSessionController:
                 return q | {'recommendation_reason':'现有合适题已练过；用经过程序校验的基础变式继续，尚需延迟独立复测。'}
         if data.get('chapter'):
             requested=data['chapter']
-            data['coverage_gaps']=list(set(data.get('coverage_gaps',[])+[requested]))
+            level_gap=bool(data.get('difficulty_preferences',{}))
+            if not level_gap:
+                data['coverage_gaps']=list(set(data.get('coverage_gaps',[])+[requested]))
             data['chapter']=None; data['mode']='adaptive'
-            data['notice']='所选考点暂缺可信题，先转为本科学科的基础练习；不将该考点标为已掌握。'
+            data['notice']=('本章节暂无符合难度偏好的可信题，先切换其他考点；不将该章节标为已掌握。' if level_gap else
+                '所选考点暂缺可信题，先转为本科学科的基础练习；不将该考点标为已掌握。')
             q=self._choose(sid,data)
             if q:
                 return q | {'recommendation_reason':data['notice']+' '+q.get('recommendation_reason','')}
@@ -325,6 +357,7 @@ class PracticeSessionController:
             summary['needs_independent_retest']=sorted(set(summary['needs_independent_retest']) | set(data.get('pending_targets',[])))
             summary['unable_to_start_count']=data.get('unable_to_start_count',0)
             summary['coverage_gaps']=data.get('coverage_gaps',[])
+            summary['too_easy_count']=len(data.get('too_easy_events',[]))
             return {'session_id':sid,'question':question, 'state':{k:v for k,v in data.items()
                 if k not in ('prepared','remedy','generation_events','_revision')}, 'remedy':{k:v for k,v in (data.get('remedy') or {}).items() if k != 'origin'},
                 'next_reason':(data.get('prepared') or {}).get('recommendation_reason',''),
@@ -508,6 +541,66 @@ class PracticeSessionController:
                 data['_revision']=data.get('_revision',0)+1
                 checkpoint.payload=data
                 current.current_snapshot=None; current.current_question_id=None
+            return self.next(sid)
+
+    def too_easy(self, sid, qid):
+        """Atomic preference event and skip; no grade, mastery or review writes."""
+        with self.service.lock:
+            data=self._recover(sid,self._load(sid))
+            if data['phase'] in ('FEEDBACK','SAVED'):
+                raise ValueError('请在当前题提交前反馈难度。')
+            with self.service.factory.begin() as s:
+                s.connection().exec_driver_sql('BEGIN IMMEDIATE')
+                current=self.service._session(s,sid)
+                q=current.current_snapshot
+                if not q or current.current_question_id!=qid:
+                    raise ValueError('题目已切换，请对当前题反馈。')
+                live=s.get(Question,qid)
+                if not live or not eligible(live.payload):
+                    raise ValueError('本题已暂停，请点击下一题。')
+                checkpoint=s.get(PracticeState,sid)
+                if checkpoint.payload.get('_revision',0)!=data.get('_revision',0):
+                    raise ValueError('状态已更新，请继续刷题恢复。')
+                preferences=data.setdefault('difficulty_preferences',{})
+                for topic in q['topic_ids']:
+                    preferences[topic]=max(preferences.get(topic,1),min(5,q['difficulty']+1))
+                data.setdefault('too_easy_events',[]).append({'question_id':qid,'topic_ids':q['topic_ids'],
+                    'difficulty':q['difficulty'],'at':to_iso(naive_utcnow())})
+                data['skipped_ids']=list(set(data.get('skipped_ids',[])+[qid]))
+                if data.get('remedy'):
+                    origin=data['remedy']['origin']
+                    data['pending_targets']=list(set(data.get('pending_targets',[])+origin['topic_ids']))
+                data['remedy']=None; data['prepared']=None; data['phase']='READY'
+                data['notice']='已跳过过于简单的题；优先提高本考点难度，无合适题时切换考点，不计为答对或掌握。'
+                data['_revision']=data.get('_revision',0)+1
+                checkpoint.payload=deepcopy(data)
+                current.current_snapshot=None; current.current_question_id=None
+            return self.next(sid)
+
+    def set_question_filter(self, sid, question_filter):
+        if question_filter not in ('all','choice'):
+            raise ValueError('未知题型筛选。')
+        if not sid:
+            return None
+        with self.service.lock:
+            data=self._recover(sid,self._load(sid))
+            if data['phase']=='SAVED':
+                return self.view(sid)
+            with self.service.factory.begin() as s:
+                s.connection().exec_driver_sql('BEGIN IMMEDIATE')
+                checkpoint=s.get(PracticeState,sid)
+                if checkpoint.payload.get('_revision',0)!=data.get('_revision',0):
+                    raise ValueError('状态已更新，请继续刷题恢复。')
+                current=self.service._session(s,sid)
+                q=current.current_snapshot
+                if question_filter=='choice' and q and q['question_type'] not in ('single_choice','multiple_choice'):
+                    current.current_snapshot=None; current.current_question_id=None
+                    data['phase']='READY'
+                data['question_filter']=question_filter
+                data['prepared']=None; data['remedy']=None
+                data['notice']='已更新题型筛选；切换题型不计成绩。'
+                data['_revision']=data.get('_revision',0)+1
+                checkpoint.payload=deepcopy(data)
             return self.next(sid)
 
     def record_error(self, sid, category):

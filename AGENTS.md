@@ -100,7 +100,7 @@ node fastgpt-physics-lab/tools/e2e-test.mjs        # 45 项，需先启动诊断
 4. **不得虚构内容**：题号断号保留原样（力学第 3 章 3-21 直接跳 3-23，原书如此）；看不清的题面记为疑点，不按 OCR 猜写；不伪造难度、耗时、真题频率等未测数据。
 5. **电磁学答案资料是第三版**，不可按题号直接配给第二版题目。两个量子物理版本分别整理，**不做跨版去重**。BK09《量子力学教程》是单页 DRM 提示文件，不是可用教材。
 6. **不要修改浏览器学习记录**（`physics-records-v1`），也不要改写 `fastgpt-physics-lab/data/diagnosis-sessions.json` 做测试。
-7. **三份真题（23普物、24普物、24量子）默认冻结为模拟卷**，不得进入自动推荐器，只能由学习者主动解冻后限时使用。
+7. **所有真题默认冻结为模拟卷**，包括23普物、24普物、24量子，以及后来加入的22年651（四张PNG）、25年651；不得进入自动推荐器，只能由学习者主动解冻后限时使用。上传原始资料不代表核验、导入题库或解冻。
 8. 密钥只存在于 `PhysicsPrep/.env` 与 `fastgpt-physics-lab/env/.env`（均已 gitignore）。**不要**外发、贴入聊天或提交；脚本输出中只显示长度与末四位。
 9. 两个项目共享 `fastgpt-physics-lab/env/.env` 的凭据：PhysicsPrep 的 `verify_with_lab_env.py` 等只读该文件。**不要删除或移动它**，否则打断对方在线验证；轮换 key 需两边协调。
 10. `fastgpt-physics-lab` 的 Compose 项目名已固定在其 `docker-compose.yml` 顶层 `name:`。**严禁** `docker system prune`、`docker volume prune` 或不带项目限定的批量停止。

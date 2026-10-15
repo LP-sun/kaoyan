@@ -16,16 +16,8 @@ __pycache__/
 **/credentials*
 **/genai_keys.json
 
-# Original/private source material (kept locally, not published)
-*.pdf
+# Local platform pricing spreadsheet
 *.xlsx
-教材/
-允文君数学物理资料分享/
-23普物.pdf
-24普物.pdf
-24量子.pdf
-普物大纲.pdf
-量子大纲.pdf
 并行-MaaS平台模型列表及报价(1).xlsx
 
 # Generated large aggregates and browser/runtime records
